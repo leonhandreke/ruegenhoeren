@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+#import "ruegenhoerenAppDelegate.h"
 #import "UGAudioLocationDatabase.h"
+#import "UGAudioLocationDetailViewController.h"
 
 @interface UGMapViewController : UIViewController <MKMapViewDelegate> {
 
     MKMapView *mapView;
 }
+
+- (IBAction) showAudioLocationDetailView: (id) sender;
 
 @end

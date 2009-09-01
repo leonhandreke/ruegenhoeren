@@ -93,10 +93,10 @@
     
     // Set the image for the button
     [myDetailButton setImage:[UIImage imageNamed:@"rightarrow.png"] forState:UIControlStateNormal];
-    //[myDetailButton addTarget:self action:@selector(gotosomeaction:) forControlEvents:UIControlEventTouchUpInside];
+    [myDetailButton addTarget:self action:@selector(showAudioLocationDetailView:) forControlEvents:UIControlEventTouchUpInside];
     
     // The UIView tag becomes the index of the annotation
-    NSInteger *viewTag = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] indexOfObject: annotation]
+    NSInteger viewTag = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] indexOfObject: annotation];
     myDetailButton.tag = viewTag;
     
     // Set the button as the callout view
@@ -105,6 +105,13 @@
     [annotationView setCanShowCallout: YES];
 	//[annotationView setAnimatesDrop: NO];
 	return annotationView;
+}
+
+- (IBAction) showAudioLocationDetailView: (id) sender {
+    UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: nil bundle: nil];
+    //[[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
+    [[NSBundle mainBundle] loadNibNamed: @"UGAudioLocationDetailViewController" owner: detailViewController options: nil];
+    [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
 }
 
 @end
