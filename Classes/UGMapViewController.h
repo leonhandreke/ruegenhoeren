@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+#import "UGAudioLocationDatabase.h"
 
-@interface UGMapViewController : UIViewController {
+@interface UGMapViewController : UIViewController <MKMapViewDelegate> {
 
     MKMapView *mapView;
 }

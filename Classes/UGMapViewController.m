@@ -44,12 +44,18 @@
     ruegenRegion.center=ruegenCenter;
     
     mapView = [[MKMapView alloc] initWithFrame: [[self view] bounds]];
+	[mapView setDelegate: self];
     [mapView setRegion: ruegenRegion animated: NO];
     [[self view] insertSubview: mapView atIndex: 0];
     
     // Insert the location markers
     
-    NSEnumerator *audioLocationsEnumerator = []
+    NSEnumerator *audioLocationsEnumerator = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] objectEnumerator];
+	UGAudioLocation *currentLocation;
+	
+	while (currentLocation = [audioLocationsEnumerator nextObject]) {
+		[mapView addAnnotation: currentLocation];
+	}
 }
 
 
@@ -71,5 +77,13 @@
     [super dealloc];
 }
 
+#pragma mark MKMapViewDelegate
+
+- (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation {
+	NSLog(@"Cally");
+	MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]];
+	[annotationView setAnimatesDrop: NO];
+	return annotationView;
+}
 
 @end

@@ -15,6 +15,8 @@
     NSMutableArray *audioLocations;
 }
 
++ (UGAudioLocationDatabase *) sharedAudioLocationDatabase;
+
 - (void) addAudioLocation: (UGAudioLocation *) audioLocation;
 
 
