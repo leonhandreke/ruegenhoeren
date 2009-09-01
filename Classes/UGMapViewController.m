@@ -96,7 +96,7 @@
     //[myDetailButton addTarget:self action:@selector(gotosomeaction:) forControlEvents:UIControlEventTouchUpInside];
     
     // The UIView tag becomes the index of the annotation
-    NSInteger *viewTag = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] indexOfObject: annotation]
+    NSInteger viewTag = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] indexOfObject: annotation];
     myDetailButton.tag = viewTag;
     
     // Set the button as the callout view
