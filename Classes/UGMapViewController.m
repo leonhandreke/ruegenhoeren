@@ -50,6 +50,8 @@
     
     // Insert the location markers
     
+    [UGAudioLocationDatabase sharedAudioLocationDatabase];
+    
     NSEnumerator *audioLocationsEnumerator = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] objectEnumerator];
 	UGAudioLocation *currentLocation;
 	
@@ -80,9 +82,8 @@
 #pragma mark MKMapViewDelegate
 
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation {
-	NSLog(@"Cally");
 	MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]];
-	[annotationView setAnimatesDrop: NO];
+	//[annotationView setAnimatesDrop: NO];
 	return annotationView;
 }
 

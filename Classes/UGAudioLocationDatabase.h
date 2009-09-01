@@ -20,6 +20,6 @@
 - (void) addAudioLocation: (UGAudioLocation *) audioLocation;
 
 
-@property (readonly) NSMutableArray *audioLocations;
+@property (assign) NSMutableArray *audioLocations;
 
 @end

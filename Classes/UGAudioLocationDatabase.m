@@ -13,7 +13,6 @@
 
 @synthesize audioLocations;
 
-
 static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 
 + (UGAudioLocationDatabase *) sharedAudioLocationDatabase
@@ -27,20 +26,20 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 
 - (UGAudioLocationDatabase*) init {
     if (self = [super init]) {
+        audioLocations = [[NSMutableArray alloc] init];
+        
         UGAudioLocation *woorkeAudioLocation = [[UGAudioLocation alloc] init];
         [woorkeAudioLocation setTitle: @"Hügelgräberfeld \"Woorker Berge\""];
 		CLLocationCoordinate2D woorkeLocation = {54.447286617183636, 13.410186767578125};
         [woorkeAudioLocation setCoordinate: woorkeLocation];
 		
 		[self addAudioLocation: woorkeAudioLocation];
-        
     }
-    
     return self;
 }
 
 - (void) addAudioLocation: (UGAudioLocation *) audioLocation {
-    [audioLocations addObject: audioLocation];
+    [[self audioLocations] addObject: audioLocation];
 }
 
 @end

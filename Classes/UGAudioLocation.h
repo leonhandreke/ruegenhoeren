@@ -29,7 +29,7 @@
 @property (assign) NSString *description;
 @property (assign) NSString *narrator;
 
-@property (assign) CLLocationCoordinate2D coordinate;
+@property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
 @property (assign) NSURL *fileLocation;
 
