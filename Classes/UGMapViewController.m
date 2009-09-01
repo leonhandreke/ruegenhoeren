@@ -83,6 +83,22 @@
 
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation {
 	MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]];
+    
+    // Set up the Left callout
+    UIButton *myDetailButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    myDetailButton.frame = CGRectMake(0, 0, 25, 25);
+    myDetailButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    myDetailButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    
+    // Set the image for the button
+    [myDetailButton setImage:[UIImage imageNamed:@"rightarrow.png"] forState:UIControlStateNormal];
+    //[myDetailButton addTarget:self action:@selector(gotosomeaction:) forControlEvents:UIControlEventTouchUpInside]; 
+    //myDetailButton.tag  = [annotation title];
+    
+    // Set the button as the callout view
+    annotationView.rightCalloutAccessoryView = myDetailButton;
+    
+    [annotationView setCanShowCallout: YES];
 	//[annotationView setAnimatesDrop: NO];
 	return annotationView;
 }
