@@ -43,8 +43,6 @@
     ruegenRegion.span=span;
     ruegenRegion.center=ruegenCenter;
     
-    mapView = [[MKMapView alloc] initWithFrame: [[self view] bounds]];
-	[mapView setDelegate: self];
     [mapView setRegion: ruegenRegion animated: NO];
     [[self view] insertSubview: mapView atIndex: 0];
     
