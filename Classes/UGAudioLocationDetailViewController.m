@@ -152,6 +152,11 @@
     [super dealloc];
 }
 
+-(IBAction)showMapView:(id)sender {
+
+	[[self navigationController] popViewControllerAnimated: YES];
+
+}
 
 @end
 

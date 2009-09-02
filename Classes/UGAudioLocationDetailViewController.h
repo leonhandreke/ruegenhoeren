@@ -16,4 +16,6 @@
     
 }
 
+-(IBAction)showMapView:(id)sender;
+
 @end
