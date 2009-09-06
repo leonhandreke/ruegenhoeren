@@ -7,15 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+ 
+//Private header 
+//#import "UINavigationButton.h"
 
 #import "UGAudioLocation.h"
 
-@interface UGAudioLocationDetailViewController : UITableViewController {
+@interface UGAudioLocationDetailViewController : UIViewController {
 
     UGAudioLocation *audioLocation;
+    IBOutlet UINavigationBar *navigationBar;
+    
+    IBOutlet UIScrollView *scrollView;
+    IBOutlet UIView *scrollViewContentView;
+    
+    IBOutlet UILabel *titleLabel;
+    IBOutlet UITextView *descriptionTextView;
+    IBOutlet UIImageView *imageView;
     
 }
 
--(IBAction)showMapView:(id)sender;
+@property (assign) UGAudioLocation *audioLocation;
+
 
 @end

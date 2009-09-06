@@ -15,10 +15,12 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		353DF02F104B264E0078BA8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353DF02E104B264E0078BA8A /* MapKit.framework */; };
 		356097CC104B1B5D00EA72D7 /* UGMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356097CB104B1B5D00EA72D7 /* UGMapViewController.m */; };
-		356097D0104B1C7900EA72D7 /* UGMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356097CF104B1C7900EA72D7 /* UGMapViewController.xib */; };
+		35798C9F1053C87500B91200 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35798C9E1053C87500B91200 /* MediaPlayer.framework */; };
 		35899787104D86080095A26A /* rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 35899786104D86080095A26A /* rightarrow.png */; };
 		3589979E104D95A60095A26A /* UGAudioLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */; };
 		358997A8104D95EA0095A26A /* UGAudioLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */; };
+		35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */; };
+		35982D0A1051835800D7EF1C /* UGAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35982D081051835800D7EF1C /* UGAudioPlayerViewController.xib */; };
 		35C93640104B37CB00616A86 /* UGAudioLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9363F104B37CB00616A86 /* UGAudioLocation.m */; };
 		35C93643104B390600616A86 /* UGAudioLocationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C93642104B390600616A86 /* UGAudioLocationDatabase.m */; };
 /* End PBXBuildFile section */
@@ -36,11 +38,14 @@
 		353DF02E104B264E0078BA8A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = "<absolute>"; };
 		356097CA104B1B5D00EA72D7 /* UGMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMapViewController.h; sourceTree = "<group>"; };
 		356097CB104B1B5D00EA72D7 /* UGMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMapViewController.m; sourceTree = "<group>"; };
-		356097CF104B1C7900EA72D7 /* UGMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGMapViewController.xib; sourceTree = "<group>"; };
+		35798C9E1053C87500B91200 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		35899786104D86080095A26A /* rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightarrow.png; path = Resources/rightarrow.png; sourceTree = "<group>"; };
 		3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationDetailViewController.xib; sourceTree = "<group>"; };
 		358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDetailViewController.h; sourceTree = "<group>"; };
 		358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationDetailViewController.m; sourceTree = "<group>"; };
+		35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioPlayerViewController.h; sourceTree = "<group>"; };
+		35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioPlayerViewController.m; sourceTree = "<group>"; };
+		35982D081051835800D7EF1C /* UGAudioPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UGAudioPlayerViewController.xib; path = Classes/UGAudioPlayerViewController.xib; sourceTree = "<group>"; };
 		35C9363E104B37CB00616A86 /* UGAudioLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocation.h; sourceTree = "<group>"; };
 		35C9363F104B37CB00616A86 /* UGAudioLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocation.m; sourceTree = "<group>"; };
 		35C93641104B390600616A86 /* UGAudioLocationDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDatabase.h; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				353DF02F104B264E0078BA8A /* MapKit.framework in Frameworks */,
+				35798C9F1053C87500B91200 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,8 @@
 				35C93642104B390600616A86 /* UGAudioLocationDatabase.m */,
 				358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */,
 				358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */,
+				35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */,
+				35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -112,10 +120,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35982D081051835800D7EF1C /* UGAudioPlayerViewController.xib */,
 				35899786104D86080095A26A /* rightarrow.png */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
-				356097CF104B1C7900EA72D7 /* UGMapViewController.xib */,
 				3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */,
 			);
 			name = Resources;
@@ -124,6 +132,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35798C9E1053C87500B91200 /* MediaPlayer.framework */,
 				353DF02E104B264E0078BA8A /* MapKit.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -182,9 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
-				356097D0104B1C7900EA72D7 /* UGMapViewController.xib in Resources */,
 				35899787104D86080095A26A /* rightarrow.png in Resources */,
 				3589979E104D95A60095A26A /* UGAudioLocationDetailViewController.xib in Resources */,
+				35982D0A1051835800D7EF1C /* UGAudioPlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +210,7 @@
 				35C93640104B37CB00616A86 /* UGAudioLocation.m in Sources */,
 				35C93643104B390600616A86 /* UGAudioLocationDatabase.m in Sources */,
 				358997A8104D95EA0095A26A /* UGAudioLocationDetailViewController.m in Sources */,
+				35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

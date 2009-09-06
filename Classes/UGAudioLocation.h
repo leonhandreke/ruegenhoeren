@@ -15,9 +15,11 @@
     NSString *title;
     NSString *description;
     NSString *narrator;
+
     
     CLLocationCoordinate2D coordinate;
     
+    NSURL *imageFileLocation;
     NSURL *fileLocation;
     
 }
@@ -25,12 +27,13 @@
 // To conform to MKAnnotation
 -(NSString *) subtitle;
 
-@property (assign) NSString *title;
-@property (assign) NSString *description;
-@property (assign) NSString *narrator;
+@property (retain) NSString *title;
+@property (retain) NSString *description;
+@property (retain) NSString *narrator;
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
-@property (assign) NSURL *fileLocation;
+@property (retain) NSURL *imageFileLocation;
+@property (retain) NSURL *fileLocation;
 
 @end

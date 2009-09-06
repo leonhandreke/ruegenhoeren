@@ -43,8 +43,7 @@
     ruegenRegion.span=span;
     ruegenRegion.center=ruegenCenter;
     
-    [mapView setRegion: ruegenRegion animated: NO];
-    [[self view] insertSubview: mapView atIndex: 0];
+    [(MKMapView *)[self view] setRegion: ruegenRegion animated: NO];
     
     // Insert the location markers
     
@@ -54,7 +53,7 @@
 	UGAudioLocation *currentLocation;
 	
 	while (currentLocation = [audioLocationsEnumerator nextObject]) {
-		[mapView addAnnotation: currentLocation];
+		[(MKMapView *)[self view] addAnnotation: currentLocation];
 	}
 }
 
@@ -109,6 +108,7 @@
     UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: nil bundle: nil];
     //[[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
     [[NSBundle mainBundle] loadNibNamed: @"UGAudioLocationDetailViewController" owner: detailViewController options: nil];
+    [detailViewController setAudioLocation: [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] objectAtIndex: [(UIView *) sender tag]]];
     [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
 }
 

@@ -15,7 +15,6 @@
 
 @interface UGMapViewController : UIViewController <MKMapViewDelegate> {
 
-    IBOutlet MKMapView *mapView;
 }
 
 - (IBAction) showAudioLocationDetailView: (id) sender;
