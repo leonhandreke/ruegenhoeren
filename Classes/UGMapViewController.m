@@ -16,16 +16,19 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
+        NSLog(@"Chello");
     }
     return self;
 }
 */
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
+/*- (void)loadView {
+    //[super loadView];
+    
+}*/
+
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -105,9 +108,7 @@
 }
 
 - (IBAction) showAudioLocationDetailView: (id) sender {
-    UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: nil bundle: nil];
-    //[[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
-    [[NSBundle mainBundle] loadNibNamed: @"UGAudioLocationDetailViewController" owner: detailViewController options: nil];
+    UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: @"UGAudioLocationDetailViewController" bundle: [NSBundle mainBundle]];
     [detailViewController setAudioLocation: [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] objectAtIndex: [(UIView *) sender tag]]];
     [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
 }

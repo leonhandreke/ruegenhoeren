@@ -23,50 +23,53 @@
  }
  */
 
-/*
- - (void)viewDidLoad {
- [super viewDidLoad];
- }
- */
 
+ - (void)viewDidLoad {
+     [super viewDidLoad];
+     [[self navigationController] setNavigationBarHidden: NO animated: YES];
+     [[self navigationItem] setTitle: @"Audio Location"];
+     [[self navigationItem] setHidesBackButton: NO animated: NO];
+     
+     
+     UIFont *descriptionFont = [UIFont fontWithName: @"Helvetica" size: 17];
+     
+     CGSize descriptionSize = [[audioLocation description] sizeWithFont: descriptionFont constrainedToSize: CGSizeMake(280, CGFLOAT_MAX)];
+     NSLog(@"%f", descriptionSize.height);
+     
+     // 266 is the base height for the content view, without the description
+     
+     // Resize the content view to fit the text view
+     // Do not ask me why bound /2, it works
+     CGRect scrollViewContentViewBounds = CGRectMake([scrollViewContentView bounds].origin.x, [scrollViewContentView bounds].origin.y,
+                                                    [scrollViewContentView bounds].size.width, 266 + descriptionSize.height);
+     [scrollViewContentView setBounds: scrollViewContentViewBounds];
+     NSLog(NSStringFromCGRect(scrollViewContentView.bounds));
+     
+     
+     CGRect descriptionTextViewBounds = CGRectMake(20, 49,
+                                                  [descriptionTextView bounds].size.width, descriptionSize.height+50);
+     [descriptionTextView setBounds: descriptionTextViewBounds];
+     
+     
+     [descriptionTextView setText: [audioLocation description]];
+     
+     
+     [scrollView setContentSize: scrollViewContentView.bounds.size];
+     [scrollView addSubview: scrollViewContentView];
+     
+     [titleLabel setText: [audioLocation title]];
+     
+     [scrollView setNeedsLayout];
+     
+     [self performSelectorInBackground: @selector(loadAudioLocationImage) withObject: nil];
+ }
+
+/*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[self navigationController] setNavigationBarHidden: NO animated: YES];
-    [[self navigationItem] setTitle: @"Audio Location"];
-    [[self navigationItem] setHidesBackButton: NO animated: NO];
-    
-    
-    UIFont *descriptionFont = [UIFont fontWithName: @"Helvetica" size: 17];
-    
-    CGSize descriptionSize = [[audioLocation description] sizeWithFont: descriptionFont constrainedToSize: CGSizeMake(320, CGFLOAT_MAX)];
-    NSLog(@"%f", descriptionSize.height);
-    
-    // Resize the content view to fit the text view
-    // Do not ask me why bound /2, it works
-    CGRect scrollViewContentViewBounds = CGRectMake([scrollViewContentView bounds].origin.x, [scrollViewContentView bounds].origin.y - descriptionSize.height / 2,
-                                                    [scrollViewContentView bounds].size.width, [scrollViewContentView bounds].size.height + descriptionSize.height);
-    [scrollViewContentView setBounds: scrollViewContentViewBounds];
-    
-    CGRect descriptionTextViewBounds = CGRectMake([descriptionTextView bounds].origin.x, [descriptionTextView bounds].origin.y,
-     [descriptionTextView bounds].size.width, descriptionSize.height);
-     [descriptionTextView setS];
-    
-    
-    [descriptionTextView setText: [audioLocation description]];
-    
-    
-    [scrollView setContentSize: scrollViewContentView.bounds.size];
-    [scrollView addSubview: scrollViewContentView];
-    
-    [titleLabel setText: [audioLocation title]];
-    
-    
-    
-    [self performSelectorInBackground: @selector(loadAudioLocationImage) withObject: nil];
-    
 }
-
+*/
 
 /*
  - (void)viewDidAppear:(BOOL)animated {
