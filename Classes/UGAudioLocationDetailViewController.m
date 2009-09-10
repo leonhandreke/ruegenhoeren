@@ -26,12 +26,13 @@
 
  - (void)viewDidLoad {
      [super viewDidLoad];
-     [[self navigationController] setNavigationBarHidden: NO animated: YES];
+     [[self navigationController] setNavigationBarHidden: NO animated: NO];
      [[self navigationItem] setTitle: @"Audio Location"];
      [[self navigationItem] setHidesBackButton: NO animated: NO];
      
+     //[scrollView setNeedsLayout];
      
-     UIFont *descriptionFont = [UIFont fontWithName: @"Helvetica" size: 17];
+     /*UIFont *descriptionFont = [UIFont fontWithName: @"Helvetica" size: 17];
      
      CGSize descriptionSize = [[audioLocation description] sizeWithFont: descriptionFont constrainedToSize: CGSizeMake(280, CGFLOAT_MAX)];
      NSLog(@"%f", descriptionSize.height);
@@ -48,18 +49,14 @@
      
      CGRect descriptionTextViewBounds = CGRectMake(20, 49,
                                                   [descriptionTextView bounds].size.width, descriptionSize.height+50);
-     [descriptionTextView setBounds: descriptionTextViewBounds];
+     [descriptionTextView setBounds: descriptionTextViewBounds];*/
      
      
      [descriptionTextView setText: [audioLocation description]];
-     
+     [titleLabel setText: [audioLocation title]];
      
      [scrollView setContentSize: scrollViewContentView.bounds.size];
      [scrollView addSubview: scrollViewContentView];
-     
-     [titleLabel setText: [audioLocation title]];
-     
-     [scrollView setNeedsLayout];
      
      [self performSelectorInBackground: @selector(loadAudioLocationImage) withObject: nil];
  }
@@ -81,11 +78,12 @@
  [super viewWillDisappear:animated];
  }
  */
-/*
- - (void)viewDidDisappear:(BOOL)animated {
- [super viewDidDisappear:animated];
- }
- */
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[self navigationController] setNavigationBarHidden: YES animated: NO];
+}
+ 
 
 /*
  // Override to allow orientations other than the default portrait orientation.

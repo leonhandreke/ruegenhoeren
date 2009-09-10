@@ -9,3 +9,6 @@ build/*
 # osx noise
 .DS_Store
 profile
+
+#no copyright shite
+*.mp3
