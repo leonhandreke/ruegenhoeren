@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface UGAudioPlayerViewController : UIViewController {
 
-    IBOutlet UIProgressView *progressView;
+    NSURL *audioFileLocation;
+    
+    AVAudioPlayer *audioPlayer;
+    
+    IBOutlet UISlider *scrubberSlider;
     IBOutlet UILabel *doneTimeLabel;
     IBOutlet UILabel *remainingTimeLabel;
     
@@ -24,5 +28,8 @@
     MPVolumeView *volumeView;
     
 }
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil audioFile: (NSURL *) newAudioFileLocation;
+
 
 @end

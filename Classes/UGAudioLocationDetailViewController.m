@@ -26,7 +26,7 @@
 
  - (void)viewDidLoad {
      [super viewDidLoad];
-     [[self navigationController] setNavigationBarHidden: NO animated: NO];
+     [[self navigationController] setNavigationBarHidden: NO animated: YES];
      [[self navigationItem] setTitle: @"Audio Location"];
      [[self navigationItem] setHidesBackButton: NO animated: NO];
      
@@ -73,17 +73,17 @@
  [super viewDidAppear:animated];
  }
  */
-/*
- - (void)viewWillDisappear:(BOOL)animated {
- [super viewWillDisappear:animated];
- }
- */
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[self navigationController] setNavigationBarHidden: YES animated: NO];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[self navigationController] setNavigationBarHidden: YES animated: YES];
 }
  
+/*
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+}
+*/
 
 /*
  // Override to allow orientations other than the default portrait orientation.
@@ -110,6 +110,14 @@
     UIImage *audioLocationImage = [UIImage imageWithData: [NSData dataWithContentsOfURL: [audioLocation imageFileLocation]]];
     [imageView setImage: audioLocationImage];
     [apool release];
+}
+
+- (IBAction) playAudioLocation: (id) sender {
+    
+    UGAudioPlayerViewController *audioPlayerViewController = [[UGAudioPlayerViewController alloc] initWithNibName:@"UGAudioPlayerViewController" 
+                                                                                                           bundle: [NSBundle mainBundle] 
+                                                                                                        audioFile: [audioLocation audioFileLocation]];
+    [[self navigationController] pushViewController: audioPlayerViewController animated: YES];
 }
 
 - (void)dealloc {

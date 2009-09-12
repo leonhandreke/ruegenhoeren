@@ -12,6 +12,7 @@
 //#import "UINavigationButton.h"
 
 #import "UGAudioLocation.h"
+#import "UGAudioPlayerViewController.h"
 
 @interface UGAudioLocationDetailViewController : UIViewController {
 
@@ -26,6 +27,8 @@
     IBOutlet UIImageView *imageView;
     
 }
+
+- (IBAction) playAudioLocation: (id) sender;
 
 @property (assign) UGAudioLocation *audioLocation;
 
