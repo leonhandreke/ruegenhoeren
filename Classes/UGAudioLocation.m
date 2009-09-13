@@ -11,19 +11,27 @@
 
 @implementation UGAudioLocation
 
-@synthesize title, description, narrator, coordinate, imageFileLocation, audioFileLocation;
+@synthesize title, description, narrator, coordinate, imageFileLocation, audioFileName;
 
 - (void) dealloc {
     [title release];
     [description release];
     [narrator release];
     [imageFileLocation release];
-    [audioFileLocation release];
+    [audioFileName release];
     [super dealloc];
 }
 
 -(NSString*) subtitle {
 	return [self narrator];
+}
+
+- (NSURL *) audioFileLocation {
+    
+    /*NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES); 
+    NSString *filename = [paths objectAtIndex:0];*/
+    NSString *filename = [[NSBundle mainBundle] pathForResource: audioFileName ofType: nil];  
+    return [NSURL fileURLWithPath: filename];
 }
 
 @end

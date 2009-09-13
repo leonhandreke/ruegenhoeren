@@ -11,6 +11,7 @@
 //Private header 
 //#import "UINavigationButton.h"
 
+#import "ruegenhoerenAppDelegate.h"
 #import "UGAudioLocation.h"
 #import "UGAudioPlayerViewController.h"
 

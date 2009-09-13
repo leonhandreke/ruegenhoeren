@@ -14,6 +14,7 @@
 
 @synthesize window;
 @synthesize navigationController;
+@synthesize currentAudioPlayerViewController;
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {

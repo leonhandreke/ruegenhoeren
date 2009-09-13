@@ -20,12 +20,14 @@
     CLLocationCoordinate2D coordinate;
     
     NSURL *imageFileLocation;
-    NSURL *audioFileLocation;
+    NSString *audioFileName;
     
 }
 
 // To conform to MKAnnotation
 -(NSString *) subtitle;
+
+- (NSURL *) audioFileLocation;
 
 @property (retain) NSString *title;
 @property (retain) NSString *description;
@@ -34,6 +36,6 @@
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
 @property (retain) NSURL *imageFileLocation;
-@property (retain) NSURL *audioFileLocation;
+@property (retain) NSString *audioFileName;
 
 @end

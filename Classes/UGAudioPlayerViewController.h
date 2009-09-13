@@ -31,5 +31,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil audioFile: (NSURL *) newAudioFileLocation;
 
+- (void) volumeChanged:(NSNotification *)notify;
+- (void) updateDurationScrubber;
 
 @end

@@ -19,15 +19,7 @@
         audioFileLocation = newAudioFileLocation;
         audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:audioFileLocation error: nil];
         
-        //Initialize the custom UISlider
-        scrubberSlider.backgroundColor = [UIColor clearColor];  
-        UIImage *stetchLeftTrack = [[UIImage imageNamed:@"blueTrack.png"]
-                                    stretchableImageWithLeftCapWidth:9.0 topCapHeight:0.0];
-        UIImage *stetchRightTrack = [[UIImage imageNamed:@"whiteTrack.png"]
-                                     stretchableImageWithLeftCapWidth:9.0 topCapHeight:0.0];
-        [scrubberSlider setThumbImage: [UIImage imageNamed:@"whiteSlide.png"] forState:UIControlStateNormal];
-        [scrubberSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
-        [scrubberSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
+        
     }
     return self;
 }
@@ -38,7 +30,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[self navigationController] setNavigationBarHidden: NO animated: YES];
+    //Initialize the custom UISlider
+    scrubberSlider.backgroundColor = [UIColor clearColor];  
+    UIImage *stetchLeftTrack = [[UIImage imageNamed:@"blueTrack.png"]
+                                stretchableImageWithLeftCapWidth:9.0 topCapHeight:0.0];
+    UIImage *stetchRightTrack = [[UIImage imageNamed:@"whiteTrack.png"]
+                                 stretchableImageWithLeftCapWidth:9.0 topCapHeight:0.0];
+    [scrubberSlider setThumbImage: [UIImage imageNamed:@"whiteSlide.png"] forState:UIControlStateNormal];
+    [scrubberSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
+    [scrubberSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
     
 	// VolumeViewHolder is the frame to hold the slider.  We'll resize the slider to be the size of the frame.
 	volumeView = [[[MPVolumeView alloc] initWithFrame:volumeViewHolder.bounds] autorelease];
@@ -64,13 +64,22 @@
 	[volumeViewSlider _updateVolumeFromAVSystemController];
 }
 
+- (void) viewWillAppear: (BOOL) animated {
+    [[self navigationController] setNavigationBarHidden: NO animated: YES];
+    [[self navigationItem] setTitle: @"Audio Location"];
+    [[self navigationItem] setHidesBackButton: NO animated: NO];
+    
+}
+
 - (void) viewDidAppear: (BOOL) animated {
     [super viewDidAppear: animated];
     
     [audioPlayer play];
 }
 
-//- (void) updateDurationScrubber
+- (void) updateDurationScrubber {
+    
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

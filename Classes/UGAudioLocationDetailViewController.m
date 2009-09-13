@@ -26,9 +26,7 @@
 
  - (void)viewDidLoad {
      [super viewDidLoad];
-     [[self navigationController] setNavigationBarHidden: NO animated: YES];
-     [[self navigationItem] setTitle: @"Audio Location"];
-     [[self navigationItem] setHidesBackButton: NO animated: NO];
+
      
      //[scrollView setNeedsLayout];
      
@@ -61,24 +59,26 @@
      [self performSelectorInBackground: @selector(loadAudioLocationImage) withObject: nil];
  }
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [[self navigationController] setNavigationBarHidden: NO animated: YES];
+    [[self navigationItem] setTitle: @"Audio Location"];
+    [[self navigationItem] setHidesBackButton: NO animated: NO];
 }
-*/
+
 
 /*
  - (void)viewDidAppear:(BOOL)animated {
  [super viewDidAppear:animated];
  }
  */
-
+/*
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[self navigationController] setNavigationBarHidden: YES animated: YES];
 }
- 
+*/ 
 /*
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
@@ -117,7 +117,8 @@
     UGAudioPlayerViewController *audioPlayerViewController = [[UGAudioPlayerViewController alloc] initWithNibName:@"UGAudioPlayerViewController" 
                                                                                                            bundle: [NSBundle mainBundle] 
                                                                                                         audioFile: [audioLocation audioFileLocation]];
-    [[self navigationController] pushViewController: audioPlayerViewController animated: YES];
+    [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: audioPlayerViewController animated: YES];
+    [(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentAudioPlayerViewController: audioPlayerViewController];
 }
 
 - (void)dealloc {
