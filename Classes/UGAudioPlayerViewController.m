@@ -40,8 +40,12 @@
     [scrubberSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
     [scrubberSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
     
+    CGRect tabBarBounds = [tabBar bounds];
+    tabBarBounds.size.height = 100;
+    [tabBar setBounds: tabBarBounds];
+    
 	// VolumeViewHolder is the frame to hold the slider.  We'll resize the slider to be the size of the frame.
-	volumeView = [[[MPVolumeView alloc] initWithFrame:volumeViewHolder.bounds] autorelease];
+	/*volumeView = [[[MPVolumeView alloc] initWithFrame:volumeViewHolder.bounds] autorelease];
 	[volumeView sizeToFit];
 	[volumeViewHolder addSubview:volumeView];
 	
@@ -55,7 +59,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(volumeChanged:) 
 												 name:@"AVSystemController_SystemVolumeDidChangeNotification" 
-											   object:nil];
+											   object:nil];*/
 }
 
 

@@ -23,8 +23,9 @@
     IBOutlet UIImageView *backgroundView;
     IBOutlet UITextView *descriptionView;
     
+    IBOutlet UITabBar * tabBar;
     IBOutlet UIView *volumeViewHolder;
-    IBOutlet UIView *volumeViewSlider;
+    UIView *volumeViewSlider;
     MPVolumeView *volumeView;
     
 }

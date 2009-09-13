@@ -21,7 +21,7 @@
 		35757523105ABA300058EB63 /* whiteslide.png in Resources */ = {isa = PBXBuildFile; fileRef = 35757520105ABA300058EB63 /* whiteslide.png */; };
 		35757524105ABA300058EB63 /* whitetrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 35757521105ABA300058EB63 /* whitetrack.png */; };
 		35757600105D3B5D0058EB63 /* bluetrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 357575FF105D3B5D0058EB63 /* bluetrack.png */; };
-		35757685105D48F40058EB63 /* UGAudioLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35757684105D48F40058EB63 /* UGAudioLocationDetailViewController.xib */; };
+		3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */; };
 		35798C9F1053C87500B91200 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35798C9E1053C87500B91200 /* MediaPlayer.framework */; };
 		3589979E104D95A60095A26A /* UGAudioLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */; };
 		358997A8104D95EA0095A26A /* UGAudioLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */; };
@@ -49,7 +49,7 @@
 		35757520105ABA300058EB63 /* whiteslide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteslide.png; path = Resources/whiteslide.png; sourceTree = "<group>"; };
 		35757521105ABA300058EB63 /* whitetrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whitetrack.png; path = Resources/whitetrack.png; sourceTree = "<group>"; };
 		357575FF105D3B5D0058EB63 /* bluetrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluetrack.png; path = Resources/bluetrack.png; sourceTree = "<group>"; };
-		35757684105D48F40058EB63 /* UGAudioLocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationDetailViewController.xib; sourceTree = "<group>"; };
+		35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioPlayerViewController.xib; sourceTree = "<group>"; };
 		35798C9E1053C87500B91200 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationDetailViewController.xib; sourceTree = "<group>"; };
 		358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDetailViewController.h; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				35757684105D48F40058EB63 /* UGAudioLocationDetailViewController.xib */,
+				35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */,
 				357575FF105D3B5D0058EB63 /* bluetrack.png */,
 				3575751F105ABA300058EB63 /* rightarrow.png */,
 				35757520105ABA300058EB63 /* whiteslide.png */,
@@ -213,7 +213,7 @@
 				35757523105ABA300058EB63 /* whiteslide.png in Resources */,
 				35757524105ABA300058EB63 /* whitetrack.png in Resources */,
 				35757600105D3B5D0058EB63 /* bluetrack.png in Resources */,
-				35757685105D48F40058EB63 /* UGAudioLocationDetailViewController.xib in Resources */,
+				3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
