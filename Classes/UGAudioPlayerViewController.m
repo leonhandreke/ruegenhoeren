@@ -44,8 +44,10 @@
     tabBarBounds.size.height = 100;
     [tabBar setBounds: tabBarBounds];
     
+    [self performSelectorInBackground:@selector(updateDurationScrubber) withObject:nil];
+    
 	// VolumeViewHolder is the frame to hold the slider.  We'll resize the slider to be the size of the frame.
-	/*volumeView = [[[MPVolumeView alloc] initWithFrame:volumeViewHolder.bounds] autorelease];
+	volumeView = [[[MPVolumeView alloc] initWithFrame:volumeViewHolder.bounds] autorelease];
 	[volumeView sizeToFit];
 	[volumeViewHolder addSubview:volumeView];
 	
@@ -59,7 +61,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(volumeChanged:) 
 												 name:@"AVSystemController_SystemVolumeDidChangeNotification" 
-											   object:nil];*/
+											   object:nil];
 }
 
 
@@ -83,6 +85,25 @@
 
 - (void) updateDurationScrubber {
     
+    NSAutoreleasePool *apool = [[NSAutoreleasePool alloc] init];
+    
+    while(TRUE) {
+        
+        NSNumber *timeDone = [NSNumber numberWithDouble: [audioPlayer currentTime]];
+        NSNumber *timeRemaining = [NSNumber numberWithDouble: [audioPlayer duration] - [audioPlayer currentTime]];
+        
+        NSString *doneLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeDone intValue] / 60, [timeDone intValue] % 60];
+        NSString *remainingLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeRemaining intValue] / 60, [timeRemaining intValue] % 60];
+        
+        NSNumber *sliderValue =  [NSNumber numberWithDouble: [timeDone doubleValue] / [[NSNumber numberWithDouble: [audioPlayer duration]] doubleValue]];
+
+        [self performSelectorOnMainThread: @selector(setDoneTimeLabelText:) withObject: doneLabelValue waitUntilDone: YES];
+        [self performSelectorOnMainThread: @selector(setRemainingTimeLabelText:) withObject: remainingLabelValue waitUntilDone: YES];
+        [self performSelectorOnMainThread: @selector(setSliderValue:) withObject: sliderValue waitUntilDone: YES];
+        //NSLog(@"%f", [scrubberSlider value]);
+        sleep(1);
+    }
+    [apool release];
 }
 
 /*
@@ -92,6 +113,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (void) setSliderValue: (NSNumber*) value {
+    [scrubberSlider setValue: [value floatValue]];
+}
+
+- (void) setDoneTimeLabelText: (NSString *) text {
+    [doneTimeLabel setText: text];
+}
+
+- (void) setRemainingTimeLabelText: (NSString *) text {
+    [remainingTimeLabel setText: text];
+}
+
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
