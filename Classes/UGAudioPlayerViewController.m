@@ -141,6 +141,7 @@
 
 
 - (void)dealloc {
+	[audioPlayer dealloc];
     [super dealloc];
 }
 

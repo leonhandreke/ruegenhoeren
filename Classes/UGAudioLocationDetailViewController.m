@@ -113,8 +113,10 @@
 }
 
 - (IBAction) playAudioLocation: (id) sender {
-    
-    UGAudioPlayerViewController *audioPlayerViewController = [[UGAudioPlayerViewController alloc] initWithNibName:@"UGAudioPlayerViewController" 
+	
+	[audioPlayerViewController release];
+	
+    audioPlayerViewController = [[UGAudioPlayerViewController alloc] initWithNibName:@"UGAudioPlayerViewController" 
                                                                                                            bundle: [NSBundle mainBundle] 
                                                                                                         audioFile: [audioLocation audioFileLocation]];
     [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: audioPlayerViewController animated: YES];

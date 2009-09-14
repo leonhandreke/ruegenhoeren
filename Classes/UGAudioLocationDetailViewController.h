@@ -18,6 +18,7 @@
 @interface UGAudioLocationDetailViewController : UIViewController {
 
     UGAudioLocation *audioLocation;
+	UGAudioPlayerViewController *audioPlayerViewController;
     IBOutlet UINavigationBar *navigationBar;
     
     IBOutlet UIScrollView *scrollView;
