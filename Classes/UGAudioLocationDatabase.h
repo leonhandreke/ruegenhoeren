@@ -22,6 +22,7 @@
 - (void) addAudioLocation: (UGAudioLocation *) audioLocation;
 
 - (NSArray *) topics;
+- (NSArray *) audioLocationsForTopic: (NSString *) topic;
 
 @property (assign) NSMutableArray *audioLocations;
 

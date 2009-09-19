@@ -42,6 +42,22 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
     return self;
 }
 
+- (NSArray *) audioLocationsForTopic: (NSString *) topic {
+    
+    NSMutableArray *matchingAudioLocations = [[NSMutableArray alloc] init];
+    
+    NSEnumerator *audioLocationsEnumerator = [audioLocations objectEnumerator];
+    UGAudioLocation *currentAudioLocation;
+    
+    while (currentAudioLocation = [audioLocationsEnumerator nextObject]) {
+        if([[currentAudioLocation topic] isEqualToString: topic]) {
+            [matchingAudioLocations addObject: currentAudioLocation];
+        }
+    }
+    return matchingAudioLocations;
+}
+
+
 - (void) addAudioLocation: (UGAudioLocation *) audioLocation {
     [[self audioLocations] addObject: audioLocation];
     [topics release];
@@ -67,6 +83,6 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
         }
     }
              
-    return topics;
+    return [topics autorelease];
 }
 @end

@@ -35,6 +35,7 @@
 - (void)dealloc {
     [navigationController release];
 	[tabBarController release];
+    [currentAudioPlayerViewController release];
 	[window release];
 	[super dealloc];
 }

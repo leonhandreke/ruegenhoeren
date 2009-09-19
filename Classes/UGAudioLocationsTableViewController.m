@@ -1,15 +1,17 @@
 //
-//  UGTopicsTableViewController.m
+//  UGAudioLocationsTableViewController.m
 //  ruegenhoeren
 //
 //  Created by Leon on 9/19/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "UGTopicsTableViewController.h"
+#import "UGAudioLocationsTableViewController.h"
 
 
-@implementation UGTopicsTableViewController
+@implementation UGAudioLocationsTableViewController
+
+@synthesize audioLocations;
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -29,12 +31,11 @@
 }
 */
 
-
+/*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [[[self tabBarController] navigationItem] setTitle: @"Topics"];
 }
-
+*/
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -81,22 +82,23 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[[UGAudioLocationDatabase sharedAudioLocationDatabase] topics] count];
+    return [audioLocations count];
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"TopicCell";
+    static NSString *CellIdentifier = @"AudioLocationCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    [[cell textLabel] setText: [[[UGAudioLocationDatabase sharedAudioLocationDatabase] topics] objectAtIndex: indexPath.row]];
+    [[cell textLabel] setText: [[audioLocations objectAtIndex: indexPath.row] title]];
 	[cell setAccessoryType: UITableViewCellAccessoryDisclosureIndicator];
+	
     return cell;
 }
 
@@ -106,14 +108,11 @@
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];
 	// [anotherViewController release];
-    
-    NSString *topicSelected = [[[tableView cellForRowAtIndexPath: indexPath] textLabel] text];
-    UGAudioLocationsTableViewController *audioLocationsTableViewController = [[UGAudioLocationsTableViewController alloc] init];
-    [audioLocationsTableViewController setAudioLocations: [[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocationsForTopic: topicSelected]];
-    [[audioLocationsTableViewController tableView] reloadData];
-    
-    [[self navigationController] pushViewController: audioLocationsTableViewController animated: YES];
-    
+    UGAudioLocation * audioLocation = (UGAudioLocation *)[audioLocations objectAtIndex: indexPath.row];
+	
+    UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: @"UGAudioLocationDetailViewController" bundle: [NSBundle mainBundle]];
+    [detailViewController setAudioLocation: audioLocation];
+    [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
 }
 
 

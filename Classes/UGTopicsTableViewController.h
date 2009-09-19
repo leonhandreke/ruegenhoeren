@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TapkuLibrary/TapkuLibrary.h"
-
 #import "UGAudioLocationDatabase.h"
+#import "UGAudioLocationsTableViewController.h"
 
 @interface UGTopicsTableViewController : UITableViewController {
 
