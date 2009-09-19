@@ -13,6 +13,7 @@
 @implementation ruegenhoerenAppDelegate
 
 @synthesize window;
+@synthesize tabBarController;
 @synthesize navigationController;
 @synthesize currentAudioPlayerViewController;
 
@@ -22,6 +23,7 @@
 	// Configure and show the window
 	[window addSubview:[navigationController view]];
 	[window makeKeyAndVisible];
+    [navigationController pushViewController: tabBarController animated: NO];
 }
 
 
@@ -31,7 +33,8 @@
 
 
 - (void)dealloc {
-	[navigationController release];
+    [navigationController release];
+	[tabBarController release];
 	[window release];
 	[super dealloc];
 }

@@ -58,12 +58,16 @@
 	while (currentLocation = [audioLocationsEnumerator nextObject]) {
 		[(MKMapView *)[self view] addAnnotation: currentLocation];
 	}
+    
+    [[[self tabBarController] navigationItem] setTitle: @"Map"];
 }
-
+/*
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
-    [[self navigationController] setNavigationBarHidden: YES animated: YES];
+    //[[self navigationController] setNavigationBarHidden: YES animated: YES];
+    
 }
+*/
 
 /*
 // Override to allow orientations other than the default portrait orientation.
