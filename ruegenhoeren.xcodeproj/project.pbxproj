@@ -34,6 +34,7 @@
 		35E9E24C1065002E0022BA69 /* UGTopicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */; };
 		35E9E2E2106512290022BA69 /* UGAudioLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */; };
 		35E9E37310654A460022BA69 /* UGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E37210654A460022BA69 /* UGTabBarController.m */; };
+		35E9E57510658E840022BA69 /* UGAudioLocationsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E9E57410658E840022BA69 /* UGAudioLocationsTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationsTableViewController.m; sourceTree = "<group>"; };
 		35E9E37110654A460022BA69 /* UGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGTabBarController.h; sourceTree = "<group>"; };
 		35E9E37210654A460022BA69 /* UGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGTabBarController.m; sourceTree = "<group>"; };
+		35E9E57410658E840022BA69 /* UGAudioLocationsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationsTableViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */,
+				35E9E57410658E840022BA69 /* UGAudioLocationsTableViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				35757600105D3B5D0058EB63 /* bluetrack.png in Resources */,
 				3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */,
 				35E9E1D71064FB0C0022BA69 /* TapkuLibrary.bundle in Resources */,
+				35E9E57510658E840022BA69 /* UGAudioLocationsTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 #import "ruegenhoerenAppDelegate.h"
+#import "UGAudioLocationDatabase.h"
 #import "UGAudioLocation.h"
 #import "UGAudioLocationDetailViewController.h"
 
-@interface UGAudioLocationsTableViewController : UITableViewController {
+@interface UGAudioLocationsTableViewController : UITableViewController <UISearchBarDelegate> {
 
     NSArray *audioLocations;
+    NSMutableArray *filteredAudioLocations;
+    
 }
 
 

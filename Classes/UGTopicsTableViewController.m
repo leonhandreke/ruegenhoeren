@@ -108,9 +108,9 @@
 	// [anotherViewController release];
     
     NSString *topicSelected = [[[tableView cellForRowAtIndexPath: indexPath] textLabel] text];
-    UGAudioLocationsTableViewController *audioLocationsTableViewController = [[UGAudioLocationsTableViewController alloc] init];
+    UGAudioLocationsTableViewController *audioLocationsTableViewController =[[UGAudioLocationsTableViewController alloc] initWithNibName:@"UGAudioLocationsTableViewController" 
+                                                                                                                                  bundle: [NSBundle mainBundle]]; 
     [audioLocationsTableViewController setAudioLocations: [[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocationsForTopic: topicSelected]];
-    [[audioLocationsTableViewController tableView] reloadData];
     
     [[self navigationController] pushViewController: audioLocationsTableViewController animated: YES];
     

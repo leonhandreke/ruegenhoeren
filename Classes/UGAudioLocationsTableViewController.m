@@ -31,11 +31,19 @@
 }
 */
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    if (audioLocations == nil) {
+        [self setAudioLocations: [[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations]];
+        
+    }
+    
+    if (filteredAudioLocations == nil) {
+        filteredAudioLocations = [[NSMutableArray alloc] initWithArray: audioLocations];
+    }
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -82,7 +90,8 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [audioLocations count];
+    NSLog(@"Avast!");
+    return [filteredAudioLocations count];
 }
 
 
@@ -96,7 +105,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    [[cell textLabel] setText: [[audioLocations objectAtIndex: indexPath.row] title]];
+    [[cell textLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] title]];
 	[cell setAccessoryType: UITableViewCellAccessoryDisclosureIndicator];
 	
     return cell;
@@ -108,10 +117,10 @@
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];
 	// [anotherViewController release];
-    UGAudioLocation * audioLocation = (UGAudioLocation *)[audioLocations objectAtIndex: indexPath.row];
+    UGAudioLocation * selectedAudioLocation = (UGAudioLocation *)[filteredAudioLocations objectAtIndex: indexPath.row];
 	
     UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: @"UGAudioLocationDetailViewController" bundle: [NSBundle mainBundle]];
-    [detailViewController setAudioLocation: audioLocation];
+    [detailViewController setAudioLocation: selectedAudioLocation];
     [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
 }
 
@@ -155,6 +164,53 @@
 }
 */
 
+#pragma mark UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [filteredAudioLocations release];
+    
+    if ([searchText isEqualToString: @""]) {
+        filteredAudioLocations = [[NSMutableArray alloc] initWithArray: audioLocations];
+        return;
+    }
+    
+    filteredAudioLocations = [[NSMutableArray alloc] init];
+    
+    NSEnumerator *audioLocationsEnumerator = [audioLocations objectEnumerator];
+    UGAudioLocation *currentAudioLocation;
+    
+    while (currentAudioLocation = [audioLocationsEnumerator nextObject]) {
+        NSRange titleRange = [[currentAudioLocation title] rangeOfString: searchText options: (NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)];
+        NSRange descriptionRange = [[currentAudioLocation description] rangeOfString: searchText options: (NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)];
+        
+        if (titleRange.location != NSNotFound || descriptionRange.location != NSNotFound)
+        {
+            [filteredAudioLocations addObject:currentAudioLocation];
+        }
+    }
+
+    [[self tableView] reloadData];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {  
+    [searchBar setShowsCancelButton: YES animated: YES];
+    return YES;
+}  
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {  
+    [searchBar setShowsCancelButton: NO animated: YES];
+    return YES;
+}  
 
 - (void)dealloc {
     [super dealloc];
