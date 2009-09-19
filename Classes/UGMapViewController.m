@@ -59,15 +59,15 @@
 		[(MKMapView *)[self view] addAnnotation: currentLocation];
 	}
     
-    [[[self tabBarController] navigationItem] setTitle: @"Map"];
+
 }
-/*
+
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
-    //[[self navigationController] setNavigationBarHidden: YES animated: YES];
-    
+    [[[self tabBarController] navigationController] setNavigationBarHidden: YES animated: YES];
+    //[[[self tabBarController] navigationItem] setTitle: @"Map"];
 }
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

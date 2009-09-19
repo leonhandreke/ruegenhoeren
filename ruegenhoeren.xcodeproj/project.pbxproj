@@ -31,6 +31,7 @@
 		35E9E1D11064FAA80022BA69 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E1D01064FA670022BA69 /* libTapkuLibrary.a */; };
 		35E9E1D71064FB0C0022BA69 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 35E9E1D61064FB0C0022BA69 /* TapkuLibrary.bundle */; };
 		35E9E20D1064FB340022BA69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E20C1064FB340022BA69 /* QuartzCore.framework */; };
+		35E9E24C1065002E0022BA69 /* UGTopicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../tapkulibrary/TapkuLibrary/TapkuLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
 		35E9E1D61064FB0C0022BA69 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../tapkulibrary/TapkuLibrary/TapkuLibrary.bundle; sourceTree = SOURCE_ROOT; };
 		35E9E20C1064FB340022BA69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../Volumes/Leopard/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = SOURCE_ROOT; };
+		35E9E24A1065002E0022BA69 /* UGTopicsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGTopicsTableViewController.h; sourceTree = "<group>"; };
+		35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGTopicsTableViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +123,8 @@
 				358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */,
 				35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */,
 				35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */,
+				35E9E24A1065002E0022BA69 /* UGTopicsTableViewController.h */,
+				35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				35C93643104B390600616A86 /* UGAudioLocationDatabase.m in Sources */,
 				358997A8104D95EA0095A26A /* UGAudioLocationDetailViewController.m in Sources */,
 				35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */,
+				35E9E24C1065002E0022BA69 /* UGTopicsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,11 +339,11 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = ../tapkulibrary/TabkuLibrary;
+				HEADER_SEARCH_PATHS = "../tapkulibrary/**";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};

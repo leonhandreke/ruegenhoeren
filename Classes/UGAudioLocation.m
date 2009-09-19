@@ -11,12 +11,13 @@
 
 @implementation UGAudioLocation
 
-@synthesize title, description, narrator, coordinate, imageFileLocation, audioFileName;
+@synthesize title, description, narrator, topic, coordinate, imageFileLocation, audioFileName;
 
 - (void) dealloc {
     [title release];
     [description release];
     [narrator release];
+    [topic release];
     [imageFileLocation release];
     [audioFileName release];
     [super dealloc];

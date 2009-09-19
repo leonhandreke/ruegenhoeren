@@ -15,7 +15,7 @@
     NSString *title;
     NSString *description;
     NSString *narrator;
-
+    NSString *topic;
     
     CLLocationCoordinate2D coordinate;
     
@@ -29,13 +29,14 @@
 
 - (NSURL *) audioFileLocation;
 
-@property (retain) NSString *title;
-@property (retain) NSString *description;
-@property (retain) NSString *narrator;
+@property (copy) NSString *title;
+@property (copy) NSString *description;
+@property (copy) NSString *narrator;
+@property (copy) NSString *topic;
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
-@property (retain) NSURL *imageFileLocation;
-@property (retain) NSString *audioFileName;
+@property (copy) NSURL *imageFileLocation;
+@property (copy) NSString *audioFileName;
 
 @end

@@ -13,11 +13,15 @@
 @interface UGAudioLocationDatabase : NSObject {
 
     NSMutableArray *audioLocations;
+    
+    NSMutableArray *topics;
 }
 
 + (UGAudioLocationDatabase *) sharedAudioLocationDatabase;
 
 - (void) addAudioLocation: (UGAudioLocation *) audioLocation;
+
+- (NSArray *) topics;
 
 @property (assign) NSMutableArray *audioLocations;
 
