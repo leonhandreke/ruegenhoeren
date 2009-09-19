@@ -44,7 +44,8 @@
     tabBarBounds.size.height = 100;
     [tabBar setBounds: tabBarBounds];
     
-    [self performSelectorInBackground:@selector(updateDurationScrubber) withObject:nil];
+    //updateDurationTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(updateDurationScrubber) userInfo: nil repeats: YES];
+    
     
 	// VolumeViewHolder is the frame to hold the slider.  We'll resize the slider to be the size of the frame.
 	volumeView = [[[MPVolumeView alloc] initWithFrame:volumeViewHolder.bounds] autorelease];
@@ -71,6 +72,8 @@
 }
 
 - (void) viewWillAppear: (BOOL) animated {
+    updateDurationTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(updateDurationScrubber) userInfo: nil repeats: YES];
+    
     [[self navigationController] setNavigationBarHidden: NO animated: YES];
     [[self navigationItem] setTitle: @"Audio Location"];
     [[self navigationItem] setHidesBackButton: NO animated: NO];
@@ -79,31 +82,28 @@
 
 - (void) viewDidAppear: (BOOL) animated {
     [super viewDidAppear: animated];
-    
     [audioPlayer play];
+}
+
+- (void) viewDidDisappear: (BOOL) animated {
+    [updateDurationTimer invalidate];
+    [super viewDidDisappear: animated];
 }
 
 - (void) updateDurationScrubber {
     
-    NSAutoreleasePool *apool = [[NSAutoreleasePool alloc] init];
+    NSNumber *timeDone = [NSNumber numberWithDouble: [audioPlayer currentTime]];
+    NSNumber *timeRemaining = [NSNumber numberWithDouble: [audioPlayer duration] - [audioPlayer currentTime]];
     
-    while(TRUE) {
-        
-        NSNumber *timeDone = [NSNumber numberWithDouble: [audioPlayer currentTime]];
-        NSNumber *timeRemaining = [NSNumber numberWithDouble: [audioPlayer duration] - [audioPlayer currentTime]];
-        
-        NSString *doneLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeDone intValue] / 60, [timeDone intValue] % 60];
-        NSString *remainingLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeRemaining intValue] / 60, [timeRemaining intValue] % 60];
-        
-        NSNumber *sliderValue =  [NSNumber numberWithDouble: [timeDone doubleValue] / [[NSNumber numberWithDouble: [audioPlayer duration]] doubleValue]];
-
-        [self performSelectorOnMainThread: @selector(setDoneTimeLabelText:) withObject: doneLabelValue waitUntilDone: YES];
-        [self performSelectorOnMainThread: @selector(setRemainingTimeLabelText:) withObject: remainingLabelValue waitUntilDone: YES];
-        [self performSelectorOnMainThread: @selector(setSliderValue:) withObject: sliderValue waitUntilDone: YES];
-        //NSLog(@"%f", [scrubberSlider value]);
-        sleep(1);
-    }
-    [apool release];
+    NSString *doneLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeDone intValue] / 60, [timeDone intValue] % 60];
+    NSString *remainingLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeRemaining intValue] / 60, [timeRemaining intValue] % 60];
+    
+    NSNumber *sliderValue =  [NSNumber numberWithDouble: [timeDone doubleValue] / [[NSNumber numberWithDouble: [audioPlayer duration]] doubleValue]];
+    
+    [self performSelectorOnMainThread: @selector(setDoneTimeLabelText:) withObject: doneLabelValue waitUntilDone: YES];
+    [self performSelectorOnMainThread: @selector(setRemainingTimeLabelText:) withObject: remainingLabelValue waitUntilDone: YES];
+    [self performSelectorOnMainThread: @selector(setSliderValue:) withObject: sliderValue waitUntilDone: YES];
+    //NSLog(@"%f", [scrubberSlider value]);
 }
 
 /*
@@ -141,7 +141,8 @@
 
 
 - (void)dealloc {
-	[audioPlayer dealloc];
+    
+	[audioPlayer release];
     [super dealloc];
 }
 

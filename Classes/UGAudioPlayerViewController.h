@@ -16,6 +16,8 @@
     
     AVAudioPlayer *audioPlayer;
     
+    NSTimer *updateDurationTimer;
+    
     IBOutlet UISlider *scrubberSlider;
     IBOutlet UILabel *doneTimeLabel;
     IBOutlet UILabel *remainingTimeLabel;

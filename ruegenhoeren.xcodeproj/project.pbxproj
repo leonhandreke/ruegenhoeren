@@ -41,14 +41,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libTapkuLibrary.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = TapkuLibrary;
 		};
 		35E9E1D31064FAC30022BA69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* TapkuLibrary */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = TapkuLibrary;
 		};
 /* End PBXContainerItemProxy section */
