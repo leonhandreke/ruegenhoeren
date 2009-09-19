@@ -9,6 +9,7 @@
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="63"/>
+			<integer value="75"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -45,12 +46,12 @@
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 			</object>
-			<object class="IBUINavigationController" id="172003329">
+			<object class="IBUINavigationController" id="535156489">
 				<object class="IBUISimulatedNavigationBarMetrics" key="IBUISimulatedTopBarMetrics">
 					<bool key="IBUIPrompted">NO</bool>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUINavigationBar" key="IBUINavigationBar" id="577611556">
+				<object class="IBUINavigationBar" key="IBUINavigationBar" id="613276133">
 					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<string key="NSFrame">{{0, -44}, {0, 44}}</string>
@@ -68,27 +69,36 @@
 					<bool key="IBUIPrompted">NO</bool>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="80281322">
-					<string key="IBUITitle">Map</string>
-					<object class="IBMKMapView" key="IBUIView" id="588497966">
-						<nil key="NSNextResponder"/>
-						<int key="NSvFlags">274</int>
-						<string key="NSFrameSize">{320, 411}</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">2</int>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<bool key="IBMKShowsUserLocation">YES</bool>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="267054620">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="238972312">
+						<string key="IBUITitle">Toopics</string>
+						<reference key="IBUITabBar"/>
 					</object>
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="1047563147">
-						<string key="IBUITitle">Item</string>
-					</object>
+					<reference key="IBUIToolbarItems" ref="0"/>
 					<reference key="IBUIParentViewController" ref="492308130"/>
-					<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<reference ref="80281322"/>
+					<reference ref="267054620"/>
+					<object class="IBUIViewController" id="378772628">
+						<string key="IBUITitle">Map</string>
+						<object class="IBMKMapView" key="IBUIView" id="616863410">
+							<nil key="NSNextResponder"/>
+							<int key="NSvFlags">274</int>
+							<string key="NSFrameSize">{320, 411}</string>
+							<bool key="IBUIOpaque">NO</bool>
+							<bool key="IBUIClipsSubviews">YES</bool>
+							<int key="IBUIContentMode">2</int>
+							<bool key="IBUIMultipleTouchEnabled">YES</bool>
+							<bool key="IBMKShowsUserLocation">YES</bool>
+						</object>
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="374936753">
+							<string key="IBUITitle">Map</string>
+							<reference key="IBUITabBar"/>
+						</object>
+						<reference key="IBUIParentViewController" ref="492308130"/>
+						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
+					</object>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="817819466">
 					<nil key="NSNextResponder"/>
@@ -132,8 +142,8 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="588497966"/>
-						<reference key="destination" ref="80281322"/>
+						<reference key="source" ref="616863410"/>
+						<reference key="destination" ref="378772628"/>
 					</object>
 					<int key="connectionID">70</int>
 				</object>
@@ -141,7 +151,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">navigationController</string>
 						<reference key="source" ref="664661524"/>
-						<reference key="destination" ref="172003329"/>
+						<reference key="destination" ref="535156489"/>
 					</object>
 					<int key="connectionID">72</int>
 				</object>
@@ -185,7 +195,8 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="817819466"/>
-							<reference ref="80281322"/>
+							<reference ref="378772628"/>
+							<reference ref="267054620"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -196,37 +207,51 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">63</int>
-						<reference key="object" ref="172003329"/>
+						<reference key="object" ref="535156489"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="577611556"/>
+							<reference ref="613276133"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">65</int>
-						<reference key="object" ref="577611556"/>
-						<reference key="parent" ref="172003329"/>
+						<reference key="object" ref="613276133"/>
+						<reference key="parent" ref="535156489"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">67</int>
-						<reference key="object" ref="80281322"/>
+						<reference key="object" ref="378772628"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1047563147"/>
-							<reference ref="588497966"/>
+							<reference ref="374936753"/>
+							<reference ref="616863410"/>
 						</object>
 						<reference key="parent" ref="492308130"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">68</int>
-						<reference key="object" ref="1047563147"/>
-						<reference key="parent" ref="80281322"/>
+						<reference key="object" ref="374936753"/>
+						<reference key="parent" ref="378772628"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">69</int>
-						<reference key="object" ref="588497966"/>
-						<reference key="parent" ref="80281322"/>
+						<reference key="object" ref="616863410"/>
+						<reference key="parent" ref="378772628"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">76</int>
+						<reference key="object" ref="267054620"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="238972312"/>
+						</object>
+						<reference key="parent" ref="492308130"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">75</int>
+						<reference key="object" ref="238972312"/>
+						<reference key="parent" ref="267054620"/>
 					</object>
 				</object>
 			</object>
@@ -250,6 +275,7 @@
 					<string>67.CustomClassName</string>
 					<string>67.IBPluginDependency</string>
 					<string>69.IBPluginDependency</string>
+					<string>75.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -275,6 +301,7 @@
 					<string>UGMapViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -293,7 +320,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">74</int>
+			<int key="maxID">76</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

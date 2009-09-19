@@ -28,7 +28,27 @@
 		35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */; };
 		35C93640104B37CB00616A86 /* UGAudioLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9363F104B37CB00616A86 /* UGAudioLocation.m */; };
 		35C93643104B390600616A86 /* UGAudioLocationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C93642104B390600616A86 /* UGAudioLocationDatabase.m */; };
+		35E9E1D11064FAA80022BA69 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E1D01064FA670022BA69 /* libTapkuLibrary.a */; };
+		35E9E1D71064FB0C0022BA69 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 35E9E1D61064FB0C0022BA69 /* TapkuLibrary.bundle */; };
+		35E9E20D1064FB340022BA69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E20C1064FB340022BA69 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35E9E1CF1064FA670022BA69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libTapkuLibrary.a */;
+			remoteInfo = TapkuLibrary;
+		};
+		35E9E1D31064FAC30022BA69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* TapkuLibrary */;
+			remoteInfo = TapkuLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +80,9 @@
 		35C9363F104B37CB00616A86 /* UGAudioLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocation.m; sourceTree = "<group>"; };
 		35C93641104B390600616A86 /* UGAudioLocationDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDatabase.h; sourceTree = "<group>"; };
 		35C93642104B390600616A86 /* UGAudioLocationDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationDatabase.m; sourceTree = "<group>"; };
+		35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../tapkulibrary/TapkuLibrary/TapkuLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
+		35E9E1D61064FB0C0022BA69 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../tapkulibrary/TapkuLibrary/TapkuLibrary.bundle; sourceTree = SOURCE_ROOT; };
+		35E9E20C1064FB340022BA69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = ../../../../Volumes/Leopard/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.2.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +97,8 @@
 				353DF02F104B264E0078BA8A /* MapKit.framework in Frameworks */,
 				35798C9F1053C87500B91200 /* MediaPlayer.framework in Frameworks */,
 				35757518105AB7380058EB63 /* AVFoundation.framework in Frameworks */,
+				35E9E1D11064FAA80022BA69 /* libTapkuLibrary.a in Frameworks */,
+				35E9E20D1064FB340022BA69 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +140,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -131,6 +157,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35E9E1D61064FB0C0022BA69 /* TapkuLibrary.bundle */,
 				35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */,
 				357575FF105D3B5D0058EB63 /* bluetrack.png */,
 				3575751F105ABA300058EB63 /* rightarrow.png */,
@@ -147,6 +174,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35E9E20C1064FB340022BA69 /* QuartzCore.framework */,
 				35757517105AB7380058EB63 /* AVFoundation.framework */,
 				35798C9E1053C87500B91200 /* MediaPlayer.framework */,
 				353DF02E104B264E0078BA8A /* MapKit.framework */,
@@ -155,6 +183,14 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35E9E1C91064FA670022BA69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35E9E1D01064FA670022BA69 /* libTapkuLibrary.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +207,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				35E9E1D41064FAC30022BA69 /* PBXTargetDependency */,
 			);
 			name = ruegenhoeren;
 			productName = ruegenhoeren;
@@ -194,12 +231,28 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 35E9E1C91064FA670022BA69 /* Products */;
+					ProjectRef = 35E9E1C81064FA670022BA69 /* TapkuLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* ruegenhoeren */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		35E9E1D01064FA670022BA69 /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = 35E9E1CF1064FA670022BA69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -214,6 +267,7 @@
 				35757524105ABA300058EB63 /* whitetrack.png in Resources */,
 				35757600105D3B5D0058EB63 /* bluetrack.png in Resources */,
 				3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */,
+				35E9E1D71064FB0C0022BA69 /* TapkuLibrary.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +289,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35E9E1D41064FAC30022BA69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = 35E9E1D31064FAC30022BA69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -271,7 +333,9 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../tapkulibrary/TabkuLibrary;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos2.2.1;
 			};
