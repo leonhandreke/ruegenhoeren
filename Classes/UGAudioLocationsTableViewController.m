@@ -90,7 +90,6 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"Avast!");
     return [filteredAudioLocations count];
 }
 
@@ -102,10 +101,12 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     [[cell textLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] title]];
+    [[cell detailTextLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] topic]];
+    
 	[cell setAccessoryType: UITableViewCellAccessoryDisclosureIndicator];
 	
     return cell;
