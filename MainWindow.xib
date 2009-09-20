@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">437.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="88"/>
+			<integer value="91"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -66,11 +66,10 @@
 					<bool key="IBUIPrompted">NO</bool>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="41389041">
-					<string key="IBUITitle">Search</string>
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="882411076">
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="367230831">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="440921144">
+						<string key="IBUITitle">Umgebung</string>
 						<reference key="IBUITabBar"/>
-						<int key="IBUISystemItemIdentifier">8</int>
 					</object>
 					<reference key="IBUIToolbarItems" ref="0"/>
 					<reference key="IBUIParentViewController" ref="492308130"/>
@@ -122,6 +121,7 @@
 							</object>
 						</object>
 					</object>
+					<reference ref="367230831"/>
 					<object class="IBUIViewController" id="197177814">
 						<string key="IBUITitle">Map</string>
 						<object class="IBMKMapView" key="IBUIView" id="1023452160">
@@ -141,7 +141,16 @@
 						<reference key="IBUIParentViewController" ref="492308130"/>
 						<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 					</object>
-					<reference ref="41389041"/>
+					<object class="IBUIViewController" id="41389041">
+						<string key="IBUITitle">Search</string>
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="882411076">
+							<reference key="IBUITabBar"/>
+							<int key="IBUISystemItemIdentifier">8</int>
+						</object>
+						<reference key="IBUIToolbarItems" ref="0"/>
+						<reference key="IBUIParentViewController" ref="492308130"/>
+						<string key="IBUINibName">UGAudioLocationsTableViewController</string>
+					</object>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="817819466">
 					<nil key="NSNextResponder"/>
@@ -257,6 +266,7 @@
 							<reference ref="197177814"/>
 							<reference ref="572136735"/>
 							<reference ref="41389041"/>
+							<reference ref="367230831"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -354,6 +364,20 @@
 						<reference key="object" ref="882411076"/>
 						<reference key="parent" ref="41389041"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">91</int>
+						<reference key="object" ref="367230831"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="440921144"/>
+						</object>
+						<reference key="parent" ref="492308130"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">90</int>
+						<reference key="object" ref="440921144"/>
+						<reference key="parent" ref="367230831"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -384,6 +408,8 @@
 					<string>84.IBPluginDependency</string>
 					<string>88.IBPluginDependency</string>
 					<string>89.CustomClassName</string>
+					<string>90.IBPluginDependency</string>
+					<string>91.CustomClassName</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -417,6 +443,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UGAudioLocationsTableViewController</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>UGAudioLocationsDistanceTableViewController</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -435,11 +463,19 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">89</int>
+			<int key="maxID">91</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">UGAudioLocationsDistanceTableViewController</string>
+					<string key="superclassName">UGAudioLocationsTableViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/UGAudioLocationsDistanceTableViewController.h</string>
+					</object>
+				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">UGAudioLocationsTableViewController</string>
 					<string key="superclassName">UITableViewController</string>

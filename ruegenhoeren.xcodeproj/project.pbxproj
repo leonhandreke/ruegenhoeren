@@ -35,6 +35,8 @@
 		35E9E2E2106512290022BA69 /* UGAudioLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */; };
 		35E9E37310654A460022BA69 /* UGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E37210654A460022BA69 /* UGTabBarController.m */; };
 		35E9E57510658E840022BA69 /* UGAudioLocationsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E9E57410658E840022BA69 /* UGAudioLocationsTableViewController.xib */; };
+		35E9E61F10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */; };
+		35E9E62610662E600022BA69 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E62510662E600022BA69 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,9 @@
 		35E9E37110654A460022BA69 /* UGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGTabBarController.h; sourceTree = "<group>"; };
 		35E9E37210654A460022BA69 /* UGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGTabBarController.m; sourceTree = "<group>"; };
 		35E9E57410658E840022BA69 /* UGAudioLocationsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationsTableViewController.xib; sourceTree = "<group>"; };
+		35E9E61D10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationsDistanceTableViewController.h; sourceTree = "<group>"; };
+		35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationsDistanceTableViewController.m; sourceTree = "<group>"; };
+		35E9E62510662E600022BA69 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = ../../../../Volumes/Leopard/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +115,7 @@
 				35757518105AB7380058EB63 /* AVFoundation.framework in Frameworks */,
 				35E9E1D11064FAA80022BA69 /* libTapkuLibrary.a in Frameworks */,
 				35E9E20D1064FB340022BA69 /* QuartzCore.framework in Frameworks */,
+				35E9E62610662E600022BA69 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +143,8 @@
 				35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */,
 				35E9E37110654A460022BA69 /* UGTabBarController.h */,
 				35E9E37210654A460022BA69 /* UGTabBarController.m */,
+				35E9E61D10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.h */,
+				35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35E9E62510662E600022BA69 /* CoreLocation.framework */,
 				35E9E20C1064FB340022BA69 /* QuartzCore.framework */,
 				35757517105AB7380058EB63 /* AVFoundation.framework */,
 				35798C9E1053C87500B91200 /* MediaPlayer.framework */,
@@ -307,6 +316,7 @@
 				35E9E24C1065002E0022BA69 /* UGTopicsTableViewController.m in Sources */,
 				35E9E2E2106512290022BA69 /* UGAudioLocationsTableViewController.m in Sources */,
 				35E9E37310654A460022BA69 /* UGTabBarController.m in Sources */,
+				35E9E61F10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
