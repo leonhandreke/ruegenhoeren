@@ -32,6 +32,12 @@
     [locationManager setDesiredAccuracy: kCLLocationAccuracyKilometer];
     [locationManager setDelegate: self];
     
+    loadingHUDView = [[LoadingHUDView alloc] init];
+    [loadingHUDView setCenter: [[[self tabBarController] view] center]];
+    [[[self tabBarController] view] addSubview: loadingHUDView];
+    [loadingHUDView setTitle: @"Bestimme Standpunkt"];
+    [loadingHUDView startAnimating];
+    
 }
 
 
@@ -178,12 +184,14 @@
            fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"Location: %@", [newLocation description]);
+    [loadingHUDView stopAnimating];
     [[self tableView] reloadData];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
 {
+    [loadingHUDView stopAnimating];
 	DebugLog(@"CLLocationManager error: %@", [error description]);
 }
 

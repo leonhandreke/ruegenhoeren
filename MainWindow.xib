@@ -66,8 +66,8 @@
 					<bool key="IBUIPrompted">NO</bool>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="367230831">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="440921144">
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="556370313">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="352770616">
 						<string key="IBUITitle">Umgebung</string>
 						<reference key="IBUITabBar"/>
 					</object>
@@ -114,14 +114,14 @@
 									<float key="IBUISectionFooterHeight">2.200000e+01</float>
 								</object>
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="442260823">
-									<string key="IBUITitle">Topics</string>
+									<string key="IBUITitle">Themen</string>
 								</object>
 								<reference key="IBUIParentViewController" ref="572136735"/>
 								<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 							</object>
 						</object>
 					</object>
-					<reference ref="367230831"/>
+					<reference ref="556370313"/>
 					<object class="IBUIViewController" id="197177814">
 						<string key="IBUITitle">Map</string>
 						<object class="IBMKMapView" key="IBUIView" id="1023452160">
@@ -266,7 +266,7 @@
 							<reference ref="197177814"/>
 							<reference ref="572136735"/>
 							<reference ref="41389041"/>
-							<reference ref="367230831"/>
+							<reference ref="556370313"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -366,17 +366,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">91</int>
-						<reference key="object" ref="367230831"/>
+						<reference key="object" ref="556370313"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="440921144"/>
+							<reference ref="352770616"/>
 						</object>
 						<reference key="parent" ref="492308130"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">90</int>
-						<reference key="object" ref="440921144"/>
-						<reference key="parent" ref="367230831"/>
+						<reference key="object" ref="352770616"/>
+						<reference key="parent" ref="556370313"/>
 					</object>
 				</object>
 			</object>
@@ -463,7 +463,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">91</int>
+			<int key="maxID">92</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#import "TapkuLibrary/TapkuLibrary.h"
+
 #import "UGAudioLocationsTableViewController.h"
 
 @interface UGAudioLocationsDistanceTableViewController : UGAudioLocationsTableViewController <CLLocationManagerDelegate> {
 	CLLocationManager *locationManager;
+    LoadingHUDView *loadingHUDView;
 }
 
 @property (nonatomic, retain) CLLocationManager *locationManager;  
