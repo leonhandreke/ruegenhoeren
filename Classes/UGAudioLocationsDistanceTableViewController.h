@@ -11,6 +11,7 @@
 
 #import "TapkuLibrary/TapkuLibrary.h"
 
+#import "UGAudioLocationDatabase.h"
 #import "UGAudioLocationsTableViewController.h"
 
 @interface UGAudioLocationsDistanceTableViewController : UGAudioLocationsTableViewController <CLLocationManagerDelegate> {

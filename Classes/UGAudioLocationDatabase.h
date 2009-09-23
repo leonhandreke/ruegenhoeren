@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "UGAudioLocation.h"
 
@@ -15,6 +16,9 @@
     NSMutableArray *audioLocations;
     
     NSMutableArray *topics;
+    
+    // For determinig the distance from the user
+    CLLocation * currentUserLocation;
 }
 
 + (UGAudioLocationDatabase *) sharedAudioLocationDatabase;
@@ -23,6 +27,7 @@
 
 - (NSArray *) topics;
 - (NSArray *) audioLocationsForTopic: (NSString *) topic;
++ (NSArray *) sortArray: (NSArray *) array byDistanceFrom: (CLLocation *) newLocation;
 
 @property (assign) NSMutableArray *audioLocations;
 

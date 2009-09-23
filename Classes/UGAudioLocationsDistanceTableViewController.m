@@ -8,7 +8,6 @@
 
 #import "UGAudioLocationsDistanceTableViewController.h"
 
-
 @implementation UGAudioLocationsDistanceTableViewController
 
 
@@ -177,6 +176,7 @@
 }
 */
 
+
 #pragma mark CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -184,9 +184,15 @@
            fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"Location: %@", [newLocation description]);
+    
+    [self setAudioLocations: [[UGAudioLocationDatabase sortArray: audioLocations byDistanceFrom: newLocation] retain]];
+    [filteredAudioLocations release];
+    filteredAudioLocations = [[NSMutableArray alloc] initWithArray: audioLocations];
+    
     [loadingHUDView stopAnimating];
     [[self tableView] reloadData];
 }
+
 
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
@@ -202,5 +208,5 @@
 }
 
 
-@end
 
+@end
