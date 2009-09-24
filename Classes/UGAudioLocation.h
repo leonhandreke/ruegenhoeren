@@ -13,6 +13,7 @@
 @interface UGAudioLocation : NSObject <MKAnnotation> {
 
     NSString *title;
+    NSString *subtitle;
     NSString *description;
     NSString *narrator;
     NSString *topic;
@@ -30,6 +31,7 @@
 - (NSURL *) audioFileLocation;
 
 @property (copy) NSString *title;
+@property (copy) NSString *subtitle;
 @property (copy) NSString *description;
 @property (copy) NSString *narrator;
 @property (copy) NSString *topic;

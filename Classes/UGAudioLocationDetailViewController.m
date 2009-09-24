@@ -26,44 +26,21 @@
 
  - (void)viewDidLoad {
      [super viewDidLoad];
-
      
-     //[scrollView setNeedsLayout];
+     TKOverviewHeaderView *overviewHeaderView = [[TKOverviewHeaderView alloc] init];
+     [[overviewHeaderView title] setText: [audioLocation title]];
+     [[overviewHeaderView subtitle] setText: [audioLocation subtitle]];
+     [[overviewHeaderView indicator] setText: [audioLocation topic]];
+     [[overviewHeaderView indicator] setColor: TKOverviewIndicatorViewColorGreen];
      
-     /*UIFont *descriptionFont = [UIFont fontWithName: @"Helvetica" size: 17];
-     
-     CGSize descriptionSize = [[audioLocation description] sizeWithFont: descriptionFont constrainedToSize: CGSizeMake(280, CGFLOAT_MAX)];
-     NSLog(@"%f", descriptionSize.height);
-     
-     // 266 is the base height for the content view, without the description
-     
-     // Resize the content view to fit the text view
-     // Do not ask me why bound /2, it works
-     CGRect scrollViewContentViewBounds = CGRectMake([scrollViewContentView bounds].origin.x, [scrollViewContentView bounds].origin.y,
-                                                    [scrollViewContentView bounds].size.width, 266 + descriptionSize.height);
-     [scrollViewContentView setBounds: scrollViewContentViewBounds];
-     NSLog(NSStringFromCGRect(scrollViewContentView.bounds));
-     
-     
-     CGRect descriptionTextViewBounds = CGRectMake(20, 49,
-                                                  [descriptionTextView bounds].size.width, descriptionSize.height+50);
-     [descriptionTextView setBounds: descriptionTextViewBounds];*/
-     
-     
-     [descriptionTextView setText: [audioLocation description]];
-     [titleLabel setText: [audioLocation title]];
-     
-     [scrollView setContentSize: scrollViewContentView.bounds.size];
-     [scrollView addSubview: scrollViewContentView];
-     
-     [self performSelectorInBackground: @selector(loadAudioLocationImage) withObject: nil];
+     [headerView addSubview: overviewHeaderView];
  }
 
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden: NO animated: YES];
-    [[self navigationItem] setTitle: @"Audio Location"];
+    [[self navigationItem] setTitle: [audioLocation title]];
     [[self navigationItem] setHidesBackButton: NO animated: NO];
 }
 
@@ -104,13 +81,13 @@
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
-
+/*
 - (void) loadAudioLocationImage {
     NSAutoreleasePool *apool = [[NSAutoreleasePool alloc] init];
     UIImage *audioLocationImage = [UIImage imageWithData: [NSData dataWithContentsOfURL: [audioLocation imageFileLocation]]];
     [imageView setImage: audioLocationImage];
     [apool release];
-}
+}*/
 
 - (IBAction) playAudioLocation: (id) sender {
 	
@@ -122,6 +99,30 @@
     [[self navigationController] pushViewController: audioPlayerViewController animated: YES];
     [(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentAudioPlayerViewController: audioPlayerViewController];
 }
+
+#pragma mark UIWebViewDelegate
+
+/*
+// Disable zoom
+-(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {	
+	NSSet *touches = [event allTouches];
+	BOOL forwardToSuper = YES;
+	for (UITouch *touch in touches) {
+		if ([touch tapCount] >= 2) {
+			// prevent this 
+			forwardToSuper = NO;
+		}		
+	}
+	if (forwardToSuper){
+		//return self.superview;
+		return [super hitTest:point withEvent:event];
+	}
+	else {
+		// Return the superview as the hit and prevent
+		// UIWebView receiving double or more taps
+		return self.superview;
+	}
+}*/
 
 - (void)dealloc {
     [super dealloc];

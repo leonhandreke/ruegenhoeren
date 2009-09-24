@@ -11,10 +11,11 @@
 
 @implementation UGAudioLocation
 
-@synthesize title, description, narrator, topic, coordinate, imageFileLocation, audioFileName;
+@synthesize title, subtitle, description, narrator, topic, coordinate, imageFileLocation, audioFileName;
 
 - (void) dealloc {
     [title release];
+    [subtitle release];
     [description release];
     [narrator release];
     [topic release];
@@ -23,9 +24,6 @@
     [super dealloc];
 }
 
--(NSString*) subtitle {
-	return [self narrator];
-}
 
 - (NSURL *) audioFileLocation {
     

@@ -29,7 +29,8 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
         audioLocations = [[NSMutableArray alloc] init];
         
         UGAudioLocation *sassnitzAudioLocation = [[UGAudioLocation alloc] init];
-        [sassnitzAudioLocation setTitle: @"Burgwall \"Sattel auf dem Hengst\" bei Sassnitz"];
+        [sassnitzAudioLocation setTitle: @"Sassnitz"];
+        [sassnitzAudioLocation setSubtitle: @"Burgwall \"Sattel auf dem Hengst\""];
         [sassnitzAudioLocation setTopic: @"Archäologie"];
 		CLLocationCoordinate2D sassnitzLocation = {54.518789875791065, 13.635921478271484};
         [sassnitzAudioLocation setCoordinate: sassnitzLocation];
@@ -40,7 +41,8 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 		[self addAudioLocation: sassnitzAudioLocation];
         
         UGAudioLocation *woorkeAudioLocation = [[UGAudioLocation alloc] init];
-        [woorkeAudioLocation setTitle: @"Hügelgräberfeld \"Woorker Berge\""];
+        [woorkeAudioLocation setTitle: @"Woorke"];
+        [woorkeAudioLocation setSubtitle: @"Hügelgräberfeld \"Woorker Berge\""];
         [woorkeAudioLocation setTopic: @"Archäologie"];
 		CLLocationCoordinate2D woorkeLocation = {54.447286617183636, 13.410186767578125};
         [woorkeAudioLocation setCoordinate: woorkeLocation];

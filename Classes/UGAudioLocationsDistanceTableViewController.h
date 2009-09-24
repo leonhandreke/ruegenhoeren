@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#import "TapkuLibrary/TapkuLibrary.h"
+#import "LoadingHUDView.h"
 
 #import "UGAudioLocationDatabase.h"
 #import "UGAudioLocationsTableViewController.h"

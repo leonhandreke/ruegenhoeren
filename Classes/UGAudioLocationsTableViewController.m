@@ -105,7 +105,7 @@
     }
     
     [[cell textLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] title]];
-    [[cell detailTextLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] topic]];
+    [[cell detailTextLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] subtitle]];
     
 	[cell setAccessoryType: UITableViewCellAccessoryDisclosureIndicator];
 	

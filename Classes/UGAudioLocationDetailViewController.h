@@ -8,24 +8,18 @@
 
 #import <UIKit/UIKit.h>
  
-//Private header 
-//#import "UINavigationButton.h"
+#import "TKOverviewHeaderView.h"
 
 #import "ruegenhoerenAppDelegate.h"
 #import "UGAudioLocation.h"
 #import "UGAudioPlayerViewController.h"
 
-@interface UGAudioLocationDetailViewController : UIViewController {
+@interface UGAudioLocationDetailViewController : UIViewController <UIWebViewDelegate> {
 
     UGAudioLocation *audioLocation;
-    IBOutlet UINavigationBar *navigationBar;
-    
-    IBOutlet UIScrollView *scrollView;
-    IBOutlet UIView *scrollViewContentView;
-    
-    IBOutlet UILabel *titleLabel;
-    IBOutlet UITextView *descriptionTextView;
-    IBOutlet UIImageView *imageView;
+
+    IBOutlet UIView *headerView;
+    IBOutlet UIWebView *webView;
     
 }
 
