@@ -18,43 +18,42 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 + (UGAudioLocationDatabase *) sharedAudioLocationDatabase
 {
 	if(mainAudioLocationDatabase == nil) {
-		mainAudioLocationDatabase = [[UGAudioLocationDatabase alloc] init];
-	}
-	return mainAudioLocationDatabase;	
+        // Try to load from the resource bundle first
+        NSDictionary *loadedAudioLocationsDictionary = [NSDictionary dictionaryWithContentsOfFile: [self defaultCacheFileLocation]];
+        if (loadedAudioLocationsDictionary != nil) {
+            mainAudioLocationDatabase = [[UGAudioLocationDatabase alloc] initWithDictionary: loadedAudioLocationsDictionary];
+        }
+        else {
+            mainAudioLocationDatabase = [[UGAudioLocationDatabase alloc] init];
+        }		
+    }
+    return mainAudioLocationDatabase;	
 }
-    
+
 
 - (UGAudioLocationDatabase*) init {
     if (self = [super init]) {
+        audioLocations = [[NSMutableArray alloc] init];        
+    }
+    return self;
+}
+
+- (UGAudioLocationDatabase*) initWithDictionary: (NSDictionary *) dictionary {
+    if (self = [super init]) {
         audioLocations = [[NSMutableArray alloc] init];
         
-        UGAudioLocation *sassnitzAudioLocation = [[UGAudioLocation alloc] init];
-        [sassnitzAudioLocation setTitle: @"Sassnitz"];
-        [sassnitzAudioLocation setSubtitle: @"Burgwall \"Sattel auf dem Hengst\""];
-        [sassnitzAudioLocation setTopic: @"Archäologie"];
-		CLLocationCoordinate2D sassnitzLocation = {54.518789875791065, 13.635921478271484};
-        [sassnitzAudioLocation setCoordinate: sassnitzLocation];
-        [sassnitzAudioLocation setDescription: @"Nordöstlich von Sassnitz befindet sich im Wald auf dem Kreidefelsen namens \"Hengst\" der \"Sattel\" - einer der wenigen bronzezeitlichen Burgwälle im Norden. Noch heute ahnt man beim Anblick der gewaltigen Böschung, wie eindrucksvoll die damalige Burganalage wohl gewesen sein muss."];
-        [sassnitzAudioLocation setImageFileLocation: [NSURL URLWithString: @"http://icanhascheezburger.files.wordpress.com/2009/08/funny-pictures-cat-came-in-mail.jpg"]];
-		[sassnitzAudioLocation setAudioFileName: @"9PM.mp3"];
+        NSEnumerator *dictionaryEnumetator = [[dictionary allValues] objectEnumerator];
+        NSDictionary *currentDictionary;
         
-		[self addAudioLocation: sassnitzAudioLocation];
+        while (currentDictionary = [dictionaryEnumetator nextObject]) {
+            [audioLocations addObject: [[UGAudioLocation alloc] initWithDictionary: currentDictionary]];
+        }
         
-        UGAudioLocation *woorkeAudioLocation = [[UGAudioLocation alloc] init];
-        [woorkeAudioLocation setTitle: @"Woorke"];
-        [woorkeAudioLocation setSubtitle: @"Hügelgräberfeld \"Woorker Berge\""];
-        [woorkeAudioLocation setTopic: @"Archäologie"];
-		CLLocationCoordinate2D woorkeLocation = {54.447286617183636, 13.410186767578125};
-        [woorkeAudioLocation setCoordinate: woorkeLocation];
-        [woorkeAudioLocation setDescription: @"Von Bergen aus gelangt man über Parchtitz, Thesenvitz und Patzig zum kleinen Dorf Woorke. Östlich des Ortes liegt eine Gruppe von 13 Hügelgräbern der Bronzezeit, die sich schon von weitem als kleine Waldinseln in den Feldern abzeichnen. Folgt man dem Feldweg, gelangt man zu einem Rastplatz mit Infotafel, der direkt zu Füßen eines der bis zu 6m hohen Grabhügel liegt."];
-        [woorkeAudioLocation setImageFileLocation: [NSURL URLWithString: @"http://icanhascheezburger.files.wordpress.com/2009/08/funny-pictures-cat-came-in-mail.jpg"]];
-		[woorkeAudioLocation setAudioFileName: @"9PM.mp3"];
-        
-		[self addAudioLocation: woorkeAudioLocation];
         
     }
     return self;
 }
+
 
 - (NSArray *) audioLocationsForTopic: (NSString *) topic {
     
@@ -79,7 +78,7 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 }
 
 - (NSArray *) topics {
-
+    
     if (topics != nil) {
         return topics;
     }
@@ -87,7 +86,7 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
         DebugLog(@"Generating topics array");
         topics = [[NSMutableArray alloc] init];
     }
-        
+    
     NSEnumerator *audioLocationsEnumerator = [audioLocations objectEnumerator];
     UGAudioLocation *currentAudioLocation;
     
@@ -96,9 +95,35 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
             [topics addObject: [[currentAudioLocation topic] copy]];
         }
     }
-             
+    
     return [topics autorelease];
 }
+
+- (NSDictionary *) dictionary {
+    NSMutableDictionary *resultDictionary = [[NSMutableDictionary alloc] init];
+    
+    NSEnumerator *audioLocationsEnumerator = [audioLocations objectEnumerator];
+    UGAudioLocation *currentAudioLocation;
+    
+    while (currentAudioLocation = [audioLocationsEnumerator nextObject]) {
+        [resultDictionary setValue: [currentAudioLocation dictionary] forKey: [currentAudioLocation title]];
+    }
+    
+    return [resultDictionary autorelease];
+    
+}
+
++ (NSString *) defaultCacheFileLocation {
+    // For now just the App Bundle because the content does not change
+    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    //NSString *cachesDirectory = [paths objectAtIndex:0];
+    NSString *cachesDirectory = [[NSBundle mainBundle] bundlePath];
+    NSString *path = [cachesDirectory stringByAppendingPathComponent:@"AudioLocationsCache.plist"];
+    
+    return path;    
+}
+
+#pragma mark Distance Sorting Stuff
 
 NSInteger distanceSort(UGAudioLocation *firstAudioLocation, UGAudioLocation *secondAudioLocation, CLLocation *userLocation)
 {

@@ -12,9 +12,11 @@
 
 @interface UGAudioLocation : NSObject <MKAnnotation> {
 
+    // The title is at the same time the unique identifier!
     NSString *title;
+    
     NSString *subtitle;
-    NSString *description;
+    NSString *descriptionPage;
     NSString *narrator;
     NSString *topic;
     
@@ -25,6 +27,9 @@
     
 }
 
+- (UGAudioLocation *) initWithDictionary: (NSDictionary *) dictionary;
+- (NSDictionary *) dictionary;
+
 // To conform to MKAnnotation
 -(NSString *) subtitle;
 
@@ -32,7 +37,7 @@
 
 @property (copy) NSString *title;
 @property (copy) NSString *subtitle;
-@property (copy) NSString *description;
+@property (copy) NSString *descriptionPage;
 @property (copy) NSString *narrator;
 @property (copy) NSString *topic;
 

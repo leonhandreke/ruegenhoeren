@@ -25,9 +25,13 @@
 
 - (void) addAudioLocation: (UGAudioLocation *) audioLocation;
 
+- (NSDictionary *) dictionary;
+
 - (NSArray *) topics;
 - (NSArray *) audioLocationsForTopic: (NSString *) topic;
 + (NSArray *) sortArray: (NSArray *) array byDistanceFrom: (CLLocation *) newLocation;
+
++ (NSString *) defaultCacheFileLocation;
 
 @property (assign) NSMutableArray *audioLocations;
 
