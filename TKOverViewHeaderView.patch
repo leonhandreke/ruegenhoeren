@@ -1,0 +1,40 @@
+From 9e31146533667958390316f0be90dc40abeb7851 Mon Sep 17 00:00:00 2001
+From: Leon Handreke <leonbrussels@gmail.com>
+Date: Fri, 25 Sep 2009 22:57:08 +0200
+Subject: [PATCH] Removed the indicator view from TKOverviewHeaderView.
+
+---
+ TapkuLibrary/TKOverviewHeaderView.m |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/TapkuLibrary/TKOverviewHeaderView.m b/TapkuLibrary/TKOverviewHeaderView.m
+index 4bc9447..bd3a930 100644
+--- a/TapkuLibrary/TKOverviewHeaderView.m
++++ b/TapkuLibrary/TKOverviewHeaderView.m
+@@ -55,12 +55,12 @@
+ 		[self addSubview:subtitle];
+ 		
+ 		
+-		indicator = [[TKOverviewIndicatorView alloc] initWithColor:TKOverviewIndicatorViewColorBlue];
++		/*indicator = [[TKOverviewIndicatorView alloc] initWithColor:TKOverviewIndicatorViewColorBlue];
+ 		CGRect f = indicator.frame;
+ 		f.origin.y = 18;
+ 		f.origin.x = 175;
+ 		indicator.frame = f;
+-		[self addSubview:indicator];
++		[self addSubview:indicator];*/
+ 		
+ 		self.backgroundColor = [UIColor clearColor];
+ 		
+@@ -93,7 +93,7 @@
+ - (void)dealloc {
+ 	[title release];
+ 	[subtitle release];
+-	[indicator release];
++	//[indicator release];
+     [super dealloc];
+ }
+ 
+-- 
+1.6.4.2
+
