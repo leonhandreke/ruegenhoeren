@@ -33,6 +33,7 @@
 		358AEB2F106BD45D00CE5D1C /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB2E106BD45D00CE5D1C /* NSDateAdditions.m */; };
 		358AEB50106BD66900CE5D1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358AEB4F106BD66900CE5D1C /* MapKit.framework */; };
 		358AEC0D106BFD3E00CE5D1C /* AudioLocationsCache.plist in Resources */ = {isa = PBXBuildFile; fileRef = 358AEC0C106BFD3E00CE5D1C /* AudioLocationsCache.plist */; };
+		358AEC4E106D4C8C00CE5D1C /* descriptionPage.css in Resources */ = {isa = PBXBuildFile; fileRef = 358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */; };
 		35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */; };
 		35C93640104B37CB00616A86 /* UGAudioLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9363F104B37CB00616A86 /* UGAudioLocation.m */; };
 		35C93643104B390600616A86 /* UGAudioLocationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C93642104B390600616A86 /* UGAudioLocationDatabase.m */; };
@@ -84,6 +85,7 @@
 		358AEB2E106BD45D00CE5D1C /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDateAdditions.m; path = ../tapkulibrary/TapkuLibrary/NSDateAdditions.m; sourceTree = SOURCE_ROOT; };
 		358AEB4F106BD66900CE5D1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		358AEC0C106BFD3E00CE5D1C /* AudioLocationsCache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AudioLocationsCache.plist; sourceTree = "<group>"; };
+		358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = descriptionPage.css; path = Resources/descriptionPage.css; sourceTree = "<group>"; };
 		35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioPlayerViewController.h; sourceTree = "<group>"; };
 		35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioPlayerViewController.m; sourceTree = "<group>"; };
 		35C9363E104B37CB00616A86 /* UGAudioLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocation.h; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */,
 				358AEC0C106BFD3E00CE5D1C /* AudioLocationsCache.plist */,
 				35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */,
 				357575FF105D3B5D0058EB63 /* bluetrack.png */,
@@ -293,6 +296,7 @@
 				3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */,
 				35E9E57510658E840022BA69 /* UGAudioLocationsTableViewController.xib in Resources */,
 				358AEC0D106BFD3E00CE5D1C /* AudioLocationsCache.plist in Resources */,
+				358AEC4E106D4C8C00CE5D1C /* descriptionPage.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

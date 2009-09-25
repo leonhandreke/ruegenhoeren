@@ -21,8 +21,7 @@
     NSString *topic;
     
     CLLocationCoordinate2D coordinate;
-    
-    NSURL *imageFileLocation;
+
     NSString *audioFileName;
     
 }
@@ -43,7 +42,6 @@
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
-@property (copy) NSURL *imageFileLocation;
 @property (copy) NSString *audioFileName;
 
 @end

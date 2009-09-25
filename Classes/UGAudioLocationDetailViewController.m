@@ -34,6 +34,11 @@
      [[overviewHeaderView indicator] setColor: TKOverviewIndicatorViewColorGreen];
      
      [headerView addSubview: overviewHeaderView];
+     
+     //[webView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com/ncr"]]];
+     NSString *resourcePath = [[NSBundle mainBundle] bundlePath];
+     NSURL *resourceURL = [NSURL fileURLWithPath: resourcePath];
+     [webView loadHTMLString: [audioLocation descriptionPage] baseURL: resourceURL];
  }
 
 

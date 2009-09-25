@@ -11,7 +11,7 @@
 
 @implementation UGAudioLocation
 
-@synthesize title, subtitle, descriptionPage, narrator, topic, coordinate, imageFileLocation, audioFileName;
+@synthesize title, subtitle, descriptionPage, narrator, topic, coordinate, audioFileName;
 
 - (UGAudioLocation *) initWithDictionary: (NSDictionary *) dictionary {
     if (self = [self init]) {
@@ -20,7 +20,6 @@
         [self setDescriptionPage: [dictionary valueForKey: @"descriptionPage"]];
         [self setNarrator: [dictionary valueForKey: @"narrator"]];
         [self setTopic: [dictionary valueForKey: @"topic"]];
-        [self setImageFileLocation:[NSURL URLWithString: [dictionary valueForKey: @"imageFileLocation"]]];
         [self setAudioFileName: [dictionary valueForKey: @"audioFileName"]];
     }
     return self;
@@ -32,7 +31,6 @@
     [descriptionPage release];
     [narrator release];
     [topic release];
-    [imageFileLocation release];
     [audioFileName release];
     [super dealloc];
 }
@@ -57,7 +55,6 @@
     [resultDictionary setValue: descriptionPage forKey: @"descriptionPage"];
     [resultDictionary setValue: narrator forKey: @"narrator"];
     [resultDictionary setValue: topic forKey: @"topic"];
-    [resultDictionary setValue: [imageFileLocation absoluteString] forKey: @"imageFileLocation"];
     [resultDictionary setValue: audioFileName forKey: @"audioFileName"];
     
     return [resultDictionary autorelease];
