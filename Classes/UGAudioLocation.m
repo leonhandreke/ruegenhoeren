@@ -21,6 +21,8 @@
         [self setNarrator: [dictionary valueForKey: @"narrator"]];
         [self setTopic: [dictionary valueForKey: @"topic"]];
         [self setAudioFileName: [dictionary valueForKey: @"audioFileName"]];
+        CLLocationCoordinate2D newCoordinate = {[(NSNumber *)[dictionary valueForKey: @"latitude"] doubleValue], [(NSNumber *)[dictionary valueForKey: @"longitude"] doubleValue]};
+        [self setCoordinate: newCoordinate];
     }
     return self;
 }
@@ -56,6 +58,8 @@
     [resultDictionary setValue: narrator forKey: @"narrator"];
     [resultDictionary setValue: topic forKey: @"topic"];
     [resultDictionary setValue: audioFileName forKey: @"audioFileName"];
+    [resultDictionary setValue: [NSNumber numberWithDouble: coordinate.latitude ] forKey: @"latitude"];
+    [resultDictionary setValue: [NSNumber numberWithDouble: coordinate.longitude ] forKey: @"longitude"];
     
     return [resultDictionary autorelease];
 }

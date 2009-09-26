@@ -6,6 +6,10 @@
 	<dict>
 		<key>audioFileName</key>
 		<string>9PM.mp3</string>
+		<key>latitude</key>
+		<real>54.51878987579106</real>
+		<key>longitude</key>
+		<real>13.63592147827148</real>
 		<key>descriptionPage</key>
 		<string>&lt;html&gt; &lt;head&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;descriptionPage.css&quot; /&gt;&lt;/head&gt; &lt;body&gt; &lt;img src=&quot;http://www.rügenhören.de/s/cc_images/cache_1773565720.jpg?t=1246548617&quot; /&gt; &lt;p id=&quot;description&quot;&gt;Nordöstlich von Sassnitz befindet sich im Wald auf dem Kreidefelsen namens &quot;Hengst&quot; der &quot;Sattel&quot; - einer der wenigen bronzezeitlichen Burgwälle im Norden. Noch heute ahnt man beim Anblick der gewaltigen Böschung, wie eindrucksvoll die damalige Burganalage wohl gewesen sein muss. Folgt man in Sassnitz der Haupstraße und später der Bergstraße sowie der Weddingstraße, so findet man am Ende der letztgenannten einen kleinen Parkplatz (Parkgebühr: 1,- EUR). Dieser bildet den Ausgangspunkt für einen Wanderweg parallel zur Küste. Nach etwa 500 m biegt nach rechts ein Weg zum Strand ab, dem man jedoch nicht bis hinunter zum Wasser folgt, sondern vor der Steilküste wieder nach links verlässt. Nach weiteren 100 m überquert man auf einer hölzernen Treppe bereits die Wallkrone. Der Wall nimmt einen halbkreisförmigen Verlauf und trifft nach ca. 200 m wieder auf die Steilküste. Etwa auf der Hälfte dieser Strecke befindet sich der ehemalige Eingang zur Wallburg.&lt;/p&gt; &lt;p id=&quot;copyright&quot;&gt; &lt;b&gt;Text:&lt;/b&gt; Anne Dombrowsky und Jana Dräger &lt;b&gt;Sprecher und Geräusche:&lt;/b&gt; Jana Dräger, Martin Planert und Normen Posselt. &lt;/p&gt; &lt;p id=&quot;literature&quot;&gt;&lt;b&gt;Literatur:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;Th. Schmidt (1872): Naturgeschichtliches - Die Burgwälle der Insel Rügen nach den auf Befehl Sr. Maj. des Königs im Sommer 1868 unternommenen Untersuchungen. -- In: &lt;em&gt;Baltische Studien&lt;/em&gt; 24, 1872, S. 234-290.&lt;/li&gt; &lt;li&gt;J. Herrmann (1989): Burgen und befestigte Siedlungen in der jüngeren Bronzezeit und frühen Eisenzeit. -- In: J. Herrmann (Hrsg.): &lt;em&gt;Archäologie in der Deutschen Demokratischen Republik&lt;/em&gt;, Bd. 1 (Berlin) S. 106-118.&lt;/li&gt; &lt;/ul&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</string>
 		<key>subtitle</key>
@@ -19,6 +23,10 @@
 	<dict>
 		<key>audioFileName</key>
 		<string>9PM.mp3</string>
+		<key>latitude</key>
+		<real>54.44728661718364</real>
+		<key>longitude</key>
+		<real>13.41018676757812</real>
 		<key>descriptionPage</key>
 		<string>&lt;html&gt; &lt;head&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;descriptionPage.css&quot; /&gt;&lt;/head&gt; &lt;body&gt; &lt;img src=&quot;http://www.rügenhören.de/s/cc_images/cache_1767794020.jpg?t=1245666460&quot; /&gt; &lt;p id=&quot;description&quot;&gt;Von Bergen aus gelangt man über Parchtitz, Thesenvitz und Patzig zum kleinen Dorf Woorke. Östlich des Ortes liegt eine Gruppe von 13 Hügelgräbern der Bronzezeit, die sich schon von weitem als kleine Waldinseln in den Feldern abzeichnen. Folgt man dem Feldweg, gelangt man zu einem Rastplatz mit Infotafel, der direkt zu Füßen eines der bis zu 6m hohen Grabhügel liegt.&lt;/p&gt; &lt;p id=&quot;copyright&quot;&gt; &lt;b&gt;Text und Sprecherin:&lt;/b&gt; Laura Robrecht &lt;/p&gt; &lt;p id=&quot;literature&quot;&gt;&lt;b&gt;Literatur:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;Woorke, Lkr. Rügen. -- In: &lt;em&gt;Bodendenkmalpflege in Mecklenburg-Vorpommern&lt;/em&gt;, Jahrbuch 1996, 474.&lt;/li&gt; &lt;li&gt;D. Jantzen (2004): Grabhügel der Bronzezeit - Prägende Elemente der Landschaft - damals und heute. -- In: H. Jöns / F. Lüth (Hrsg.): &lt;em&gt;Mythos und Magie. Archäologische Schätze der Bronzezeit aus Mecklenburg-Vorpommern&lt;/em&gt; (Lübstorf) 132-139.&lt;/li&gt; &lt;/ul&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</string>
 		<key>subtitle</key>
