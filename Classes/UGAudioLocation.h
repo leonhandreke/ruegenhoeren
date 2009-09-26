@@ -12,7 +12,8 @@
 
 @interface UGAudioLocation : NSObject <MKAnnotation> {
 
-    // The title is at the same time the unique identifier!
+    NSString *uuid;
+    
     NSString *title;
     
     NSString *subtitle;
@@ -34,6 +35,7 @@
 
 - (NSURL *) audioFileLocation;
 
+@property (copy) NSString *uuid;
 @property (copy) NSString *title;
 @property (copy) NSString *subtitle;
 @property (copy) NSString *descriptionPage;

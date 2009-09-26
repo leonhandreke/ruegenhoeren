@@ -11,10 +11,11 @@
 
 @implementation UGAudioLocation
 
-@synthesize title, subtitle, descriptionPage, narrator, topic, coordinate, audioFileName;
+@synthesize uuid, title, subtitle, descriptionPage, narrator, topic, coordinate, audioFileName;
 
 - (UGAudioLocation *) initWithDictionary: (NSDictionary *) dictionary {
     if (self = [self init]) {
+        [self setUuid: [dictionary valueForKey: @"uuid"]];
         [self setTitle: [dictionary valueForKey: @"title"]];
         [self setSubtitle: [dictionary valueForKey: @"subtitle"]];
         [self setDescriptionPage: [dictionary valueForKey: @"descriptionPage"]];
@@ -28,6 +29,7 @@
 }
 
 - (void) dealloc {
+    [uuid release];
     [title release];
     [subtitle release];
     [descriptionPage release];
@@ -52,6 +54,7 @@
 - (NSDictionary *) dictionary {
     NSMutableDictionary *resultDictionary = [[NSMutableDictionary alloc] init];
     
+    [resultDictionary setValue: uuid forKey: @"uuid"];
     [resultDictionary setValue: title forKey: @"title"];
     [resultDictionary setValue: subtitle forKey: @"subtitle"];
     [resultDictionary setValue: descriptionPage forKey: @"descriptionPage"];

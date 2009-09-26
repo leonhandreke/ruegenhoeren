@@ -106,7 +106,7 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
     UGAudioLocation *currentAudioLocation;
     
     while (currentAudioLocation = [audioLocationsEnumerator nextObject]) {
-        [resultDictionary setValue: [currentAudioLocation dictionary] forKey: [currentAudioLocation title]];
+        [resultDictionary setValue: [currentAudioLocation dictionary] forKey: [currentAudioLocation uuid]];
     }
     
     return [resultDictionary autorelease];

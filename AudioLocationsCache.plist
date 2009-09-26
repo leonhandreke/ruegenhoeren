@@ -2,10 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Sassnitz</key>
+	<key>923bc121-6865-4bc3-8468-551c4fdf1584</key>
 	<dict>
 		<key>audioFileName</key>
 		<string>9PM.mp3</string>
+		<key>uuid</key>
+		<string>923bc121-6865-4bc3-8468-551c4fdf1584</string>
 		<key>latitude</key>
 		<real>54.51878987579106</real>
 		<key>longitude</key>
@@ -19,10 +21,12 @@
 		<key>topic</key>
 		<string>Archäologie</string>
 	</dict>
-	<key>Woorke</key>
+	<key>1c87e446-bad3-42b2-b340-63d97ecef962</key>
 	<dict>
 		<key>audioFileName</key>
 		<string>9PM.mp3</string>
+		<key>uuid</key>
+		<string>1c87e446-bad3-42b2-b340-63d97ecef962</string>
 		<key>latitude</key>
 		<real>54.44728661718364</real>
 		<key>longitude</key>
