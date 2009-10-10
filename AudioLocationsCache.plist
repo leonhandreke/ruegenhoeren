@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>499a9680-6518-45fa-9de7-9250fd6a36d9</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>uuid</key>
+		<string>499a9680-6518-45fa-9de7-9250fd6a36d9</string>
+		<key>latitude</key>
+		<real>54.67656051905868</real>
+		<key>longitude</key>
+		<real>13.42263221740723</real>
+		<key>descriptionPage</key>
+		<string> &lt;html&gt;     &lt;head&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;descriptionPage.css&quot; /&gt;&lt;/head&gt;     &lt;body&gt;         &lt;img src=&quot;http://www.rügenhören.de/s/cc_images/cache_1773619720.jpg?t=1245705199&quot; /&gt;         &lt;p id=&quot;description&quot;&gt;Das Kap Arkona ist eines der beliebtesten Ausflugsziele auf der Insel Rügen und zieht jährlich mehrere hunderttausend Besucher an. Neben drei Leuchttürmen und einem NVA-Bunker finden sich hier auch Reste einer slawischen Burganlage aus dem Mittelalter, die früher einmal das Hauptheiligtum der Slawen war, bevor diese zum Christentum übertraten.   Da Arkona als Flächendenkmal ausgewiesen ist, dürfen Besucher mit dem Auto nur bis zum Parkplatz von Putgarten fahren. Ab da hat man für die knapp 2 km zum Kap die Wahl zwischen einer halbstündig verkehrenden Bimmelbahn (5,- EUR hin und zurück) oder einem kleinen Fußmarsch. Fahrradfahrer dürfen natürlich bis Arkona durchfahren. Sobald man sich der Wendeschleife nähert, liegt rechter Hand ein Peilturm, zu dessen Füßen sich der Burgwall befindet. Der lohnenswerte Zugang zur Aussichtsplattform auf der Wallkrone kostet 1,- EUR, in Kombination mit dem Besuch des Museums im Peilturm 2,- EUR.&lt;/p&gt;                  &lt;p id=&quot;copyright&quot;&gt;         &lt;b&gt;Text:&lt;/b&gt; Maria Palaschevsky &lt;br/&gt;         &lt;b&gt;Sprecher:&lt;/b&gt; Maria Palaschevsky und Jonas Vogt         &lt;/p&gt;         &lt;p id=&quot;literature&quot;&gt;&lt;b&gt;Literatur:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;P. Herfert (1997): Die Tempelburg Arkona. Die schriftliche Überlieferung in archäologischer Sicht. -- In: &lt;em&gt;Rugia‐Journal&lt;/em&gt; 5, S. 36‐41.&lt;/li&gt; &lt;li&gt;P. Herfert (1998): Die Tempelburg Arkona. Die archäologischen Untersuchungen&lt;br/&gt; 1860 bis 1930. -- In: &lt;em&gt;Rugia‐Journal&lt;/em&gt; 6, S. 21‐25.&lt;/li&gt; &lt;/ul&gt;         &lt;/p&gt;     &lt;/body&gt; &lt;/html&gt;</string>
+		<key>subtitle</key>
+		<string>Tempelburg von Arkona</string>
+		<key>title</key>
+		<string>Arkona</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+	</dict>
 	<key>923bc121-6865-4bc3-8468-551c4fdf1584</key>
 	<dict>
 		<key>audioFileName</key>
