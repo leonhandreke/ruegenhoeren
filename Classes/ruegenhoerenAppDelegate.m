@@ -14,16 +14,14 @@
 
 @synthesize window;
 @synthesize tabBarController;
-@synthesize navigationController;
 @synthesize currentAudioPlayerViewController;
 
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	
 	// Configure and show the window
-	[window addSubview:[navigationController view]];
+	[window addSubview:[tabBarController view]];
 	[window makeKeyAndVisible];
-    [navigationController pushViewController: tabBarController animated: NO];
 }
 
 
@@ -33,7 +31,6 @@
 
 
 - (void)dealloc {
-    [navigationController release];
 	[tabBarController release];
     [currentAudioPlayerViewController release];
 	[window release];

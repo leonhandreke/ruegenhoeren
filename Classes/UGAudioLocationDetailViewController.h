@@ -23,6 +23,7 @@
     
 }
 
+- (BOOL)hidesBottomBarWhenPushed;
 - (IBAction) playAudioLocation: (id) sender;
 
 @property (assign) UGAudioLocation *audioLocation;

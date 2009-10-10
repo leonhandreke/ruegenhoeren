@@ -49,16 +49,12 @@
     [super viewDidAppear:animated];
 }
 */
-/*
+
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
+    [searchBar resignFirstResponder];
 }
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-	[super viewDidDisappear:animated];
-}
-*/
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -122,7 +118,7 @@
 	
     UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: @"UGAudioLocationDetailViewController" bundle: [NSBundle mainBundle]];
     [detailViewController setAudioLocation: selectedAudioLocation];
-    [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
+    [[self navigationController] pushViewController: detailViewController animated: YES];
 }
 
 
@@ -193,23 +189,23 @@
     [[self tableView] reloadData];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+- (void)searchBarCancelButtonClicked:(UISearchBar *)clickedSearchBar
 {
-    [searchBar resignFirstResponder];
+    [clickedSearchBar resignFirstResponder];
 }
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+- (void)searchBarSearchButtonClicked:(UISearchBar *)clickedSearchBar
 {
-    [searchBar resignFirstResponder];
+    [clickedSearchBar resignFirstResponder];
 }
 
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {  
-    [searchBar setShowsCancelButton: YES animated: YES];
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)clickedSearchBar {  
+    [clickedSearchBar setShowsCancelButton: YES animated: YES];
     return YES;
 }  
 
-- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {  
-    [searchBar setShowsCancelButton: NO animated: YES];
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)clickedSearchBar {  
+    [clickedSearchBar setShowsCancelButton: NO animated: YES];
     return YES;
 }  
 

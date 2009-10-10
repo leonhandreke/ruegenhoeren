@@ -58,14 +58,20 @@
 	while (currentLocation = [audioLocationsEnumerator nextObject]) {
 		[(MKMapView *)[self view] addAnnotation: currentLocation];
 	}
+
     
 
 }
 
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
-    [[[self tabBarController] navigationController] setNavigationBarHidden: YES animated: YES];
+    [[self navigationController] setNavigationBarHidden: YES animated: animated];
     //[[[self tabBarController] navigationItem] setTitle: @"Map"];
+}
+
+- (void) viewWillDisappear: (BOOL) animated {
+    [super viewWillDisappear: animated];
+    [[self navigationController] setNavigationBarHidden:NO animated: animated];
 }
 
 
@@ -118,7 +124,7 @@
 - (IBAction) showAudioLocationDetailView: (id) sender {
     UGAudioLocationDetailViewController *detailViewController = [[UGAudioLocationDetailViewController alloc] initWithNibName: @"UGAudioLocationDetailViewController" bundle: [NSBundle mainBundle]];
     [detailViewController setAudioLocation: [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] objectAtIndex: [(UIView *) sender tag]]];
-    [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] navigationController] pushViewController: detailViewController animated: YES];
+    [[self navigationController] pushViewController: detailViewController animated: YES];
 }
 
 @end

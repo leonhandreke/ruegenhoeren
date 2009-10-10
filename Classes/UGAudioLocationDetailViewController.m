@@ -49,6 +49,10 @@
     [[self navigationItem] setHidesBackButton: NO animated: NO];
 }
 
+- (BOOL)hidesBottomBarWhenPushed {
+	return TRUE;
+}
+
 
 /*
  - (void)viewDidAppear:(BOOL)animated {

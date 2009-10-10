@@ -18,6 +18,8 @@
     NSArray *audioLocations;
     NSMutableArray *filteredAudioLocations;
     
+    IBOutlet UISearchBar *searchBar;
+    
 }
 
 

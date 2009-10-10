@@ -40,6 +40,7 @@
 		35B65C00107FF2C9000DC693 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B65BFF107FF2C9000DC693 /* 103-map.png */; };
 		35B65C12107FF2F5000DC693 /* 28-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B65C11107FF2F5000DC693 /* 28-star.png */; };
 		35B65C3810809773000DC693 /* 06-magnifying-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B65C3710809773000DC693 /* 06-magnifying-glass.png */; };
+		35B65CCA1080A0D6000DC693 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35B65CC91080A0D6000DC693 /* Icon.png */; };
 		35C93640104B37CB00616A86 /* UGAudioLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9363F104B37CB00616A86 /* UGAudioLocation.m */; };
 		35C93643104B390600616A86 /* UGAudioLocationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C93642104B390600616A86 /* UGAudioLocationDatabase.m */; };
 		35E9E20D1064FB340022BA69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E20C1064FB340022BA69 /* QuartzCore.framework */; };
@@ -98,6 +99,7 @@
 		35B65BFF107FF2C9000DC693 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
 		35B65C11107FF2F5000DC693 /* 28-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "28-star.png"; sourceTree = "<group>"; };
 		35B65C3710809773000DC693 /* 06-magnifying-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnifying-glass.png"; sourceTree = "<group>"; };
+		35B65CC91080A0D6000DC693 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
 		35C9363E104B37CB00616A86 /* UGAudioLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocation.h; sourceTree = "<group>"; };
 		35C9363F104B37CB00616A86 /* UGAudioLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocation.m; sourceTree = "<group>"; };
 		35C93641104B390600616A86 /* UGAudioLocationDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDatabase.h; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35B65CC91080A0D6000DC693 /* Icon.png */,
 				35B65BFD107FF2B2000DC693 /* 73-radar.png */,
 				35B65BFF107FF2C9000DC693 /* 103-map.png */,
 				35B65C11107FF2F5000DC693 /* 28-star.png */,
@@ -317,6 +320,7 @@
 				35B65C00107FF2C9000DC693 /* 103-map.png in Resources */,
 				35B65C12107FF2F5000DC693 /* 28-star.png in Resources */,
 				35B65C3810809773000DC693 /* 06-magnifying-glass.png in Resources */,
+				35B65CCA1080A0D6000DC693 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Leon Handreke";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -389,7 +393,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphonesimulator3.0;
 			};
 			name = Debug;
 		};
@@ -397,12 +401,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leon Handreke";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphonesimulator3.0;
 			};
 			name = Release;
 		};

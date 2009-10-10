@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">437.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="63"/>
+			<integer value="70"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -110,14 +110,6 @@
 						<reference key="destination" ref="420201141"/>
 					</object>
 					<int key="connectionID">74</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">playAudioLocation:</string>
-						<reference key="source" ref="498359034"/>
-						<reference key="destination" ref="841351856"/>
-					</object>
-					<int key="connectionID">76</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
