@@ -96,7 +96,7 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
         }
     }
     
-    return [topics autorelease];
+    return topics ;
 }
 
 - (NSDictionary *) dictionary {
