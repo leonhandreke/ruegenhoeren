@@ -1,63 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>499a9680-6518-45fa-9de7-9250fd6a36d9</key>
+	<key>16fde56c-0f5f-4575-a969-ac5b4206915c</key>
 	<dict>
 		<key>audioFileName</key>
 		<string>9PM.mp3</string>
-		<key>uuid</key>
-		<string>499a9680-6518-45fa-9de7-9250fd6a36d9</string>
-		<key>latitude</key>
-		<real>54.67656051905868</real>
-		<key>longitude</key>
-		<real>13.42263221740723</real>
 		<key>descriptionPage</key>
-		<string> &lt;html&gt;     &lt;head&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;descriptionPage.css&quot; /&gt;&lt;/head&gt;     &lt;body&gt;         &lt;img src=&quot;http://www.rügenhören.de/s/cc_images/cache_1773619720.jpg?t=1245705199&quot; /&gt;         &lt;p id=&quot;description&quot;&gt;Das Kap Arkona ist eines der beliebtesten Ausflugsziele auf der Insel Rügen und zieht jährlich mehrere hunderttausend Besucher an. Neben drei Leuchttürmen und einem NVA-Bunker finden sich hier auch Reste einer slawischen Burganlage aus dem Mittelalter, die früher einmal das Hauptheiligtum der Slawen war, bevor diese zum Christentum übertraten.   Da Arkona als Flächendenkmal ausgewiesen ist, dürfen Besucher mit dem Auto nur bis zum Parkplatz von Putgarten fahren. Ab da hat man für die knapp 2 km zum Kap die Wahl zwischen einer halbstündig verkehrenden Bimmelbahn (5,- EUR hin und zurück) oder einem kleinen Fußmarsch. Fahrradfahrer dürfen natürlich bis Arkona durchfahren. Sobald man sich der Wendeschleife nähert, liegt rechter Hand ein Peilturm, zu dessen Füßen sich der Burgwall befindet. Der lohnenswerte Zugang zur Aussichtsplattform auf der Wallkrone kostet 1,- EUR, in Kombination mit dem Besuch des Museums im Peilturm 2,- EUR.&lt;/p&gt;                  &lt;p id=&quot;copyright&quot;&gt;         &lt;b&gt;Text:&lt;/b&gt; Maria Palaschevsky &lt;br/&gt;         &lt;b&gt;Sprecher:&lt;/b&gt; Maria Palaschevsky und Jonas Vogt         &lt;/p&gt;         &lt;p id=&quot;literature&quot;&gt;&lt;b&gt;Literatur:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;P. Herfert (1997): Die Tempelburg Arkona. Die schriftliche Überlieferung in archäologischer Sicht. -- In: &lt;em&gt;Rugia‐Journal&lt;/em&gt; 5, S. 36‐41.&lt;/li&gt; &lt;li&gt;P. Herfert (1998): Die Tempelburg Arkona. Die archäologischen Untersuchungen&lt;br/&gt; 1860 bis 1930. -- In: &lt;em&gt;Rugia‐Journal&lt;/em&gt; 6, S. 21‐25.&lt;/li&gt; &lt;/ul&gt;         &lt;/p&gt;     &lt;/body&gt; &lt;/html&gt;</string>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="16fde56c-0f5f-4575-a969-ac5b4206915c" /&gt;    &lt;meta key_name="latitude" content="54.5613942" /&gt;    &lt;meta key_name="longitude" content="13.570894" /&gt;    &lt;meta key_name="subtitle" content="Opferstein" /&gt;    &lt;meta key_name="title" content="Quoltitz" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1768112920.jpg?t=1245668868" /&gt;        &lt;p id="description"&gt;Östlich der Wüstung Quoltitz liegt in einem kleinen Hain aus Buchen und Erlen einer der größten Findlinge Rügens. Die darauf befindlichen Rillen, Schälchen und Mulden haben schon früh Anlass zu allerlei schaurigen Vermutungen über deren Zweck gegeben. Mit dem Fahrrad folgt man am westlichen Ortseingang von Neddesitz der Beschilderung nach Quoltitz und biegt dort angekommen in einen Feldweg nach Osten ab. Nach etwa 1 km kommt man kurz vor einem See am beschilderten Hain vorbei. Autofahrer parken am Kreidemuseum in Gummanz und gehen von dort etwa 1 km auf Feldwegen nach Norden. Eine genaue Wegbeschreibung erfragt man am besten an der Rezeption des Museums.&lt;/p&gt;        		&lt;p id="copyright"&gt;        &lt;b&gt;Text und Sprecher:&lt;/b&gt;        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;M. Sommer-Scheffler (2002): Steingewinnung auf der Insel Rügen. Zur Deutung der sogenannten Opfersteine. -- In: &lt;em&gt;Bodendenkmalpflege in Mecklenburg-Vorpommern&lt;/em&gt;, Jahrbuch 2001--49, S.41-56.&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.5613942</string>
+		<key>longitude</key>
+		<string>13.570894</string>
 		<key>subtitle</key>
-		<string>Tempelburg von Arkona</string>
+		<string>Opferstein</string>
 		<key>title</key>
-		<string>Arkona</string>
+		<string>Quoltitz</string>
 		<key>topic</key>
 		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>16fde56c-0f5f-4575-a969-ac5b4206915c</string>
 	</dict>
-	<key>923bc121-6865-4bc3-8468-551c4fdf1584</key>
+	<key>1c56907d-51c3-443a-a885-7e09874291b6</key>
 	<dict>
 		<key>audioFileName</key>
 		<string>9PM.mp3</string>
-		<key>uuid</key>
-		<string>923bc121-6865-4bc3-8468-551c4fdf1584</string>
-		<key>latitude</key>
-		<real>54.51878987579106</real>
-		<key>longitude</key>
-		<real>13.63592147827148</real>
 		<key>descriptionPage</key>
-		<string>&lt;html&gt; &lt;head&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;descriptionPage.css&quot; /&gt;&lt;/head&gt; &lt;body&gt; &lt;img src=&quot;http://www.rügenhören.de/s/cc_images/cache_1773565720.jpg?t=1246548617&quot; /&gt; &lt;p id=&quot;description&quot;&gt;Nordöstlich von Sassnitz befindet sich im Wald auf dem Kreidefelsen namens &quot;Hengst&quot; der &quot;Sattel&quot; - einer der wenigen bronzezeitlichen Burgwälle im Norden. Noch heute ahnt man beim Anblick der gewaltigen Böschung, wie eindrucksvoll die damalige Burganalage wohl gewesen sein muss. Folgt man in Sassnitz der Haupstraße und später der Bergstraße sowie der Weddingstraße, so findet man am Ende der letztgenannten einen kleinen Parkplatz (Parkgebühr: 1,- EUR). Dieser bildet den Ausgangspunkt für einen Wanderweg parallel zur Küste. Nach etwa 500 m biegt nach rechts ein Weg zum Strand ab, dem man jedoch nicht bis hinunter zum Wasser folgt, sondern vor der Steilküste wieder nach links verlässt. Nach weiteren 100 m überquert man auf einer hölzernen Treppe bereits die Wallkrone. Der Wall nimmt einen halbkreisförmigen Verlauf und trifft nach ca. 200 m wieder auf die Steilküste. Etwa auf der Hälfte dieser Strecke befindet sich der ehemalige Eingang zur Wallburg.&lt;/p&gt; &lt;p id=&quot;copyright&quot;&gt; &lt;b&gt;Text:&lt;/b&gt; Anne Dombrowsky und Jana Dräger &lt;b&gt;Sprecher und Geräusche:&lt;/b&gt; Jana Dräger, Martin Planert und Normen Posselt. &lt;/p&gt; &lt;p id=&quot;literature&quot;&gt;&lt;b&gt;Literatur:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;Th. Schmidt (1872): Naturgeschichtliches - Die Burgwälle der Insel Rügen nach den auf Befehl Sr. Maj. des Königs im Sommer 1868 unternommenen Untersuchungen. -- In: &lt;em&gt;Baltische Studien&lt;/em&gt; 24, 1872, S. 234-290.&lt;/li&gt; &lt;li&gt;J. Herrmann (1989): Burgen und befestigte Siedlungen in der jüngeren Bronzezeit und frühen Eisenzeit. -- In: J. Herrmann (Hrsg.): &lt;em&gt;Archäologie in der Deutschen Demokratischen Republik&lt;/em&gt;, Bd. 1 (Berlin) S. 106-118.&lt;/li&gt; &lt;/ul&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</string>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="1c56907d-51c3-443a-a885-7e09874291b6" /&gt;    &lt;meta key_name="latitude" content="54.4711349" /&gt;    &lt;meta key_name="longitude" content="13.4539282" /&gt;    &lt;meta key_name="subtitle" content="Hügelgräberfeld" /&gt;    &lt;meta key_name="title" content="Ralswiek" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773577520.jpg?t=1247744379" /&gt;        &lt;p id="description"&gt;Dass Ralswiek vor über 1000 Jahren einmal ein bedeutender Handelsplatz war, ist heute nur Kennern bekannt. Die meisten Touristen strömen am einstmaligen Ortskern vorbei hin zur Seebühne im Nordteil des Dorfes. Zugegebenermaßen ist aber von dem alten Hafengelände auch nicht mehr viel zu sehen. In den "Schwarzen Bergen" über dem Ort findet sich jedoch noch immer der Bestattungsplatz jener Zeit mit eindrucksvollen Grabhügeln. Falls gerade die Störtebecker-Festspiele geöffnet haben, müssen Sie Ihr Auto schon vorn auf dem Besucherparkplatz an der B96 abstellen. Folgen Sie dann dem Besucherstrom 800 m bis zum Ortseingangsschild und biegen Sie dort rechts in die Nebenstraße ab. Dann sind es noch einmal gut 300 m bis zu einem Waldweg, der schräg rechts in die bewaldeten Hügel führt. Außerhalb der Festspielzeiten oder, falls Sie mit dem Fahrrad unterwegs sind, können Sie bis zu diesem Weg auch fahren. Rechts und links des Weges ist der ganze Wald oberhalb der Böschung voller Hügelgräber, lassen Sie Ihrer Entdeckerlust einfach freien Lauf!&lt;/p&gt;        		&lt;p id="copyright"&gt;        &lt;b&gt;Text und Sprecher:&lt;/b&gt;        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;J. Herrmann und D. Warnke (2008)&lt;strong&gt;: &lt;/strong&gt;Ralswiek auf Rügen. Die slawisch-wikingischen Siedlungen und deren Hinterland. Teil V. Das Hügelgräberfeld in den Schwarzen Bergen beiRalswiek (Schwerin).&lt;/li&gt;&lt;li&gt;Jochen von Firks (1999): Der Nachbau eines altslawischen Bootes. Ein archäologischer Fund aus Ralswiek auf Rügen wird seetüchtig (Lübstorf 1999).&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.4711349</string>
+		<key>longitude</key>
+		<string>13.4539282</string>
 		<key>subtitle</key>
-		<string>Burgwall &quot;Sattel auf dem Hengst&quot;</string>
+		<string>Hügelgräberfeld</string>
 		<key>title</key>
-		<string>Sassnitz</string>
+		<string>Ralswiek</string>
 		<key>topic</key>
 		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>1c56907d-51c3-443a-a885-7e09874291b6</string>
 	</dict>
 	<key>1c87e446-bad3-42b2-b340-63d97ecef962</key>
 	<dict>
 		<key>audioFileName</key>
 		<string>9PM.mp3</string>
-		<key>uuid</key>
-		<string>1c87e446-bad3-42b2-b340-63d97ecef962</string>
-		<key>latitude</key>
-		<real>54.44728661718364</real>
-		<key>longitude</key>
-		<real>13.41018676757812</real>
 		<key>descriptionPage</key>
-		<string>&lt;html&gt; &lt;head&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;descriptionPage.css&quot; /&gt;&lt;/head&gt; &lt;body&gt; &lt;img src=&quot;http://www.rügenhören.de/s/cc_images/cache_1767794020.jpg?t=1245666460&quot; /&gt; &lt;p id=&quot;description&quot;&gt;Von Bergen aus gelangt man über Parchtitz, Thesenvitz und Patzig zum kleinen Dorf Woorke. Östlich des Ortes liegt eine Gruppe von 13 Hügelgräbern der Bronzezeit, die sich schon von weitem als kleine Waldinseln in den Feldern abzeichnen. Folgt man dem Feldweg, gelangt man zu einem Rastplatz mit Infotafel, der direkt zu Füßen eines der bis zu 6m hohen Grabhügel liegt.&lt;/p&gt; &lt;p id=&quot;copyright&quot;&gt; &lt;b&gt;Text und Sprecherin:&lt;/b&gt; Laura Robrecht &lt;/p&gt; &lt;p id=&quot;literature&quot;&gt;&lt;b&gt;Literatur:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;Woorke, Lkr. Rügen. -- In: &lt;em&gt;Bodendenkmalpflege in Mecklenburg-Vorpommern&lt;/em&gt;, Jahrbuch 1996, 474.&lt;/li&gt; &lt;li&gt;D. Jantzen (2004): Grabhügel der Bronzezeit - Prägende Elemente der Landschaft - damals und heute. -- In: H. Jöns / F. Lüth (Hrsg.): &lt;em&gt;Mythos und Magie. Archäologische Schätze der Bronzezeit aus Mecklenburg-Vorpommern&lt;/em&gt; (Lübstorf) 132-139.&lt;/li&gt; &lt;/ul&gt; &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</string>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="1c87e446-bad3-42b2-b340-63d97ecef962" /&gt;    &lt;meta key_name="latitude" content="54.4743893" /&gt;    &lt;meta key_name="longitude" content="13.3843303" /&gt;    &lt;meta key_name="subtitle" content="Hügelgräberfeld 'Woorker Berge'" /&gt;    &lt;meta key_name="title" content="Woorke" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1767794020.jpg?t=1245666460" /&gt;        &lt;p id="description"&gt;Von Bergen aus gelangt man über Parchtitz, Thesenvitz und Patzig zum kleinen Dorf Woorke. Östlich des Ortes liegt eine Gruppe von 13 Hügelgräbern der Bronzezeit, die sich schon von weitem als kleine Waldinseln in den Feldern abzeichnen. Folgt man dem Feldweg, gelangt man zu einem Rastplatz mit Infotafel, der direkt zu Füßen eines der bis zu 6m hohen Grabhügel liegt.&lt;/p&gt;                &lt;p id="copyright"&gt;        &lt;b&gt;Text und Sprecherin:&lt;/b&gt; Laura Robrecht        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;            &lt;ul&gt;                &lt;li&gt;Woorke, Lkr. Rügen. -- In: &lt;em&gt;Bodendenkmalpflege in Mecklenburg-Vorpommern&lt;/em&gt;, Jahrbuch 1996, 474.&lt;/li&gt;                &lt;li&gt;D. Jantzen (2004): Grabhügel der Bronzezeit - Prägende Elemente der Landschaft - damals und heute. -- In: H. Jöns / F. Lüth (Hrsg.): &lt;em&gt;Mythos und Magie. Archäologische Schätze der Bronzezeit aus Mecklenburg-Vorpommern&lt;/em&gt; (Lübstorf) 132-139.&lt;/li&gt;            &lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.4743893</string>
+		<key>longitude</key>
+		<string>13.3843303</string>
 		<key>subtitle</key>
-		<string>Hügelgräberfeld &quot;Woorker Berge&quot;</string>
+		<string>Hügelgräberfeld 'Woorker Berge'</string>
 		<key>title</key>
 		<string>Woorke</string>
 		<key>topic</key>
 		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>1c87e446-bad3-42b2-b340-63d97ecef962</string>
+	</dict>
+	<key>499a9680-6518-45fa-9de7-9250fd6a36d9</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="499a9680-6518-45fa-9de7-9250fd6a36d9" /&gt;    &lt;meta key_name="latitude" content="54.677156" /&gt;    &lt;meta key_name="longitude" content="13.4365582" /&gt;    &lt;meta key_name="subtitle" content="Tempelburg" /&gt;    &lt;meta key_name="title" content="Arkona" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773619720.jpg?t=1245705199" /&gt;        &lt;p id="description"&gt;Das Kap Arkona ist eines der beliebtesten Ausflugsziele auf der Insel Rügen und zieht jährlich mehrere hunderttausend Besucher an. Neben drei Leuchttürmen und einem NVA-Bunker finden sich hier auch Reste einer slawischen Burganlage aus dem Mittelalter, die früher einmal das Hauptheiligtum der Slawen war, bevor diese zum Christentum übertraten. Da Arkona als Flächendenkmal ausgewiesen ist, dürfen Besucher mit dem Auto nur bis zum Parkplatz von Putgarten fahren. Ab da hat man für die knapp 2 km zum Kap die Wahl zwischen einer halbstündig verkehrenden Bimmelbahn (5,- EUR hin und zurück) oder einem kleinen Fußmarsch. Fahrradfahrer dürfen natürlich bis Arkona durchfahren. Sobald man sich der Wendeschleife nähert, liegt rechter Hand ein Peilturm, zu dessen Füßen sich der Burgwall befindet. Der lohnenswerte Zugang zur Aussichtsplattform auf der Wallkrone kostet 1,- EUR, in Kombination mit dem Besuch des Museums im Peilturm 2,- EUR.&lt;/p&gt;                &lt;p id="copyright"&gt;        &lt;b&gt;Text:&lt;/b&gt; Maria Palaschevsky &lt;br/&gt;        &lt;b&gt;Sprecher:&lt;/b&gt; Maria Palaschevsky und Jonas Vogt        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;P. Herfert (1997): Die Tempelburg Arkona. Die schriftliche Überlieferung in archäologischer Sicht. -- In: &lt;em&gt;Rugia‐Journal&lt;/em&gt; 5, S. 36‐41.&lt;/li&gt;&lt;li&gt;P. Herfert (1998): Die Tempelburg Arkona. Die archäologischen Untersuchungen&lt;br/&gt;1860 bis 1930. -- In: &lt;em&gt;Rugia‐Journal&lt;/em&gt; 6, S. 21‐25.&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.677156</string>
+		<key>longitude</key>
+		<string>13.4365582</string>
+		<key>subtitle</key>
+		<string>Tempelburg</string>
+		<key>title</key>
+		<string>Arkona</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>499a9680-6518-45fa-9de7-9250fd6a36d9</string>
+	</dict>
+	<key>923bc121-6865-4bc3-8468-551c4fdf1584</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="923bc121-6865-4bc3-8468-551c4fdf1584" /&gt;    &lt;meta key_name="latitude" content="54.5261251" /&gt;    &lt;meta key_name="longitude" content="13.6711228" /&gt;    &lt;meta key_name="subtitle" content="Burgwall 'Sattel auf dem Hengst'" /&gt;    &lt;meta key_name="title" content="Sassnitz" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773565720.jpg?t=1246548617" /&gt;        &lt;p id="description"&gt;Nordöstlich von Sassnitz befindet sich im Wald auf dem Kreidefelsen namens "Hengst" der "Sattel" - einer der wenigen bronzezeitlichen Burgwälle im Norden. Noch heute ahnt man beim Anblick der gewaltigen Böschung, wie eindrucksvoll die damalige Burganalage wohl gewesen sein muss. Folgt man in Sassnitz der Haupstraße und später der Bergstraße sowie der Weddingstraße, so findet man am Ende der letztgenannten einen kleinen Parkplatz (Parkgebühr: 1,- EUR). Dieser bildet den Ausgangspunkt für einen Wanderweg parallel zur Küste. Nach etwa 500 m biegt nach rechts ein Weg zum Strand ab, dem man jedoch nicht bis hinunter zum Wasser folgt, sondern vor der Steilküste wieder nach links verlässt. Nach weiteren 100 m überquert man auf einer hölzernen Treppe bereits die Wallkrone. Der Wall nimmt einen halbkreisförmigen Verlauf und trifft nach ca. 200 m wieder auf die Steilküste. Etwa auf der Hälfte dieser Strecke befindet sich der ehemalige Eingang zur Wallburg.&lt;/p&gt;                &lt;p id="copyright"&gt;        &lt;b&gt;Text:&lt;/b&gt; Anne Dombrowsky und Jana Dräger        &lt;b&gt;Sprecher und Geräusche:&lt;/b&gt; Jana Dräger, Martin Planert und Normen Posselt.        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;            &lt;ul&gt;                &lt;li&gt;Th. Schmidt (1872): Naturgeschichtliches - Die Burgwälle der Insel Rügen nach den auf Befehl Sr. Maj. des Königs im Sommer 1868 unternommenen Untersuchungen. -- In: &lt;em&gt;Baltische Studien&lt;/em&gt; 24, 1872, S. 234-290.&lt;/li&gt;                &lt;li&gt;J. Herrmann (1989): Burgen und befestigte Siedlungen in der jüngeren Bronzezeit und frühen Eisenzeit. -- In: J. Herrmann (Hrsg.): &lt;em&gt;Archäologie in der Deutschen Demokratischen Republik&lt;/em&gt;, Bd. 1 (Berlin) S. 106-118.&lt;/li&gt;            &lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.5261251</string>
+		<key>longitude</key>
+		<string>13.6711228</string>
+		<key>subtitle</key>
+		<string>Burgwall 'Sattel auf dem Hengst'</string>
+		<key>title</key>
+		<string>Sassnitz</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>923bc121-6865-4bc3-8468-551c4fdf1584</string>
+	</dict>
+	<key>c6bbb956-f5ea-4218-b66e-d824d8d35f52</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="c6bbb956-f5ea-4218-b66e-d824d8d35f52" /&gt;    &lt;meta key_name="latitude" content="54.3621578" /&gt;    &lt;meta key_name="longitude" content="13.6174464" /&gt;    &lt;meta key_name="subtitle" content="Großsteingräber" /&gt;    &lt;meta key_name="title" content="Lancken-Granitz" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773588520.jpg?t=1246548257" /&gt;        &lt;p id="description"&gt;Am sogenannten "Fünffingerweg" bei Lancken-Granitz steht die wohl schönste Gruppe von Großsteingräbern der Insel Rügen. Fast alle Grabkammern sind noch sehr gut erhalten oder wurden nach Ausgrabungen rekonstruiert, so dass sich ein anschaulicher Einblick in die Begräbnisstätten der Steinzeit bietet. Auf der B196 biegt man in den Ort Lancken-Granitz ab und folgt der Straße nach Süden. Am Ortsende macht die Straße einen Knick nach rechts und gleich darauf wieder nach links. Hier steht rechterhand ein Hinweisschild von dem aus ein etwa 500 m langer Pfad an den Grabanlagen vorbeiführt. Alternativ kann man aber auch bis zur fünffachen Wegkreuzung weiterfahren und den Weg am anderen Ende beginnen.&lt;/p&gt;        		&lt;p id="copyright"&gt;        &lt;b&gt;Text und Sprecher:&lt;/b&gt; Frank Porreÿ        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;E. Schuldt (1971): Steinzeitliche Grabmonumenteder Insel Rügen (Schwerin).&lt;br/&gt;&lt;/li&gt;&lt;li&gt;E. Schuldt (1972): Die Großsteingräber von Lancken‐Granitz auf der Insel Rügen. -- In: Bodendenkmalpflege in Mecklenburg, Jahrbuch 1971, S. 9‐84.&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.3621578</string>
+		<key>longitude</key>
+		<string>13.6174464</string>
+		<key>subtitle</key>
+		<string>Großsteingräber</string>
+		<key>title</key>
+		<string>Lancken-Granitz</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>c6bbb956-f5ea-4218-b66e-d824d8d35f52</string>
+	</dict>
+	<key>c9c63329-0c78-44eb-8d36-9cee09cc2187</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="c9c63329-0c78-44eb-8d36-9cee09cc2187" /&gt;    &lt;meta key_name="latitude" content="54.31412" /&gt;    &lt;meta key_name="longitude" content="13.3470154" /&gt;    &lt;meta key_name="subtitle" content="Burgwall" /&gt;    &lt;meta key_name="title" content="Garz (1. Teil)" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773611020.jpg?t=1247706151" /&gt;        &lt;p id="description"&gt;Mitten in Garz, unmittelbar am Garzer See gelegen, finden sich die Reste einer alten slawischen Burganlage, die wohl einmal vor rund 1000 Jahren die Keimzelle des Ortes gewesen sein dürfte. Der verbliebene Wall ist heute stark bewaldet, so dass man erst aus der Nähe bemerkt, dass man es hier mit einer ehemaligen Burg zu tun hat. Besucher können entweder in der Wallstraße oder auf dem Parkplatz neben dem Ernst-Moritz-Arndt-Museum (An den Anlagen 1) ihre Fahrzeuge abstellen. Neben einem Rundgang um den Wall lohnt es sich auch einmal einen der inzwischen zahlreichen Zugänge hinaufzusteigen. Statt der Innenbebauung empfängt den Besucher meist nur hüfthohes Gras, dennoch erhält man einen guten Eindruck von der Größe der Anlage.&lt;/p&gt;        		&lt;p id="copyright"&gt;        &lt;b&gt;Text:&lt;/b&gt; Hermann Sievers &lt;/br&gt;        &lt;b&gt;Sprecher:&lt;/b&gt; Sprecher: Hermann Sievers und Stefan Klatt        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;P. Herfert (1994): Höfe, Burgen und Tempel der Rugianer. -– In: &lt;em&gt;Die alte Stadt Garz auf Rügen&lt;/em&gt; (Garz), S. 17‐23.&lt;/li&gt;&lt;li&gt;S. Wichert (2006): Beobachtungen zu Karentia auf Rügen im Mittelalter. -- In: &lt;em&gt;Baltische Studien&lt;/em&gt; N.F. Bd. 91, 2005, S. 31-38&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.31412</string>
+		<key>longitude</key>
+		<string>13.3470154</string>
+		<key>subtitle</key>
+		<string>Burgwall</string>
+		<key>title</key>
+		<string>Garz (1. Teil)</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>c9c63329-0c78-44eb-8d36-9cee09cc2187</string>
+	</dict>
+	<key>cf887f9d-4092-49a7-814b-3eda3f30ca2e</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="cf887f9d-4092-49a7-814b-3eda3f30ca2e" /&gt;    &lt;meta key_name="latitude" content="54.5196617" /&gt;    &lt;meta key_name="longitude" content="13.5471725" /&gt;    &lt;meta key_name="subtitle" content="Grabhügel 'Dubberworth'" /&gt;    &lt;meta key_name="title" content="Sagard" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1767645620.jpg?t=1245666695" /&gt;        &lt;p id="description"&gt;Wenn man auf der B96 von Lietzow aus nach Norden fährt, liegt unmittelbar neben der Abfahrt nach Sagard auf der rechten Seite ein bronzezeitlicher Grabhügel - der "Dubberworth" oder "Dobberworth" - der als einer der größten Norddeutschlands gilt. Fahrradfahrer können eine kleine Ackerzufahrt zum Halten nutzen. Bei der Anfahrt mit dem Auto parkt man am besten in Sagard und läuft ein Stück zurück. Bitte achten Sie darauf, dass Sie bei Ihrem Besuch kein Getreide zertrampeln!&lt;/p&gt;        		&lt;p id="copyright"&gt;        &lt;b&gt;Text und Sprecher:&lt;/b&gt;        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;D. Jantzen (2004): Grabhügel der Bronzezeit - Prägende Elemente der Landschaft - damals und heute. -- In: H. Jöns / F. Lüth (Hrsg.): &lt;em&gt;Mythos und Magie. Archäologische Schätze der Bronzezeitaus Mecklenburg-Vorpommern&lt;/em&gt; (Lübstorf) 132-139.&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.5196617</string>
+		<key>longitude</key>
+		<string>13.5471725</string>
+		<key>subtitle</key>
+		<string>Grabhügel 'Dubberworth'</string>
+		<key>title</key>
+		<string>Sagard</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>cf887f9d-4092-49a7-814b-3eda3f30ca2e</string>
+	</dict>
+	<key>d5d5e41a-7440-400d-84a9-fe2f15274648</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="d5d5e41a-7440-400d-84a9-fe2f15274648" /&gt;    &lt;meta key_name="latitude" content="54.6349273" /&gt;    &lt;meta key_name="longitude" content="13.3416241" /&gt;    &lt;meta key_name="subtitle" content="Bildstein" /&gt;    &lt;meta key_name="title" content="Altenkirchen" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773658820.jpg?t=1245920837" /&gt;        &lt;p id="description"&gt;Mitten in Altenkirchen liegt, etwas versetzt hinter den Häusern am Karl-Marx-Platz, eine der ältesten Kirchen der Insel - eine Tatsache, der der Ort wohl auch seinen Namen verdankt. Schon die Kirche selbst ist aus baugeschichtlicher Sicht interessant. Ein besonderes Detail verbirgt sich jedoch in der Sakristei im Nordosten des Gebäudes: ein liegend eingemauerter Bildstein, der wohl noch von den vorchristlichen Slawen stammt.&lt;/p&gt;                &lt;p id="copyright"&gt;        &lt;b&gt;Text:&lt;/b&gt; Gudrun Mohr und Stefan Klatt &lt;/br&gt;        &lt;b&gt;Sprecher: &lt;/b&gt; Gudrun Mohr, Daniel Neumann, Gundula Lidke und Stefan Klatt        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;W. Saal (1991): Die drei slawischen Bildsteine Vorpommerns. Kirche von Altenkirchen (Rügen), Marienkirche Bergen (Rügen) Stolpe-Grüttow. -- In: &lt;em&gt;Steinkreuzforschung&lt;/em&gt; Reihe B, Bd. 18, S.81-83.&lt;br/&gt;&lt;/li&gt;&lt;li&gt;G. Reymann / J. Schulz (2002): &lt;em&gt;Dorf- und Stadtkirchen auf Rügen und Hiddensee&lt;/em&gt; (Bremen) S. 26-29.&lt;br/&gt;&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.6349273</string>
+		<key>longitude</key>
+		<string>13.3416241</string>
+		<key>subtitle</key>
+		<string>Bildstein</string>
+		<key>title</key>
+		<string>Altenkirchen</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>d5d5e41a-7440-400d-84a9-fe2f15274648</string>
+	</dict>
+	<key>e3d984a7-a3d6-4173-a687-90789c646e7e</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="e3d984a7-a3d6-4173-a687-90789c646e7e" /&gt;    &lt;meta key_name="latitude" content="54.65313" /&gt;    &lt;meta key_name="longitude" content="13.3934283" /&gt;    &lt;meta key_name="subtitle" content="Hünenbett 'Riesenberg'" /&gt;    &lt;meta key_name="title" content="Nobbin" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773548120.jpg?t=1246472686" /&gt;        &lt;p id="description"&gt;Bei Nobbin liegt unmittelbar über der Steilküste ein Hünenbett, das lange als das älteste Grabmonument der Insel galt. Es ist fast vollständig erhalten und beeindruckt noch heute mit seinen riesigen Wächtersteinen. Autofahrer folgen der Straße von Altenkirchen Richtung Kap Arkona und biegen nach etwa 3 km rechts in das Dörfchen Nobbin ab. Das Hünengrab ist hier schon ausgeschildert. Stellen Sie Ihr Fahrzeug am Feldweg ab und gehen Sie die übrigen 500 m zu Fuß. Mit dem Fahrrad reist man am besten über den Küstenradweg zwischen Juliusruh und Arkona an. Das Großsteingrab liegt direkt am Radweg. Vor Ort lädt eine Sitzgruppe zum Rasten, und eine Informationstafel stillt den Wissensdurst.&lt;/p&gt;                &lt;p id="copyright"&gt;        &lt;b&gt;Text und Sprecher:&lt;/b&gt; Daniel Neumann        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;E. Schuldt (1972): Der Riesenberg von Nobbin, Kreis Rügen. --  In: &lt;em&gt;Bodendenkmalpflege in Mecklenburg&lt;/em&gt;, Jahrbuch 1971, S. 153-160.&lt;/li&gt;&lt;li&gt;E. Schuldt (1971): &lt;em&gt;Steinzeitliche Grabmonumente der Insel Rügen&lt;/em&gt; (Schwerin).&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.65313</string>
+		<key>longitude</key>
+		<string>13.3934283</string>
+		<key>subtitle</key>
+		<string>Hünenbett 'Riesenberg'</string>
+		<key>title</key>
+		<string>Nobbin</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>e3d984a7-a3d6-4173-a687-90789c646e7e</string>
+	</dict>
+	<key>e8680cc5-54f9-452d-8736-c515e69f9533</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="e8680cc5-54f9-452d-8736-c515e69f9533" /&gt;    &lt;meta key_name="latitude" content="54.359032" /&gt;    &lt;meta key_name="longitude" content="13.6818194" /&gt;    &lt;meta key_name="subtitle" content="Schälchenstein am 'Goldbusch'" /&gt;    &lt;meta key_name="title" content="Altensien" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773638720.jpg?t=1247522455" /&gt;        &lt;p id="description"&gt;Die Großstein- oder Megalithgräber sind schon als solches interessante Ausflugsziele und auf Rügen noch immer häufig anzutreffen. Der sogenannte Goldbusch bei Altensien weist aber noch eine Besonderheit auf: einer der Steine wurde Jahrtausende nach der Entstehung des Grabes noch mit kleinen Vertiefungen verziert - in Fachkreisen auch Schälchen genannt. Fährt man von Sellin Richtung Lancken-Granitz geht es kurz nach dem Ortsausgang auf der linken Seite nach Altensien. Man durchfährt den kleinen Ort und folgt der Straße am Ufer des Selliner Sees entlang nach Süden. Nach etwa 1 km liegt auf der linken Straßenseite zwischen Bäumen und Gestrüpp das Großsteingrab mit einer Informationstafel. Um die Schälchen sehen zu können, muss man ein wenig klettern.&lt;/p&gt;        		&lt;p id="copyright"&gt;        &lt;b&gt;Text:&lt;/b&gt; Stefan Hanel und Fabian Zachariae &lt;br/&gt;        &lt;b&gt;Sprecher und Geräusche:&lt;/b&gt; Stefan Hanel, Fabian Zachariae und Katrin Rodde.        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;E. Schuldt (1972): Der Großdolmen von Altensien, Kreis Rügen. -- In: &lt;em&gt;Bodendenkmalpflege in Mecklenburg&lt;/em&gt;, Jahrbuch 1971, S. 133‐142.&lt;/li&gt;&lt;li&gt;M. Sommer‐Scheffler (2005): Schälchensteine von der Insel Rügen. -- In: &lt;em&gt;Bodendenkmalpflege in Mecklenburg‐Vorpommern&lt;/em&gt;, Jahrbuch 2004, S. 283‐294.&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.359032</string>
+		<key>longitude</key>
+		<string>13.6818194</string>
+		<key>subtitle</key>
+		<string>Schälchenstein am 'Goldbusch'</string>
+		<key>title</key>
+		<string>Altensien</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>e8680cc5-54f9-452d-8736-c515e69f9533</string>
+	</dict>
+	<key>f4e37b5b-754c-4c61-baab-6b73a86aa220</key>
+	<dict>
+		<key>audioFileName</key>
+		<string>9PM.mp3</string>
+		<key>descriptionPage</key>
+		<string>&lt;html&gt;    &lt;head&gt;    &lt;link type="text/css" rel="stylesheet" href="descriptionPage.css" /&gt;    &lt;meta key_name="audioFileName" content="9PM.mp3" /&gt;    &lt;meta key_name="uuid" content="f4e37b5b-754c-4c61-baab-6b73a86aa220" /&gt;    &lt;meta key_name="latitude" content="54.31412" /&gt;    &lt;meta key_name="longitude" content="13.3470154" /&gt;    &lt;meta key_name="subtitle" content="Burgwall" /&gt;    &lt;meta key_name="title" content="Garz (2. Teil)" /&gt;    &lt;meta key_name="topic" content="Archäologie" /&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;img src="http://www.rügenhören.de/s/cc_images/cache_1773611020.jpg?t=1247706151" /&gt;        &lt;p id="description"&gt;Mitten in Garz, unmittelbar am Garzer See gelegen, finden sich die Reste einer alten slawischen Burganlage, die wohl einmal vor rund 1000 Jahren die Keimzelle des Ortes gewesen sein dürfte. Der verbliebene Wall ist heute stark bewaldet, so dass man erst aus der Nähe bemerkt, dass man es hier mit einer ehemaligen Burg zu tun hat. Besucher können entweder in der Wallstraße oder auf dem Parkplatz neben dem Ernst-Moritz-Arndt-Museum (An den Anlagen 1) ihre Fahrzeuge abstellen. Neben einem Rundgang um den Wall lohnt es sich auch einmal einen der inzwischen zahlreichen Zugänge hinaufzusteigen. Statt der Innenbebauung empfängt den Besucher meist nur hüfthohes Gras, dennoch erhält man einen guten Eindruck von der Größe der Anlage.&lt;/p&gt;        		&lt;p id="copyright"&gt;        &lt;b&gt;Text:&lt;/b&gt; Ernst Moritz Arndt (gekürzt) &lt;/br&gt;        &lt;b&gt;Sprecherin:&lt;/b&gt; Wiebke Schrader        &lt;/p&gt;        &lt;p id="literature"&gt;&lt;b&gt;Literatur:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;P. Herfert (1994): Höfe, Burgen und Tempel der Rugianer. -– In: &lt;em&gt;Die alte Stadt Garz auf Rügen&lt;/em&gt; (Garz), S. 17‐23.&lt;/li&gt;&lt;li&gt;S. Wichert (2006): Beobachtungen zu Karentia auf Rügen im Mittelalter. -- In: &lt;em&gt;Baltische Studien&lt;/em&gt; N.F. Bd. 91, 2005, S. 31-38&lt;/li&gt;&lt;/ul&gt;        &lt;/p&gt;    &lt;/body&gt;&lt;/html&gt;</string>
+		<key>latitude</key>
+		<string>54.31412</string>
+		<key>longitude</key>
+		<string>13.3470154</string>
+		<key>subtitle</key>
+		<string>Burgwall</string>
+		<key>title</key>
+		<string>Garz (2. Teil)</string>
+		<key>topic</key>
+		<string>Archäologie</string>
+		<key>uuid</key>
+		<string>f4e37b5b-754c-4c61-baab-6b73a86aa220</string>
 	</dict>
 </dict>
 </plist>
