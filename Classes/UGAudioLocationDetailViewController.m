@@ -103,8 +103,8 @@
 	[[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] currentAudioPlayerViewController] release];
 	
     UGAudioPlayerViewController *audioPlayerViewController = [[UGAudioPlayerViewController alloc] initWithNibName:@"UGAudioPlayerViewController" 
-                                                                                                           bundle: [NSBundle mainBundle] 
-                                                                                                        audioFile: [audioLocation audioFileLocation]];
+                                                                                                           bundle: [NSBundle mainBundle]];
+    [audioPlayerViewController setAudioLocation: [self audioLocation]];
     [[self navigationController] pushViewController: audioPlayerViewController animated: YES];
     [(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentAudioPlayerViewController: audioPlayerViewController];
 }

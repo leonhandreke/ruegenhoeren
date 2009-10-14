@@ -10,20 +10,22 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 
+#import "UGAudioLocation.h"
 @interface UGAudioPlayerViewController : UIViewController {
 
-    NSURL *audioFileLocation;
+    UGAudioLocation *audioLocation;
     
     AVAudioPlayer *audioPlayer;
     
     NSTimer *updateDurationTimer;
     
+    IBOutlet UIButton *playPauseButton;
+    
     IBOutlet UISlider *scrubberSlider;
     IBOutlet UILabel *doneTimeLabel;
     IBOutlet UILabel *remainingTimeLabel;
     
-    IBOutlet UIImageView *backgroundView;
-    IBOutlet UITextView *descriptionView;
+    IBOutlet UIWebView *webView;
     
     IBOutlet UITabBar * tabBar;
     IBOutlet UIView *volumeViewHolder;
@@ -32,9 +34,12 @@
     
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil audioFile: (NSURL *) newAudioFileLocation;
-
 - (void) volumeChanged:(NSNotification *)notify;
 - (void) updateDurationScrubber;
+
+- (IBAction) togglePlayPause: (id) sender;
+
+@property (assign) UGAudioLocation *audioLocation;
+
 
 @end

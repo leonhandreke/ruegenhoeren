@@ -11,32 +11,33 @@
 
 @implementation UGAudioPlayerViewController
 
+@synthesize audioLocation;
 
+/*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil audioFile: (NSURL *) newAudioFileLocation {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-        audioFileLocation = newAudioFileLocation;
-        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:audioFileLocation error: nil];
-        
         
     }
     return self;
 }
-
+*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: [audioLocation audioFileLocation] error: nil];
+    
     //Initialize the custom UISlider
     scrubberSlider.backgroundColor = [UIColor clearColor];  
-    UIImage *stetchLeftTrack = [[UIImage imageNamed:@"blueTrack.png"]
+    UIImage *stetchLeftTrack = [[UIImage imageNamed:@"bluetrack.png"]
                                 stretchableImageWithLeftCapWidth:9.0 topCapHeight:0.0];
-    UIImage *stetchRightTrack = [[UIImage imageNamed:@"whiteTrack.png"]
+    UIImage *stetchRightTrack = [[UIImage imageNamed:@"whitetrack.png"]
                                  stretchableImageWithLeftCapWidth:9.0 topCapHeight:0.0];
-    [scrubberSlider setThumbImage: [UIImage imageNamed:@"whiteSlide.png"] forState:UIControlStateNormal];
+    [scrubberSlider setThumbImage: [UIImage imageNamed:@"whiteslide.png"] forState:UIControlStateNormal];
     [scrubberSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
     [scrubberSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
     
@@ -45,6 +46,10 @@
     [tabBar setBounds: tabBarBounds];
     
     //updateDurationTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(updateDurationScrubber) userInfo: nil repeats: YES];
+    
+    NSString *resourcePath = [[NSBundle mainBundle] bundlePath];
+    NSURL *resourceURL = [NSURL fileURLWithPath: resourcePath];
+    [webView loadHTMLString: [audioLocation descriptionPage] baseURL: resourceURL];
     
     
 	// VolumeViewHolder is the frame to hold the slider.  We'll resize the slider to be the size of the frame.
@@ -95,8 +100,8 @@
     NSNumber *timeDone = [NSNumber numberWithDouble: [audioPlayer currentTime]];
     NSNumber *timeRemaining = [NSNumber numberWithDouble: [audioPlayer duration] - [audioPlayer currentTime]];
     
-    NSString *doneLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeDone intValue] / 60, [timeDone intValue] % 60];
-    NSString *remainingLabelValue = [NSString stringWithFormat: @"%d:%02d", [timeRemaining intValue] / 60, [timeRemaining intValue] % 60];
+    NSString *doneLabelValue = [NSString stringWithFormat: @"%02d:%02d", [timeDone intValue] / 60, [timeDone intValue] % 60];
+    NSString *remainingLabelValue = [NSString stringWithFormat: @"-%02d:%02d", [timeRemaining intValue] / 60, [timeRemaining intValue] % 60];
     
     NSNumber *sliderValue =  [NSNumber numberWithDouble: [timeDone doubleValue] / [[NSNumber numberWithDouble: [audioPlayer duration]] doubleValue]];
     
@@ -104,6 +109,17 @@
     [self performSelectorOnMainThread: @selector(setRemainingTimeLabelText:) withObject: remainingLabelValue waitUntilDone: YES];
     [self performSelectorOnMainThread: @selector(setSliderValue:) withObject: sliderValue waitUntilDone: YES];
     //NSLog(@"%f", [scrubberSlider value]);
+}
+
+- (IBAction) togglePlayPause: (id) sender {
+    if ([audioPlayer isPlaying]) {
+        [audioPlayer pause];
+        [playPauseButton setImage: [UIImage imageNamed: @"play.png"] forState: UIControlStateNormal];
+    }
+    else {
+        [audioPlayer play];
+        [playPauseButton setImage: [UIImage imageNamed: @"pause.png"] forState: UIControlStateNormal];
+    }
 }
 
 /*
@@ -145,8 +161,5 @@
 	[audioPlayer release];
     [super dealloc];
 }
-
-
-
 
 @end
