@@ -22,18 +22,15 @@
     NSString *topic;
     
     CLLocationCoordinate2D coordinate;
-
-    NSString *audioFileName;
+    
+    NSURL *audioFileRemoteLocation;
     
 }
 
 - (UGAudioLocation *) initWithDictionary: (NSDictionary *) dictionary;
 - (NSDictionary *) dictionary;
 
-// To conform to MKAnnotation
--(NSString *) subtitle;
-
-- (NSURL *) audioFileLocation;
+- (NSURL *) audioFileLocalLocation;
 
 @property (copy) NSString *uuid;
 @property (copy) NSString *title;
@@ -44,6 +41,6 @@
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
-@property (copy) NSString *audioFileName;
+@property (copy) NSURL *audioFileRemoteLocation;
 
 @end

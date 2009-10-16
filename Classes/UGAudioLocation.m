@@ -11,7 +11,7 @@
 
 @implementation UGAudioLocation
 
-@synthesize uuid, title, subtitle, descriptionPage, narrator, topic, coordinate, audioFileName;
+@synthesize uuid, title, subtitle, descriptionPage, narrator, topic, coordinate, audioFileRemoteLocation;
 
 - (UGAudioLocation *) initWithDictionary: (NSDictionary *) dictionary {
     if (self = [self init]) {
@@ -21,7 +21,7 @@
         [self setDescriptionPage: [dictionary valueForKey: @"descriptionPage"]];
         [self setNarrator: [dictionary valueForKey: @"narrator"]];
         [self setTopic: [dictionary valueForKey: @"topic"]];
-        [self setAudioFileName: [dictionary valueForKey: @"audioFileName"]];
+        [self setAudioFileRemoteLocation: [NSURL URLWithString: [dictionary valueForKey: @"audioFileRemoteLocation"]]];
         CLLocationCoordinate2D newCoordinate = {[(NSNumber *)[dictionary valueForKey: @"latitude"] doubleValue], [(NSNumber *)[dictionary valueForKey: @"longitude"] doubleValue]};
         [self setCoordinate: newCoordinate];
     }
@@ -35,7 +35,7 @@
     [descriptionPage release];
     [narrator release];
     [topic release];
-    [audioFileName release];
+    [audioFileRemoteLocation release];
     [super dealloc];
 }
 
@@ -43,11 +43,12 @@
     return [NSString stringWithFormat: @"%@: %@", [self title], [self subtitle]];
 }
 
-- (NSURL *) audioFileLocation {
+- (NSURL *) audioFileLocalLocation {
     
-    /*NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES); 
-    NSString *filename = [paths objectAtIndex:0];*/
-    NSString *filename = [[NSBundle mainBundle] pathForResource: audioFileName ofType: nil];  
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+    NSString *filename = [paths objectAtIndex:0];
+    filename = [filename stringByAppendingPathComponent: [NSString stringWithFormat: @"%@.mp3", [self uuid]]];
+    //NSString *filename = [[NSBundle mainBundle] pathForResource: audioFileName ofType: nil];  
     return [NSURL fileURLWithPath: filename];
 }
 
@@ -60,7 +61,7 @@
     [resultDictionary setValue: descriptionPage forKey: @"descriptionPage"];
     [resultDictionary setValue: narrator forKey: @"narrator"];
     [resultDictionary setValue: topic forKey: @"topic"];
-    [resultDictionary setValue: audioFileName forKey: @"audioFileName"];
+    [resultDictionary setValue: [audioFileRemoteLocation absoluteString] forKey: @"audioFileRemoteLocation"];
     [resultDictionary setValue: [NSNumber numberWithDouble: coordinate.latitude ] forKey: @"latitude"];
     [resultDictionary setValue: [NSNumber numberWithDouble: coordinate.longitude ] forKey: @"longitude"];
     

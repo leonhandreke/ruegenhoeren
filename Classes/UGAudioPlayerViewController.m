@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: [audioLocation audioFileLocation] error: nil];
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: [audioLocation audioFileLocalLocation] error: nil];
     
     //Initialize the custom UISlider
     scrubberSlider.backgroundColor = [UIColor clearColor];  
