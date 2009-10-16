@@ -12,22 +12,22 @@
 @implementation UGMapViewController
 
 /*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-        NSLog(@"Chello");
-    }
-    return self;
-}
-*/
+ // The designated initializer. Override to perform setup that is required before the view is loaded.
+ - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+ if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+ // Custom initialization
+ NSLog(@"Chello");
+ }
+ return self;
+ }
+ */
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 /*- (void)loadView {
-    //[super loadView];
-    
-}*/
+ //[super loadView];
+ 
+ }*/
 
 
 
@@ -42,7 +42,7 @@
     span.longitudeDelta=0.5;
     
     CLLocationCoordinate2D ruegenCenter = {54.390154, 13.364868};
-
+    
     ruegenRegion.span=span;
     ruegenRegion.center=ruegenCenter;
     
@@ -58,9 +58,9 @@
 	while (currentLocation = [audioLocationsEnumerator nextObject]) {
 		[(MKMapView *)[self view] addAnnotation: currentLocation];
 	}
-
     
-
+    
+    
 }
 
 - (void) viewWillAppear: (BOOL) animated {
@@ -76,12 +76,12 @@
 
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
@@ -97,7 +97,10 @@
 
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation {
     
-	MKPinAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]];
+    
+    MKAnnotationView* annotationView;
+    
+    annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]];
     
     // Set up the Left callout
     UIButton *myDetailButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -117,7 +120,8 @@
     annotationView.rightCalloutAccessoryView = myDetailButton;
     
     [annotationView setCanShowCallout: YES];
-	//[annotationView setAnimatesDrop: NO];
+    //[annotationView setAnimatesDrop: NO];
+    
 	return annotationView;
 }
 

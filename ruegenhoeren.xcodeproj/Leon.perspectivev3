@@ -278,13 +278,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>36</integer>
+									<integer>43</integer>
 									<integer>25</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 43}, {338, 862}}</string>
+							<string>{{0, 7}, {338, 862}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>356097BB104B19CD00EA72D7</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Entitlements.plist</string>
+								<string>UGAudioLocationDatabase.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,18 +325,16 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>356097BC104B19CD00EA72D7</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Entitlements.plist</string>
+										<string>UGAudioLocationDatabase.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>352A06ED1085136B0003080E</string>
+										<string>352A07E31088336C0003080E</string>
 										<key>history</key>
 										<array>
 											<string>35B65C6510809B6E000DC693</string>
-											<string>35B65C8C10809D12000DC693</string>
 											<string>35B65C8D10809D12000DC693</string>
 											<string>35B65C9A10809E3A000DC693</string>
-											<string>35B65CCC1080A0D8000DC693</string>
 											<string>35B65CE31080A4A6000DC693</string>
 											<string>35B65CE41080A4A6000DC693</string>
 											<string>35B65D171080FAA1000DC693</string>
@@ -344,10 +342,13 @@
 											<string>35B65D7510810AEB000DC693</string>
 											<string>35B65D8F10811D5E000DC693</string>
 											<string>35B65DAD10812052000DC693</string>
-											<string>35B65DBB10812251000DC693</string>
-											<string>35B65DCE10812582000DC693</string>
-											<string>354CEAFF108505CF000B9A99</string>
-											<string>352A06EA108513610003080E</string>
+											<string>352A06FA108632050003080E</string>
+											<string>352A074B108641780003080E</string>
+											<string>352A074D108641780003080E</string>
+											<string>352A07AD1087B79A0003080E</string>
+											<string>352A07D01087BA0F0003080E</string>
+											<string>352A07E11088336C0003080E</string>
+											<string>352A07E21088336C0003080E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -361,18 +362,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1320, 586}}</string>
+								<string>{{0, 0}, {1320, 613}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 107 1680 921 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>586pt</string>
+							<string>613pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>289pt</string>
+							<string>263pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -386,9 +387,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1320, 262}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 107 1680 921 0 0 1680 1028 </string>
+										<string>{{10, 27}, {1320, -27}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -442,7 +441,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1320, 248}}</string>
+										<string>{{10, 27}, {1320, 236}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 107 1680 921 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -662,6 +663,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>352A0710108632850003080E</string>
+		<string>352A06FF1086320C0003080E</string>
 		<string>/Users/Leon/Development/ruegenhoeren/ruegenhoeren.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

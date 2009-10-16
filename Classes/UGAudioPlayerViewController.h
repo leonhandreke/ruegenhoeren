@@ -25,9 +25,9 @@
     IBOutlet UILabel *doneTimeLabel;
     IBOutlet UILabel *remainingTimeLabel;
     
-    IBOutlet UIWebView *webView;
+    IBOutlet UILabel *titleLabel;
+    IBOutlet UILabel *subtitleLabel;
     
-    IBOutlet UITabBar * tabBar;
     IBOutlet UIView *volumeViewHolder;
     UIView *volumeViewSlider;
     MPVolumeView *volumeView;
@@ -38,6 +38,7 @@
 - (void) updateDurationScrubber;
 
 - (IBAction) togglePlayPause: (id) sender;
+- (IBAction) scrubberSliderMoved: (id) sender;
 
 @property (assign) UGAudioLocation *audioLocation;
 
