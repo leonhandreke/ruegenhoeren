@@ -11,7 +11,7 @@ from BeautifulSoup import BeautifulSoup
 # Path to HTML file and resulting plist file
 
 pathHTML = "../html/"
-pathPlist = "./audioCache.plist"
+pathPlist = "../audioLocationsCache.plist"
 
 #### NO NEED TO EDIT BELOW THIS LINE ####
 
@@ -79,6 +79,10 @@ for f in html_files:
 		uuidLine = soup.findAll('meta', key_name="uuid")[0]
 		uuidStartSplit = uuidLine.encode('utf-8').split('<meta key_name="uuid" content="')[1]
 		uuid = uuidStartSplit.split('" />')[0]
+		
+		audioFileRemoteLocationLine = soup.findAll('meta', key_name="audioFileRemoteLocation")[0]
+		audioFileRemoteLocationStartSplit = audioFileRemoteLocationLine.encode('utf-8').split('<meta key_name="audioFileRemoteLocation" content="')[1]
+		audioFileRemoteLocation = audioFileRemoteLocationStartSplit.split('" />')[0]
 
 		# Audio File Name #
 		
@@ -86,7 +90,7 @@ for f in html_files:
 		#audioFileNameStartSplit = audioFileNameLine.encode('utf-8').split('<meta key_name="audioFileName" content="')[1]
 		#audioFileName = audioFileNameStartSplit.split('" />')[0]
 
-		finDict = {'topic': topic, 'title': title, 'subtitle': subtitle, 'longitude': longitude, 'latitude': latitude, 'uuid': uuid, 'descriptionPage': htmlbody, 'audioFileRemoteLocation': "http://192.168.0.245/9PM.mp3"}
+		finDict = {'topic': topic, 'title': title, 'subtitle': subtitle, 'longitude': longitude, 'latitude': latitude, 'uuid': uuid, 'descriptionPage': htmlbody, 'audioFileRemoteLocation': audioFileRemoteLocation}
 		
 		mainDict[uuid] = finDict
 		

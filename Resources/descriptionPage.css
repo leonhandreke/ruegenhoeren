@@ -2,6 +2,20 @@ body {
 	list-style-position: outside;
 	list-style-type: disc;
 	font-family: Helvetica;
+	margin: 0px;
+}
+
+img {
+    width: 100%;    
+}
+
+#text-content {
+    margin: 10px;    
+}
+
+#title {
+    font-size:14pt;
+    font-weight: bold;    
 }
 
 #description {
