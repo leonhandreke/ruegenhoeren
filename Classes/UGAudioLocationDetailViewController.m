@@ -26,14 +26,14 @@
 
  - (void)viewDidLoad {
      [super viewDidLoad];
-     
+     /*
      TKOverviewHeaderView *overviewHeaderView = [[TKOverviewHeaderView alloc] init];
      [[overviewHeaderView title] setText: [audioLocation title]];
      [[overviewHeaderView subtitle] setText: [audioLocation subtitle]];
      [[overviewHeaderView indicator] setText: [audioLocation topic]];
      [[overviewHeaderView indicator] setColor: TKOverviewIndicatorViewColorGreen];
      
-     [headerView addSubview: overviewHeaderView];
+     [headerView addSubview: overviewHeaderView];*/
      
      //[webView loadRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com/ncr"]]];
      NSString *resourcePath = [[NSBundle mainBundle] bundlePath];
@@ -46,7 +46,6 @@
     [super viewWillAppear:animated];
     [[self navigationController] setNavigationBarHidden: NO animated: YES];
     [[self navigationItem] setTitle: [audioLocation title]];
-    [[self navigationItem] setHidesBackButton: NO animated: NO];
 }
 
 - (BOOL)hidesBottomBarWhenPushed {
@@ -98,15 +97,36 @@
     [apool release];
 }*/
 
-- (IBAction) playAudioLocation: (id) sender {
+- (IBAction) playOrDownloadAudioLocation: (id) sender {
 	
-	[[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] currentAudioPlayerViewController] release];
-	
-    UGAudioPlayerViewController *audioPlayerViewController = [[UGAudioPlayerViewController alloc] initWithNibName:@"UGAudioPlayerViewController" 
-                                                                                                           bundle: [NSBundle mainBundle]];
-    [audioPlayerViewController setAudioLocation: [self audioLocation]];
-    [[self navigationController] pushViewController: audioPlayerViewController animated: YES];
-    [(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentAudioPlayerViewController: audioPlayerViewController];
+    if([[NSFileManager defaultManager] fileExistsAtPath: [[[self audioLocation] audioFileLocalLocation] absoluteString]]) {
+        // File exists, go play it...
+        
+        [[(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] currentAudioPlayerViewController] release];
+        
+        UGAudioPlayerViewController *audioPlayerViewController = [[UGAudioPlayerViewController alloc] initWithNibName:@"UGAudioPlayerViewController" 
+                                                                                                               bundle: [NSBundle mainBundle]];
+        [audioPlayerViewController setAudioLocation: [self audioLocation]];
+        [[self navigationController] pushViewController: audioPlayerViewController animated: YES];
+        [(ruegenhoerenAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentAudioPlayerViewController: audioPlayerViewController];
+        
+    }
+    else {
+        // Looks like we have to download the file first...
+        NSURLRequest *audioFileRequest = [NSURLRequest requestWithURL: [audioLocation audioFileRemoteLocation]];
+        UGDownload *fileDowload = [[UGDownload alloc] initWithRequest:audioFileRequest 
+                                                          destination: [[audioLocation audioFileLocalLocation] absoluteString] 
+                                                             delegate: self];
+        
+        UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle: UIProgressViewStyleBar];
+        UIBarButtonItem *progressBarItem = [[UIBarButtonItem alloc] initWithCustomView: progressView];
+        //[UIBarButtonItem 
+        
+        //NSArray *toolbarItems = [NSArray arrayWithObject: 
+    }
+
+    
+
 }
 
 #pragma mark UIWebViewDelegate

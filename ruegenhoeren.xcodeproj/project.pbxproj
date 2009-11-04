@@ -19,6 +19,7 @@
 		352A07EE1088D3830003080E /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 352A07EA1088D3830003080E /* 73-radar.png */; };
 		352A07EF1088D3830003080E /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 352A07EB1088D3830003080E /* 103-map.png */; };
 		352A07F11088D38F0003080E /* doubleTabBarGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 352A07F01088D38F0003080E /* doubleTabBarGradient.png */; };
+		352A083B1088FC340003080E /* UGDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 352A083A1088FC340003080E /* UGDownload.m */; };
 		354CEAFE10850550000B9A99 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 354CEAFD10850550000B9A99 /* Entitlements.plist */; };
 		356097CC104B1B5D00EA72D7 /* UGMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356097CB104B1B5D00EA72D7 /* UGMapViewController.m */; };
 		357574FC10598ED60058EB63 /* 9PM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 357574FB10598ED60058EB63 /* 9PM.mp3 */; };
@@ -29,11 +30,10 @@
 		35757600105D3B5D0058EB63 /* bluetrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 357575FF105D3B5D0058EB63 /* bluetrack.png */; };
 		3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */; };
 		35798C9F1053C87500B91200 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35798C9E1053C87500B91200 /* MediaPlayer.framework */; };
+		3586EF5610A21E7000145089 /* 06-magnifying-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3586EF5510A21E7000145089 /* 06-magnifying-glass.png */; };
 		3589979E104D95A60095A26A /* UGAudioLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */; };
 		358997A8104D95EA0095A26A /* UGAudioLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */; };
 		358AEB02106BD3CD00CE5D1C /* LoadingHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB01106BD3CD00CE5D1C /* LoadingHUDView.m */; };
-		358AEB18106BD40F00CE5D1C /* TKOverviewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB15106BD40F00CE5D1C /* TKOverviewHeaderView.m */; };
-		358AEB19106BD40F00CE5D1C /* TKOverviewIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB17106BD40F00CE5D1C /* TKOverviewIndicatorView.m */; };
 		358AEB1C106BD43B00CE5D1C /* TKGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB1B106BD43B00CE5D1C /* TKGlobal.m */; };
 		358AEB2B106BD45200CE5D1C /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB28106BD45200CE5D1C /* UIImageAdditions.m */; };
 		358AEB2C106BD45200CE5D1C /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB2A106BD45200CE5D1C /* UIViewAdditions.m */; };
@@ -73,6 +73,8 @@
 		352A07EA1088D3830003080E /* 73-radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "73-radar.png"; path = "Resources/73-radar.png"; sourceTree = "<group>"; };
 		352A07EB1088D3830003080E /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "103-map.png"; path = "Resources/103-map.png"; sourceTree = "<group>"; };
 		352A07F01088D38F0003080E /* doubleTabBarGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doubleTabBarGradient.png; path = Resources/doubleTabBarGradient.png; sourceTree = "<group>"; };
+		352A08391088FC340003080E /* UGDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGDownload.h; sourceTree = "<group>"; };
+		352A083A1088FC340003080E /* UGDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGDownload.m; sourceTree = "<group>"; };
 		354CEAFD10850550000B9A99 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		356097CA104B1B5D00EA72D7 /* UGMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMapViewController.h; sourceTree = "<group>"; };
 		356097CB104B1B5D00EA72D7 /* UGMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMapViewController.m; sourceTree = "<group>"; };
@@ -84,15 +86,12 @@
 		357575FF105D3B5D0058EB63 /* bluetrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluetrack.png; path = Resources/bluetrack.png; sourceTree = "<group>"; };
 		35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioPlayerViewController.xib; sourceTree = "<group>"; };
 		35798C9E1053C87500B91200 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3586EF5510A21E7000145089 /* 06-magnifying-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "06-magnifying-glass.png"; path = "Resources/06-magnifying-glass.png"; sourceTree = "<group>"; };
 		3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationDetailViewController.xib; sourceTree = "<group>"; };
 		358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDetailViewController.h; sourceTree = "<group>"; };
 		358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationDetailViewController.m; sourceTree = "<group>"; };
 		358AEB00106BD3CD00CE5D1C /* LoadingHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingHUDView.h; path = ../tapkulibrary/TapkuLibrary/LoadingHUDView.h; sourceTree = SOURCE_ROOT; };
 		358AEB01106BD3CD00CE5D1C /* LoadingHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingHUDView.m; path = ../tapkulibrary/TapkuLibrary/LoadingHUDView.m; sourceTree = SOURCE_ROOT; };
-		358AEB14106BD40F00CE5D1C /* TKOverviewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKOverviewHeaderView.h; path = ../tapkulibrary/TapkuLibrary/TKOverviewHeaderView.h; sourceTree = SOURCE_ROOT; };
-		358AEB15106BD40F00CE5D1C /* TKOverviewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKOverviewHeaderView.m; path = ../tapkulibrary/TapkuLibrary/TKOverviewHeaderView.m; sourceTree = SOURCE_ROOT; };
-		358AEB16106BD40F00CE5D1C /* TKOverviewIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKOverviewIndicatorView.h; path = ../tapkulibrary/TapkuLibrary/TKOverviewIndicatorView.h; sourceTree = SOURCE_ROOT; };
-		358AEB17106BD40F00CE5D1C /* TKOverviewIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKOverviewIndicatorView.m; path = ../tapkulibrary/TapkuLibrary/TKOverviewIndicatorView.m; sourceTree = SOURCE_ROOT; };
 		358AEB1A106BD42500CE5D1C /* TKGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKGlobal.h; path = ../tapkulibrary/TapkuLibrary/TKGlobal.h; sourceTree = SOURCE_ROOT; };
 		358AEB1B106BD43B00CE5D1C /* TKGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKGlobal.m; path = ../tapkulibrary/TapkuLibrary/TKGlobal.m; sourceTree = SOURCE_ROOT; };
 		358AEB27106BD45200CE5D1C /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageAdditions.h; path = ../tapkulibrary/TapkuLibrary/UIImageAdditions.h; sourceTree = SOURCE_ROOT; };
@@ -170,6 +169,8 @@
 				35E9E37210654A460022BA69 /* UGTabBarController.m */,
 				35E9E61D10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.h */,
 				35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */,
+				352A08391088FC340003080E /* UGDownload.h */,
+				352A083A1088FC340003080E /* UGDownload.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -244,6 +245,7 @@
 				352A07F01088D38F0003080E /* doubleTabBarGradient.png */,
 				352A07E81088D3830003080E /* 28-star.png */,
 				352A07E91088D3830003080E /* 57-download.png */,
+				3586EF5510A21E7000145089 /* 06-magnifying-glass.png */,
 				352A07EA1088D3830003080E /* 73-radar.png */,
 				352A07EB1088D3830003080E /* 103-map.png */,
 				352A075C1086589F0003080E /* IconHuge.png */,
@@ -276,10 +278,6 @@
 				358AEB2A106BD45200CE5D1C /* UIViewAdditions.m */,
 				358AEB1A106BD42500CE5D1C /* TKGlobal.h */,
 				358AEB1B106BD43B00CE5D1C /* TKGlobal.m */,
-				358AEB14106BD40F00CE5D1C /* TKOverviewHeaderView.h */,
-				358AEB15106BD40F00CE5D1C /* TKOverviewHeaderView.m */,
-				358AEB16106BD40F00CE5D1C /* TKOverviewIndicatorView.h */,
-				358AEB17106BD40F00CE5D1C /* TKOverviewIndicatorView.m */,
 				358AEB00106BD3CD00CE5D1C /* LoadingHUDView.h */,
 				358AEB01106BD3CD00CE5D1C /* LoadingHUDView.m */,
 			);
@@ -357,6 +355,7 @@
 				352A07EE1088D3830003080E /* 73-radar.png in Resources */,
 				352A07EF1088D3830003080E /* 103-map.png in Resources */,
 				352A07F11088D38F0003080E /* doubleTabBarGradient.png in Resources */,
+				3586EF5610A21E7000145089 /* 06-magnifying-glass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,12 +378,11 @@
 				35E9E37310654A460022BA69 /* UGTabBarController.m in Sources */,
 				35E9E61F10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m in Sources */,
 				358AEB02106BD3CD00CE5D1C /* LoadingHUDView.m in Sources */,
-				358AEB18106BD40F00CE5D1C /* TKOverviewHeaderView.m in Sources */,
-				358AEB19106BD40F00CE5D1C /* TKOverviewIndicatorView.m in Sources */,
 				358AEB1C106BD43B00CE5D1C /* TKGlobal.m in Sources */,
 				358AEB2B106BD45200CE5D1C /* UIImageAdditions.m in Sources */,
 				358AEB2C106BD45200CE5D1C /* UIViewAdditions.m in Sources */,
 				358AEB2F106BD45D00CE5D1C /* NSDateAdditions.m in Sources */,
+				352A083B1088FC340003080E /* UGDownload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

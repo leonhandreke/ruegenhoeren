@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
  
-#import "TKOverviewHeaderView.h"
+#import "UGDownload.h"
 
 #import "ruegenhoerenAppDelegate.h"
 #import "UGAudioLocation.h"
@@ -17,9 +17,10 @@
 @interface UGAudioLocationDetailViewController : UIViewController <UIWebViewDelegate> {
 
     UGAudioLocation *audioLocation;
-
-    IBOutlet UIView *headerView;
+    
     IBOutlet UIWebView *webView;
+    
+    //IBOutlet UIBarButtonItem *
     
 }
 

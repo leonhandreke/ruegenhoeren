@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Project</string>
+	<string>Debug</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -270,21 +270,24 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>352A07F41088D3AB0003080E</string>
+								<string>352A07F31088D3980003080E</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
+								<string>358AEACD106BD3B300CE5D1C</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>43</integer>
-									<integer>25</integer>
+									<integer>17</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 7}, {338, 862}}</string>
+							<string>{{0, 0}, {338, 862}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -300,8 +303,6 @@
 							<string>MainColumn</string>
 							<real>338</real>
 						</array>
-						<key>RubberWindowFrame</key>
-						<string>0 107 1680 921 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -317,7 +318,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>356097BB104B19CD00EA72D7</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UGAudioLocationDatabase.m</string>
+								<string>UGAudioLocationsTableViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,30 +326,36 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>356097BC104B19CD00EA72D7</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UGAudioLocationDatabase.m</string>
+										<string>UGAudioLocationsTableViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>352A07E31088336C0003080E</string>
+										<string>3586EF6510A21F6900145089</string>
 										<key>history</key>
 										<array>
-											<string>35B65C6510809B6E000DC693</string>
-											<string>35B65C8D10809D12000DC693</string>
-											<string>35B65C9A10809E3A000DC693</string>
 											<string>35B65CE31080A4A6000DC693</string>
 											<string>35B65CE41080A4A6000DC693</string>
-											<string>35B65D171080FAA1000DC693</string>
-											<string>35B65D6610810A9D000DC693</string>
-											<string>35B65D7510810AEB000DC693</string>
-											<string>35B65D8F10811D5E000DC693</string>
-											<string>35B65DAD10812052000DC693</string>
 											<string>352A06FA108632050003080E</string>
-											<string>352A074B108641780003080E</string>
 											<string>352A074D108641780003080E</string>
-											<string>352A07AD1087B79A0003080E</string>
-											<string>352A07D01087BA0F0003080E</string>
 											<string>352A07E11088336C0003080E</string>
-											<string>352A07E21088336C0003080E</string>
+											<string>352A07F61088D3BB0003080E</string>
+											<string>352A07F71088D3BB0003080E</string>
+											<string>352A08221088FB100003080E</string>
+											<string>352A08231088FB100003080E</string>
+											<string>352A08241088FB100003080E</string>
+											<string>352A08251088FB100003080E</string>
+											<string>352A08261088FB100003080E</string>
+											<string>3586EEFE10A201CA00145089</string>
+											<string>3586EEFF10A201CA00145089</string>
+											<string>3586EF0010A201CA00145089</string>
+											<string>3586EF0210A201CA00145089</string>
+											<string>3586EF0310A201CA00145089</string>
+											<string>3586EF4310A21D4900145089</string>
+											<string>3586EF4410A21D4900145089</string>
+											<string>3586EF5910A21E7900145089</string>
+											<string>3586EF6110A21F6900145089</string>
+											<string>3586EF6210A21F6900145089</string>
+											<string>3586EF6310A21F6900145089</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -363,8 +370,6 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1320, 613}}</string>
-								<key>RubberWindowFrame</key>
-								<string>0 107 1680 921 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -387,7 +392,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1320, -27}}</string>
+										<string>{{10, 27}, {1320, 236}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -403,7 +408,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {614, 336}}</string>
+										<string>{{10, 27}, {1320, 236}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXProjectFindModule</string>
@@ -442,8 +447,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1320, 236}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 107 1680 921 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -471,11 +474,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>352A06EE1085136B0003080E</string>
+				<string>3586EE3110A1FFE800145089</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>352A06EF1085136B0003080E</string>
+				<string>3586EE3210A1FFE800145089</string>
 				<string>356097BB104B19CD00EA72D7</string>
-				<string>352A06F01085136B0003080E</string>
+				<string>3586EE3310A1FFE800145089</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -516,6 +519,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -527,6 +532,8 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1680, 381}}</string>
+						<key>RubberWindowFrame</key>
+						<string>0 107 1680 921 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -601,7 +608,11 @@
 							</array>
 							<key>Frame</key>
 							<string>{{823, 0}, {857, 332}}</string>
+							<key>RubberWindowFrame</key>
+							<string>0 107 1680 921 0 0 1680 1028 </string>
 						</dict>
+						<key>RubberWindowFrame</key>
+						<string>0 107 1680 921 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -624,13 +635,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>352A06F11085136B0003080E</string>
+				<string>3586EF0710A201CA00145089</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>352A06F21085136B0003080E</string>
-				<string>352A06F31085136B0003080E</string>
-				<string>352A06F41085136B0003080E</string>
-				<string>352A06F51085136B0003080E</string>
+				<string>3586EF0810A201CA00145089</string>
+				<string>3586EF0910A201CA00145089</string>
+				<string>3586EF0A10A201CA00145089</string>
+				<string>3586EF0B10A201CA00145089</string>
 				<string>356097BB104B19CD00EA72D7</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -663,8 +674,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>352A0710108632850003080E</string>
-		<string>352A06FF1086320C0003080E</string>
+		<string>3586EF1F10A2043900145089</string>
+		<string>3586EF1210A201E600145089</string>
 		<string>/Users/Leon/Development/ruegenhoeren/ruegenhoeren.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
