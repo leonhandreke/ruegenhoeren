@@ -31,6 +31,7 @@
 		3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */; };
 		35798C9F1053C87500B91200 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35798C9E1053C87500B91200 /* MediaPlayer.framework */; };
 		3586EF5610A21E7000145089 /* 06-magnifying-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3586EF5510A21E7000145089 /* 06-magnifying-glass.png */; };
+		3586EF7110A34EBD00145089 /* audioLocationsCache.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3586EF7010A34EBD00145089 /* audioLocationsCache.plist */; };
 		3589979E104D95A60095A26A /* UGAudioLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */; };
 		358997A8104D95EA0095A26A /* UGAudioLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */; };
 		358AEB02106BD3CD00CE5D1C /* LoadingHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB01106BD3CD00CE5D1C /* LoadingHUDView.m */; };
@@ -39,7 +40,6 @@
 		358AEB2C106BD45200CE5D1C /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB2A106BD45200CE5D1C /* UIViewAdditions.m */; };
 		358AEB2F106BD45D00CE5D1C /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB2E106BD45D00CE5D1C /* NSDateAdditions.m */; };
 		358AEB50106BD66900CE5D1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358AEB4F106BD66900CE5D1C /* MapKit.framework */; };
-		358AEC0D106BFD3E00CE5D1C /* AudioLocationsCache.plist in Resources */ = {isa = PBXBuildFile; fileRef = 358AEC0C106BFD3E00CE5D1C /* AudioLocationsCache.plist */; };
 		358AEC4E106D4C8C00CE5D1C /* descriptionPage.css in Resources */ = {isa = PBXBuildFile; fileRef = 358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */; };
 		35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */; };
 		35B65BFB107FF058000DC693 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 35B65BFA107FF058000DC693 /* COPYING */; };
@@ -87,6 +87,7 @@
 		35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioPlayerViewController.xib; sourceTree = "<group>"; };
 		35798C9E1053C87500B91200 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3586EF5510A21E7000145089 /* 06-magnifying-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "06-magnifying-glass.png"; path = "Resources/06-magnifying-glass.png"; sourceTree = "<group>"; };
+		3586EF7010A34EBD00145089 /* audioLocationsCache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = audioLocationsCache.plist; sourceTree = "<group>"; };
 		3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationDetailViewController.xib; sourceTree = "<group>"; };
 		358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDetailViewController.h; sourceTree = "<group>"; };
 		358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationDetailViewController.m; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		358AEB2D106BD45D00CE5D1C /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDateAdditions.h; path = ../tapkulibrary/TapkuLibrary/NSDateAdditions.h; sourceTree = SOURCE_ROOT; };
 		358AEB2E106BD45D00CE5D1C /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDateAdditions.m; path = ../tapkulibrary/TapkuLibrary/NSDateAdditions.m; sourceTree = SOURCE_ROOT; };
 		358AEB4F106BD66900CE5D1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		358AEC0C106BFD3E00CE5D1C /* AudioLocationsCache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AudioLocationsCache.plist; sourceTree = "<group>"; };
 		358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = descriptionPage.css; path = Resources/descriptionPage.css; sourceTree = "<group>"; };
 		35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioPlayerViewController.h; sourceTree = "<group>"; };
 		35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioPlayerViewController.m; sourceTree = "<group>"; };
@@ -202,6 +202,7 @@
 			children = (
 				28A0AAE50D9B0CCF005BE974 /* ruegenhoeren_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				3586EF7010A34EBD00145089 /* audioLocationsCache.plist */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -212,7 +213,6 @@
 				352A07F41088D3AB0003080E /* NIBs */,
 				352A07F31088D3980003080E /* Images */,
 				358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */,
-				358AEC0C106BFD3E00CE5D1C /* AudioLocationsCache.plist */,
 				357574FB10598ED60058EB63 /* 9PM.mp3 */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				35B65BFA107FF058000DC693 /* COPYING */,
@@ -342,7 +342,6 @@
 				35757600105D3B5D0058EB63 /* bluetrack.png in Resources */,
 				3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */,
 				35E9E57510658E840022BA69 /* UGAudioLocationsTableViewController.xib in Resources */,
-				358AEC0D106BFD3E00CE5D1C /* AudioLocationsCache.plist in Resources */,
 				358AEC4E106D4C8C00CE5D1C /* descriptionPage.css in Resources */,
 				35B65BFB107FF058000DC693 /* COPYING in Resources */,
 				35B65CCA1080A0D6000DC693 /* Icon.png in Resources */,
@@ -356,6 +355,7 @@
 				352A07EF1088D3830003080E /* 103-map.png in Resources */,
 				352A07F11088D38F0003080E /* doubleTabBarGradient.png in Resources */,
 				3586EF5610A21E7000145089 /* 06-magnifying-glass.png in Resources */,
+				3586EF7110A34EBD00145089 /* audioLocationsCache.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

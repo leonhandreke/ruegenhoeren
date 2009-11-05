@@ -97,30 +97,36 @@
 
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation {
     
-    
     MKAnnotationView* annotationView;
     
-    annotationView = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]];
-    
-    // Set up the Left callout
-    UIButton *myDetailButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    myDetailButton.frame = CGRectMake(0, 0, 25, 25);
-    myDetailButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    myDetailButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-    
-    // Set the image for the button
-    [myDetailButton setImage:[UIImage imageNamed:@"rightarrow.png"] forState:UIControlStateNormal];
-    [myDetailButton addTarget:self action:@selector(showAudioLocationDetailView:) forControlEvents:UIControlEventTouchUpInside];
-    
-    // The UIView tag becomes the index of the annotation
-    NSInteger viewTag = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] indexOfObject: annotation];
-    myDetailButton.tag = viewTag;
-    
-    // Set the button as the callout view
-    annotationView.rightCalloutAccessoryView = myDetailButton;
-    
-    [annotationView setCanShowCallout: YES];
-    //[annotationView setAnimatesDrop: NO];
+    if (annotation == mapView.userLocation)
+	{
+        return nil;
+	}
+	else
+	{
+        annotationView = [[[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: [annotation title]] autorelease];
+        
+        // Set up the Left callout
+        UIButton *myDetailButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        myDetailButton.frame = CGRectMake(0, 0, 25, 25);
+        myDetailButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        myDetailButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        
+        // Set the image for the button
+        [myDetailButton setImage:[UIImage imageNamed:@"rightarrow.png"] forState:UIControlStateNormal];
+        [myDetailButton addTarget:self action:@selector(showAudioLocationDetailView:) forControlEvents:UIControlEventTouchUpInside];
+        
+        // The UIView tag becomes the index of the annotation
+        NSInteger viewTag = [[[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations] indexOfObject: annotation];
+        myDetailButton.tag = viewTag;
+        
+        // Set the button as the callout view
+        annotationView.rightCalloutAccessoryView = myDetailButton;
+        
+        [annotationView setCanShowCallout: YES];
+        //[annotationView setAnimatesDrop: NO];
+    }
     
 	return annotationView;
 }
