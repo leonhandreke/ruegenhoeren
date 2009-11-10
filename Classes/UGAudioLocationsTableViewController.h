@@ -23,5 +23,7 @@
 }
 
 
-@property (assign) NSArray *audioLocations;
+@property (retain) NSArray *audioLocations;
+@property (retain) NSArray *filteredAudioLocations;
+
 @end

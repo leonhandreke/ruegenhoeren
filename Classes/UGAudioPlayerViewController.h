@@ -42,5 +42,11 @@
 
 @property (assign) UGAudioLocation *audioLocation;
 
+@end
+
+@interface NSObject (UGAudioPlayerViewController)
+
+// For the volume slider update method...
+- (void) _updateVolumeFromAVSystemController;
 
 @end

@@ -184,10 +184,10 @@
            fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"Location: %@", [newLocation description]);
-    
-    [self setAudioLocations: [[UGAudioLocationDatabase sortArray: audioLocations byDistanceFrom: newLocation] retain]];
-    [filteredAudioLocations release];
-    filteredAudioLocations = [[NSMutableArray alloc] initWithArray: audioLocations];
+    referenceLocation = newLocation; // This static is defined in UGAudioLocation
+    [self setAudioLocations: [audioLocations sortedArrayUsingSelector: @selector(compareToLocation:)]];
+    [filteredAudioLocations removeAllObjects];
+    [filteredAudioLocations addObjectsFromArray: audioLocations];
     
     [loadingHUDView stopAnimating];
     [[self tableView] reloadData];

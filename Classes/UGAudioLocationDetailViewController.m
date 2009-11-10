@@ -112,14 +112,32 @@
         
     }
     else {
+        
         // Looks like we have to download the file first...
+        
+        UIProgressView *progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(-140, -18, 280, 25)];
+        [progressView setProgress: 0.5];
+        [progressView setProgressViewStyle: UIProgressViewStyleBar];
+        progressView.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |
+                                         UIViewAutoresizingFlexibleRightMargin |
+                                         UIViewAutoresizingFlexibleTopMargin |
+                                         UIViewAutoresizingFlexibleBottomMargin);
+        UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Downloade Hörstation"
+                                                          delegate:self
+                                                 cancelButtonTitle:nil
+                                            destructiveButtonTitle: @"Abbrechen"
+                                                 otherButtonTitles:nil];
+        
+        [menu addSubview:progressView];
+        [menu showInView:self.view];
+        [menu setBounds:CGRectMake(0,0,320, 175)];
+
+        
+        
         NSURLRequest *audioFileRequest = [NSURLRequest requestWithURL: [audioLocation audioFileRemoteLocation]];
         UGDownload *fileDowload = [[UGDownload alloc] initWithRequest:audioFileRequest 
                                                           destination: [[audioLocation audioFileLocalLocation] absoluteString] 
                                                              delegate: self];
-        
-        UIProgressView *progressView = [[UIProgressView alloc] initWithProgressViewStyle: UIProgressViewStyleBar];
-        UIBarButtonItem *progressBarItem = [[UIBarButtonItem alloc] initWithCustomView: progressView];
         //[UIBarButtonItem 
         
         //NSArray *toolbarItems = [NSArray arrayWithObject: 

@@ -11,22 +11,27 @@
 
 @implementation UGAudioLocationsTableViewController
 
-@synthesize audioLocations;
+@synthesize audioLocations, filteredAudioLocations;
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     if (self = [super initWithStyle:style]) {
+            
     }
     return self;
-}
-*/
+}*/
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [[self navigationItem] setTitle: @"Hörstationen"];
+    
+    [self setFilteredAudioLocations: [NSMutableArray array]];
+    [self setAudioLocations: [[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations]];
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -35,14 +40,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (audioLocations == nil) {
-        [self setAudioLocations: [[UGAudioLocationDatabase sharedAudioLocationDatabase] audioLocations]];
-        
-    }
-    
-    if (filteredAudioLocations == nil) {
-        filteredAudioLocations = [[NSMutableArray alloc] initWithArray: audioLocations];
-    }
+    NSLog(@"%@", filteredAudioLocations);
 }
 
 /*
@@ -162,17 +160,27 @@
 }
 */
 
+#pragma mark property override
+
+- (void) setAudioLocations:(NSArray *) newAudioLocations {
+    [audioLocations release];
+    audioLocations = [newAudioLocations retain];
+    
+    [filteredAudioLocations removeAllObjects];
+    [filteredAudioLocations addObjectsFromArray: audioLocations];
+}
+
 #pragma mark UISearchBarDelegate
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [filteredAudioLocations release];
     
     if ([searchText isEqualToString: @""]) {
-        filteredAudioLocations = [[NSMutableArray alloc] initWithArray: audioLocations];
+        [filteredAudioLocations removeAllObjects];
+        [filteredAudioLocations addObjectsFromArray: audioLocations];
         return;
     }
     
-    filteredAudioLocations = [[NSMutableArray alloc] init];
+    [filteredAudioLocations removeAllObjects];
     
     NSEnumerator *audioLocationsEnumerator = [audioLocations objectEnumerator];
     UGAudioLocation *currentAudioLocation;

@@ -14,7 +14,7 @@
 #import "UGAudioLocation.h"
 #import "UGAudioPlayerViewController.h"
 
-@interface UGAudioLocationDetailViewController : UIViewController <UIWebViewDelegate> {
+@interface UGAudioLocationDetailViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate> {
 
     UGAudioLocation *audioLocation;
     
@@ -25,7 +25,7 @@
 }
 
 - (BOOL)hidesBottomBarWhenPushed;
-- (IBAction) playAudioLocation: (id) sender;
+- (IBAction) playOrDownloadAudioLocation: (id) sender;
 
 @property (assign) UGAudioLocation *audioLocation;
 
