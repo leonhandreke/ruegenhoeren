@@ -138,6 +138,8 @@
         UGDownload *fileDowload = [[UGDownload alloc] initWithRequest:audioFileRequest 
                                                           destination: [[audioLocation audioFileLocalLocation] absoluteString] 
                                                              delegate: self];
+        
+        
         //[UIBarButtonItem 
         
         //NSArray *toolbarItems = [NSArray arrayWithObject: 
@@ -146,6 +148,17 @@
     
 
 }
+
+#pragma mark UGDownload delegate
+
+- (void)downloadDidFinish: (UGDownload *) download {
+
+}
+
+- (void)download: (UGDownload *) download didReceiveDataOfLength: (NSUInteger) dataLength {
+
+}
+
 
 #pragma mark UIWebViewDelegate
 

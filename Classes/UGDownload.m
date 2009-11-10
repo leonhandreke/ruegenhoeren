@@ -11,7 +11,7 @@
 
 @implementation UGDownload
 
-@synthesize request, delegate, destination;
+@synthesize request, delegate, destination, receivedLength;
 
 
 - (UGDownload *) initWithRequest: (NSURLRequest *) newRequest destination: (NSString *) newDestination delegate: (id) newDelegate {
@@ -25,11 +25,7 @@
 }
 
 - (double) progress {
-
-}
-
-- (double) lengthReceived {
-
+    return receivedLength / totalLength;
 }
 
 - (void) start {

@@ -184,8 +184,7 @@
            fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"Location: %@", [newLocation description]);
-    referenceLocation = newLocation; // This static is defined in UGAudioLocation
-    [self setAudioLocations: [audioLocations sortedArrayUsingSelector: @selector(compareToLocation:)]];
+    [self setAudioLocations: [UGAudioLocationDatabase sortArray: audioLocations byDistanceFrom: newLocation]];
     [filteredAudioLocations removeAllObjects];
     [filteredAudioLocations addObjectsFromArray: audioLocations];
     

@@ -27,7 +27,6 @@
 - (UGDownload *) initWithRequest: (NSURLRequest *) newRequest destination: (NSString *) newDestination delegate: (id) newDelegate;
 
 - (double) progress;
-- (double) lengthReceived;
 
 - (void) start;
 - (void) cancel;
@@ -36,5 +35,15 @@
 @property (assign) id delegate;
 @property (copy) NSURLRequest *request;
 @property (assign) NSString *destination;
+@property (readonly) double receivedLength;
+
+@end
+
+// The delegate interface
+@interface NSObject (UGDownload)
+
+- (void)downloadDidFinish: (UGDownload *) download;
+- (void)download: (UGDownload *) download didReceiveDataOfLength: (NSUInteger) dataLength;
+// etc...
 
 @end

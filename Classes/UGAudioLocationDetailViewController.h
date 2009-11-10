@@ -27,6 +27,11 @@
 - (BOOL)hidesBottomBarWhenPushed;
 - (IBAction) playOrDownloadAudioLocation: (id) sender;
 
+#pragma mark UGDownload delegate
+- (void)downloadDidFinish: (UGDownload *) download;
+- (void)download: (UGDownload *) download didReceiveDataOfLength: (NSUInteger) dataLength;
+
+
 @property (assign) UGAudioLocation *audioLocation;
 
 

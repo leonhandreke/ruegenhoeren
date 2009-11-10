@@ -125,7 +125,7 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 
 #pragma mark Distance Sorting Stuff
 
-NSInteger distanceSort(UGAudioLocation *firstAudioLocation, UGAudioLocation *secondAudioLocation, CLLocation *userLocation)
+NSInteger distanceSort(id firstAudioLocation, id secondAudioLocation, void *userLocation)
 {
     CLLocation *firstLocation = [[CLLocation alloc] initWithCoordinate:[firstAudioLocation coordinate]
                                                               altitude: 0 
@@ -138,8 +138,8 @@ NSInteger distanceSort(UGAudioLocation *firstAudioLocation, UGAudioLocation *sec
                                                      horizontalAccuracy: kCLLocationAccuracyBest
                                                        verticalAccuracy:kCLLocationAccuracyBest 
                                                               timestamp: [NSDate date]];
-    double firstDistance = [userLocation getDistanceFrom: firstLocation];
-    double secondDistance = [userLocation getDistanceFrom: secondLocation];
+    double firstDistance = [(CLLocation *)userLocation getDistanceFrom: firstLocation];
+    double secondDistance = [(CLLocation *)userLocation getDistanceFrom: secondLocation];
     
     [firstLocation release];
     [secondLocation release];
