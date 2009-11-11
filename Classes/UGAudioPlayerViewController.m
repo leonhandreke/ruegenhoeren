@@ -43,6 +43,7 @@
     
     [scrubberSlider setMaximumValue: [audioPlayer duration]];
     
+    
     [[self navigationItem] setTitle: [audioLocation title]];
     
     //updateDurationTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(updateDurationScrubber) userInfo: nil repeats: YES];
@@ -79,20 +80,20 @@
 {
 	[volumeViewSlider _updateVolumeFromAVSystemController];
 }
-
+/*
 - (void) viewWillAppear: (BOOL) animated {
-    updateDurationTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(updateDurationScrubber) userInfo: nil repeats: YES];
-    
-}
+    [updateDurationTimer fire];
+}*/
 
 - (void) viewDidAppear: (BOOL) animated {
     [super viewDidAppear: animated];
+    [self enableScrubberUpdate: self];
     [audioPlayer play];
 }
 
 - (void) viewWillDisappear: (BOOL) animated {
     [self togglePlayPause: self];
-    [updateDurationTimer invalidate];
+    [self disableScrubberUpdate: self];
     [super viewWillDisappear: animated];
 }
 
@@ -124,11 +125,16 @@
 }
 
 - (IBAction) disableScrubberUpdate: (id) sender {
+
     [updateDurationTimer invalidate];
+    updateDurationTimer = nil;
 }
 
 - (IBAction) enableScrubberUpdate: (id) sender {
-    [updateDurationTimer fire];
+    if (updateDurationTimer == nil) {
+        updateDurationTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self selector: @selector(updateDurationScrubber) userInfo: nil repeats: YES];
+    }
+    
 }
 
 /*
@@ -158,7 +164,6 @@
 
 
 - (void)dealloc {
-    
 	[audioPlayer release];
     [super dealloc];
 }
