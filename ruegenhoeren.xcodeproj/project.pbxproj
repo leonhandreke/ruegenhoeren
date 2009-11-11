@@ -22,7 +22,6 @@
 		352A083B1088FC340003080E /* UGDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 352A083A1088FC340003080E /* UGDownload.m */; };
 		354CEAFE10850550000B9A99 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 354CEAFD10850550000B9A99 /* Entitlements.plist */; };
 		356097CC104B1B5D00EA72D7 /* UGMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356097CB104B1B5D00EA72D7 /* UGMapViewController.m */; };
-		357574FC10598ED60058EB63 /* 9PM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 357574FB10598ED60058EB63 /* 9PM.mp3 */; };
 		35757518105AB7380058EB63 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35757517105AB7380058EB63 /* AVFoundation.framework */; };
 		35757522105ABA300058EB63 /* rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3575751F105ABA300058EB63 /* rightarrow.png */; };
 		35757523105ABA300058EB63 /* whiteslide.png in Resources */ = {isa = PBXBuildFile; fileRef = 35757520105ABA300058EB63 /* whiteslide.png */; };
@@ -77,7 +76,6 @@
 		354CEAFD10850550000B9A99 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		356097CA104B1B5D00EA72D7 /* UGMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGMapViewController.h; sourceTree = "<group>"; };
 		356097CB104B1B5D00EA72D7 /* UGMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGMapViewController.m; sourceTree = "<group>"; };
-		357574FB10598ED60058EB63 /* 9PM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 9PM.mp3; path = Resources/9PM.mp3; sourceTree = "<group>"; };
 		35757517105AB7380058EB63 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3575751F105ABA300058EB63 /* rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightarrow.png; path = Resources/rightarrow.png; sourceTree = "<group>"; };
 		35757520105ABA300058EB63 /* whiteslide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteslide.png; path = Resources/whiteslide.png; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 				352A07F41088D3AB0003080E /* NIBs */,
 				352A07F31088D3980003080E /* Images */,
 				358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */,
-				357574FB10598ED60058EB63 /* 9PM.mp3 */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				35B65BFA107FF058000DC693 /* COPYING */,
 			);
@@ -354,7 +351,6 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				3589979E104D95A60095A26A /* UGAudioLocationDetailViewController.xib in Resources */,
-				357574FC10598ED60058EB63 /* 9PM.mp3 in Resources */,
 				35757522105ABA300058EB63 /* rightarrow.png in Resources */,
 				35757523105ABA300058EB63 /* whiteslide.png in Resources */,
 				35757524105ABA300058EB63 /* whitetrack.png in Resources */,
