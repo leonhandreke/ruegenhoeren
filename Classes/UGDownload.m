@@ -18,7 +18,7 @@
     if ( self = [super init]) {
         [self setRequest: newRequest];
         [self setDelegate: newDelegate];
-        [self setDestination: newDestination];
+        [self setDestination: [newDestination stringByAppendingPathExtension:@"download"]];
     }
     
     return self;
@@ -29,8 +29,12 @@
 }
 
 - (void) start {
-    connection = [NSURLConnection connectionWithRequest:[self request] delegate: [self delegate]];
+    // Make sure the directory is there
+    [[NSFileManager defaultManager] createDirectoryAtPath: [self destination] withIntermediateDirectories: YES attributes: nil error: nil];
+    DebugLog(@"Download Started");
+    connection = [NSURLConnection connectionWithRequest:[self request] delegate: self];
     [connection start];
+    DebugLog(@"%@", connection);
 }
 
 - (void) cancel {
@@ -46,14 +50,15 @@
 
     NSFileManager *manager = [NSFileManager defaultManager];
     
-    if( [manager fileExistsAtPath:[self destination]] )
+    DebugLog([self destination]);
+    if( [manager fileExistsAtPath: [self destination]] )
     {
         [manager removeItemAtPath:[self destination] error:nil];
     }
     [manager createFileAtPath: [self destination] contents:nil attributes:nil];
     fileHandle = [[NSFileHandle fileHandleForWritingAtPath:[self destination]] retain];
     
-    downloadedData = [NSMutableData data];
+    downloadedData = [[NSMutableData alloc] init];
     
     totalLength = [response expectedContentLength];
     receivedLength = 0;
@@ -62,6 +67,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
+    DebugLog(@"Received Data of length %d from connection", [data length]);
     [downloadedData appendData:data];
     receivedLength += data.length;
     //NSTimeInterval elapsedTime = -[startTime timeIntervalSinceNow];
@@ -70,11 +76,13 @@
     {
         [delegate download: self didReceiveDataOfLength: data.length];
     }
+    DebugLog(@"receive data done");
     //can't keep too much data in memory. Write it to disk to avoid getting low memory error.
     if( downloadedData.length > 1048576 && fileHandle != nil )
     {
         [fileHandle writeData: downloadedData];
-        downloadedData = [NSMutableData data];
+        [downloadedData release];
+        downloadedData = [[NSMutableData alloc] init];
     }
     
 }
@@ -82,7 +90,12 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [fileHandle writeData: downloadedData];
+    [downloadedData release];
     downloadedData = nil;
+    
+    //Move the file to it's 'complete' location
+    [[NSFileManager defaultManager] moveItemAtPath: [self destination] toPath: [[self destination] stringByDeletingPathExtension] error: nil];
+    
     if( [delegate respondsToSelector:@selector(downloadDidFinish:)] )
     {
         [delegate downloadDidFinish: self];

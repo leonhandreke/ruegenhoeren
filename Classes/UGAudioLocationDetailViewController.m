@@ -122,11 +122,13 @@
                                          UIViewAutoresizingFlexibleRightMargin |
                                          UIViewAutoresizingFlexibleTopMargin |
                                          UIViewAutoresizingFlexibleBottomMargin);
+        downloadProgressBar = progressView;
         UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Downloade Hörstation"
                                                           delegate:self
                                                  cancelButtonTitle:nil
                                             destructiveButtonTitle: @"Abbrechen"
                                                  otherButtonTitles:nil];
+        downloadActionSheet = menu;
         
         [menu addSubview:progressView];
         [menu showInView:self.view];
@@ -136,53 +138,30 @@
         
         NSURLRequest *audioFileRequest = [NSURLRequest requestWithURL: [audioLocation audioFileRemoteLocation]];
         UGDownload *fileDowload = [[UGDownload alloc] initWithRequest:audioFileRequest 
-                                                          destination: [[audioLocation audioFileLocalLocation] absoluteString] 
+                                                          destination: [[audioLocation audioFileLocalLocation] path] 
                                                              delegate: self];
-        
-        
-        //[UIBarButtonItem 
-        
-        //NSArray *toolbarItems = [NSArray arrayWithObject: 
+        [fileDowload start];
     }
-
-    
-
 }
+
+#pragma mark UIActionSheetDelegate
+
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet {
+    
+}
+
 
 #pragma mark UGDownload delegate
 
 - (void)downloadDidFinish: (UGDownload *) download {
-
+    [downloadProgressBar release];
+    downloadProgressBar = nil;
 }
 
 - (void)download: (UGDownload *) download didReceiveDataOfLength: (NSUInteger) dataLength {
-
+    [downloadProgressBar setProgress: [download progress]];
 }
 
-
-#pragma mark UIWebViewDelegate
-
-/*
-// Disable zoom
--(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {	
-	NSSet *touches = [event allTouches];
-	BOOL forwardToSuper = YES;
-	for (UITouch *touch in touches) {
-		if ([touch tapCount] >= 2) {
-			// prevent this 
-			forwardToSuper = NO;
-		}		
-	}
-	if (forwardToSuper){
-		//return self.superview;
-		return [super hitTest:point withEvent:event];
-	}
-	else {
-		// Return the superview as the hit and prevent
-		// UIWebView receiving double or more taps
-		return self.superview;
-	}
-}*/
 
 - (void)dealloc {
     [super dealloc];

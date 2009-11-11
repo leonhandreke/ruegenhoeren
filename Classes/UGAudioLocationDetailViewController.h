@@ -19,7 +19,8 @@
     UGAudioLocation *audioLocation;
     
     IBOutlet UIWebView *webView;
-    
+    UIProgressView *downloadProgressBar;
+    UIActionSheet *downloadActionSheet;
     //IBOutlet UIBarButtonItem *
     
 }
@@ -31,6 +32,8 @@
 - (void)downloadDidFinish: (UGDownload *) download;
 - (void)download: (UGDownload *) download didReceiveDataOfLength: (NSUInteger) dataLength;
 
+#pragma mark UIActionSheetDelegate
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet;
 
 @property (assign) UGAudioLocation *audioLocation;
 

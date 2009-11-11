@@ -83,7 +83,7 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
         return topics;
     }
     else {
-        DebugLog(@"Generating topics array");
+        /*DebugLog(@"Generating topics array");*/
         topics = [[NSMutableArray alloc] init];
     }
     

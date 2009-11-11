@@ -33,8 +33,8 @@
 
 
 @property (assign) id delegate;
-@property (copy) NSURLRequest *request;
-@property (assign) NSString *destination;
+@property (retain) NSURLRequest *request;
+@property (retain) NSString *destination;
 @property (readonly) double receivedLength;
 
 @end
