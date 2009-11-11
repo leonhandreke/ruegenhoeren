@@ -19,6 +19,10 @@
         [self setRequest: newRequest];
         [self setDelegate: newDelegate];
         [self setDestination: [newDestination stringByAppendingPathExtension:@"download"]];
+        // Make sure the directory is there
+        [[NSFileManager defaultManager] createDirectoryAtPath: [self destination] withIntermediateDirectories: YES attributes: nil error: nil];
+        // Delete the old file in case it's still there
+        [[NSFileManager defaultManager] removeItemAtPath: newDestination error: nil];
     }
     
     return self;
@@ -29,8 +33,6 @@
 }
 
 - (void) start {
-    // Make sure the directory is there
-    [[NSFileManager defaultManager] createDirectoryAtPath: [self destination] withIntermediateDirectories: YES attributes: nil error: nil];
     connection = [NSURLConnection connectionWithRequest:[self request] delegate: self];
     [connection start];
 }
@@ -48,7 +50,7 @@
 
     NSFileManager *manager = [NSFileManager defaultManager];
     
-    DebugLog([self destination]);
+    //DebugLog([self destination]);
     if( [manager fileExistsAtPath: [self destination]] )
     {
         [manager removeItemAtPath:[self destination] error:nil];

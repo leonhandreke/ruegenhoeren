@@ -40,13 +40,14 @@
 - (IBAction) togglePlayPause: (id) sender;
 - (IBAction) scrubberSliderMoved: (id) sender;
 
+- (IBAction) disableScrubberUpdate: (id) sender;
+- (IBAction) enableScrubberUpdate: (id) sender;
+
 @property (assign) UGAudioLocation *audioLocation;
 
 @end
 
 @interface NSObject (UGAudioPlayerViewController)
-
 // For the volume slider update method...
 - (void) _updateVolumeFromAVSystemController;
-
 @end

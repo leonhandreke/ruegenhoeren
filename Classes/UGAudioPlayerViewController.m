@@ -90,9 +90,10 @@
     [audioPlayer play];
 }
 
-- (void) viewDidDisappear: (BOOL) animated {
+- (void) viewWillDisappear: (BOOL) animated {
+    [self togglePlayPause: self];
     [updateDurationTimer invalidate];
-    [super viewDidDisappear: animated];
+    [super viewWillDisappear: animated];
 }
 
 - (void) updateDurationScrubber {
@@ -120,6 +121,14 @@
         [audioPlayer play];
         [playPauseButton setImage: [UIImage imageNamed: @"pause.png"] forState: UIControlStateNormal];
     }
+}
+
+- (IBAction) disableScrubberUpdate: (id) sender {
+    [updateDurationTimer invalidate];
+}
+
+- (IBAction) enableScrubberUpdate: (id) sender {
+    [updateDurationTimer fire];
 }
 
 /*

@@ -18,15 +18,21 @@
 
     UGAudioLocation *audioLocation;
     
+    IBOutlet UIToolbar *toolbar;
+    IBOutlet UIBarButtonItem *playDownloadButton;
     IBOutlet UIWebView *webView;
+    
     UIProgressView *downloadProgressBar;
     UIActionSheet *downloadActionSheet;
-    //IBOutlet UIBarButtonItem *
+    UGDownload *download;
     
 }
 
 - (BOOL)hidesBottomBarWhenPushed;
-- (IBAction) playOrDownloadAudioLocation: (id) sender;
+- (IBAction) playAudioLocation: (id) sender;
+- (IBAction) downloadAudioLocation: (id) sender;
+
+- (void) updatePlayDownloadIcon;
 
 #pragma mark UGDownload delegate
 - (void)downloadDidFinish: (UGDownload *) download;

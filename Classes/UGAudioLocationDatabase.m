@@ -118,7 +118,7 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
     //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     //NSString *cachesDirectory = [paths objectAtIndex:0];
     NSString *cachesDirectory = [[NSBundle mainBundle] bundlePath];
-    NSString *path = [cachesDirectory stringByAppendingPathComponent:@"AudioLocationsCache.plist"];
+    NSString *path = [cachesDirectory stringByAppendingPathComponent:@"audioLocationsCache.plist"];
     
     return path;    
 }
