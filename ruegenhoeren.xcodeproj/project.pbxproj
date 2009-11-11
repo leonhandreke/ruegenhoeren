@@ -51,7 +51,6 @@
 		35E9E20D1064FB340022BA69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E20C1064FB340022BA69 /* QuartzCore.framework */; };
 		35E9E24C1065002E0022BA69 /* UGTopicsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */; };
 		35E9E2E2106512290022BA69 /* UGAudioLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */; };
-		35E9E37310654A460022BA69 /* UGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E37210654A460022BA69 /* UGTabBarController.m */; };
 		35E9E57510658E840022BA69 /* UGAudioLocationsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35E9E57410658E840022BA69 /* UGAudioLocationsTableViewController.xib */; };
 		35E9E61F10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */; };
 		35E9E62610662E600022BA69 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9E62510662E600022BA69 /* CoreLocation.framework */; };
@@ -118,8 +117,6 @@
 		35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGTopicsTableViewController.m; sourceTree = "<group>"; };
 		35E9E2E0106512290022BA69 /* UGAudioLocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationsTableViewController.h; sourceTree = "<group>"; };
 		35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationsTableViewController.m; sourceTree = "<group>"; };
-		35E9E37110654A460022BA69 /* UGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGTabBarController.h; sourceTree = "<group>"; };
-		35E9E37210654A460022BA69 /* UGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGTabBarController.m; sourceTree = "<group>"; };
 		35E9E57410658E840022BA69 /* UGAudioLocationsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationsTableViewController.xib; sourceTree = "<group>"; };
 		35E9E61D10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationsDistanceTableViewController.h; sourceTree = "<group>"; };
 		35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationsDistanceTableViewController.m; sourceTree = "<group>"; };
@@ -151,26 +148,9 @@
 			children = (
 				1D3623240D0F684500981E51 /* ruegenhoerenAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ruegenhoerenAppDelegate.m */,
-				356097CA104B1B5D00EA72D7 /* UGMapViewController.h */,
-				356097CB104B1B5D00EA72D7 /* UGMapViewController.m */,
-				35C9363E104B37CB00616A86 /* UGAudioLocation.h */,
-				35C9363F104B37CB00616A86 /* UGAudioLocation.m */,
-				35C93641104B390600616A86 /* UGAudioLocationDatabase.h */,
-				35C93642104B390600616A86 /* UGAudioLocationDatabase.m */,
-				358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */,
-				358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */,
-				35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */,
-				35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */,
-				35E9E24A1065002E0022BA69 /* UGTopicsTableViewController.h */,
-				35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */,
-				35E9E2E0106512290022BA69 /* UGAudioLocationsTableViewController.h */,
-				35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */,
-				35E9E37110654A460022BA69 /* UGTabBarController.h */,
-				35E9E37210654A460022BA69 /* UGTabBarController.m */,
-				35E9E61D10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.h */,
-				35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */,
-				352A08391088FC340003080E /* UGDownload.h */,
-				352A083A1088FC340003080E /* UGDownload.m */,
+				350C0D5B10AB1AF500D0F752 /* Navigation Structure */,
+				350C0D5C10AB1B3600D0F752 /* Models */,
+				350C0D7310AB1BA400D0F752 /* Detail Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -233,6 +213,45 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		350C0D5B10AB1AF500D0F752 /* Navigation Structure */ = {
+			isa = PBXGroup;
+			children = (
+				356097CA104B1B5D00EA72D7 /* UGMapViewController.h */,
+				356097CB104B1B5D00EA72D7 /* UGMapViewController.m */,
+				35E9E24A1065002E0022BA69 /* UGTopicsTableViewController.h */,
+				35E9E24B1065002E0022BA69 /* UGTopicsTableViewController.m */,
+				35E9E2E0106512290022BA69 /* UGAudioLocationsTableViewController.h */,
+				35E9E2E1106512290022BA69 /* UGAudioLocationsTableViewController.m */,
+				35E9E61D10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.h */,
+				35E9E61E10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m */,
+			);
+			name = "Navigation Structure";
+			sourceTree = "<group>";
+		};
+		350C0D5C10AB1B3600D0F752 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35C9363E104B37CB00616A86 /* UGAudioLocation.h */,
+				35C9363F104B37CB00616A86 /* UGAudioLocation.m */,
+				35C93641104B390600616A86 /* UGAudioLocationDatabase.h */,
+				35C93642104B390600616A86 /* UGAudioLocationDatabase.m */,
+				352A08391088FC340003080E /* UGDownload.h */,
+				352A083A1088FC340003080E /* UGDownload.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		350C0D7310AB1BA400D0F752 /* Detail Views */ = {
+			isa = PBXGroup;
+			children = (
+				358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */,
+				358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */,
+				35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */,
+				35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */,
+			);
+			name = "Detail Views";
 			sourceTree = "<group>";
 		};
 		352A07F31088D3980003080E /* Images */ = {
@@ -375,7 +394,6 @@
 				35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */,
 				35E9E24C1065002E0022BA69 /* UGTopicsTableViewController.m in Sources */,
 				35E9E2E2106512290022BA69 /* UGAudioLocationsTableViewController.m in Sources */,
-				35E9E37310654A460022BA69 /* UGTabBarController.m in Sources */,
 				35E9E61F10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m in Sources */,
 				358AEB02106BD3CD00CE5D1C /* LoadingHUDView.m in Sources */,
 				358AEB1C106BD43B00CE5D1C /* TKGlobal.m in Sources */,

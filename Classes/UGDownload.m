@@ -31,10 +31,8 @@
 - (void) start {
     // Make sure the directory is there
     [[NSFileManager defaultManager] createDirectoryAtPath: [self destination] withIntermediateDirectories: YES attributes: nil error: nil];
-    DebugLog(@"Download Started");
     connection = [NSURLConnection connectionWithRequest:[self request] delegate: self];
     [connection start];
-    DebugLog(@"%@", connection);
 }
 
 - (void) cancel {
@@ -67,7 +65,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    DebugLog(@"Received Data of length %d from connection", [data length]);
+    //DebugLog(@"Received Data of length %d from connection", [data length]);
     [downloadedData appendData:data];
     receivedLength += data.length;
     //NSTimeInterval elapsedTime = -[startTime timeIntervalSinceNow];
@@ -76,7 +74,6 @@
     {
         [delegate download: self didReceiveDataOfLength: data.length];
     }
-    DebugLog(@"receive data done");
     //can't keep too much data in memory. Write it to disk to avoid getting low memory error.
     if( downloadedData.length > 1048576 && fileHandle != nil )
     {

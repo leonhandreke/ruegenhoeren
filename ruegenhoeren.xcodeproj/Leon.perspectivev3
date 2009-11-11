@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -268,6 +270,9 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>350C0D5B10AB1AF500D0F752</string>
+								<string>350C0D5C10AB1B3600D0F752</string>
+								<string>350C0D7310AB1BA400D0F752</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>352A07F41088D3AB0003080E</string>
@@ -281,7 +286,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
+									<integer>20</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -315,14 +320,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>356097BB104B19CD00EA72D7</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UGDownload.m</string>
+								<string>UGAudioLocationDetailViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>356097BC104B19CD00EA72D7</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UGDownload.m</string>
+										<string>UGAudioLocationDetailViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>350C0D5A10AB1A5F00D0F752</string>
+										<string>350C0D7710AB1BB800D0F752</string>
 										<key>history</key>
 										<array>
 											<string>35B65CE31080A4A6000DC693</string>
@@ -342,32 +345,31 @@
 											<string>352A07F61088D3BB0003080E</string>
 											<string>352A07F71088D3BB0003080E</string>
 											<string>352A08221088FB100003080E</string>
-											<string>3586EEFE10A201CA00145089</string>
 											<string>3586EEFF10A201CA00145089</string>
-											<string>3586EF0010A201CA00145089</string>
 											<string>3586EF6110A21F6900145089</string>
 											<string>3586EF8610A34F9600145089</string>
-											<string>3586F00A10A58B3A00145089</string>
-											<string>350C0BB910A7406300D0F752</string>
-											<string>350C0BC310A7589E00D0F752</string>
-											<string>350C0BC410A7589E00D0F752</string>
 											<string>350C0BC510A7589E00D0F752</string>
-											<string>350C0BF310A7631300D0F752</string>
 											<string>350C0BF410A7631300D0F752</string>
 											<string>350C0C0210A9D90000D0F752</string>
-											<string>350C0C3A10AA0A8100D0F752</string>
-											<string>350C0C4710AA0C4700D0F752</string>
-											<string>350C0C5810AA0D5800D0F752</string>
 											<string>350C0CAE10AB07E400D0F752</string>
 											<string>350C0CB510AB07FD00D0F752</string>
 											<string>350C0CB610AB07FD00D0F752</string>
 											<string>350C0CC810AB085500D0F752</string>
 											<string>350C0CFA10AB0BD400D0F752</string>
-											<string>350C0D2110AB0C5900D0F752</string>
-											<string>350C0D3E10AB18E200D0F752</string>
 											<string>350C0D4810AB19D600D0F752</string>
 											<string>350C0D4910AB19D600D0F752</string>
-											<string>350C0D5910AB1A5B00D0F752</string>
+											<string>350C0D5E10AB1B6400D0F752</string>
+											<string>350C0D5F10AB1B6400D0F752</string>
+											<string>350C0D6010AB1B6400D0F752</string>
+											<string>350C0D6110AB1B6400D0F752</string>
+											<string>350C0D6210AB1B6400D0F752</string>
+											<string>350C0D6310AB1B6400D0F752</string>
+											<string>350C0D6410AB1B6400D0F752</string>
+											<string>350C0D6510AB1B6400D0F752</string>
+											<string>350C0D6710AB1B6400D0F752</string>
+											<string>350C0D7410AB1BB800D0F752</string>
+											<string>350C0D7510AB1BB800D0F752</string>
+											<string>350C0D7610AB1BB800D0F752</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -682,7 +684,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>350C0D5810AB1A3300D0F752</string>
+		<string>350C0D7010AB1B7A00D0F752</string>
 		<string>350C0BFB10A7631300D0F752</string>
 		<string>350C0BEC10A75A2300D0F752</string>
 		<string>/Users/Leon/Development/ruegenhoeren/ruegenhoeren.xcodeproj</string>
