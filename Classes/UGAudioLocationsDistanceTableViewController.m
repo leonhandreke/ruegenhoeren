@@ -31,11 +31,11 @@
     [locationManager setDesiredAccuracy: kCLLocationAccuracyKilometer];
     [locationManager setDelegate: self];
     
-    loadingHUDView = [[LoadingHUDView alloc] init];
-    [loadingHUDView setCenter: [[[self tabBarController] view] center]];
-    [[[self tabBarController] view] addSubview: loadingHUDView];
-    [loadingHUDView setTitle: @"Bestimme Standpunkt"];
-    [loadingHUDView startAnimating];
+    //loadingHUDView = [[LoadingHUDView alloc] init];
+    //[loadingHUDView setCenter: [[[self tabBarController] view] center]];
+    //[[[self tabBarController] view] addSubview: loadingHUDView];
+    //[loadingHUDView setTitle: @"Bestimme Standpunkt"];
+    //[loadingHUDView startAnimating];
     
 }
 
@@ -43,7 +43,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [locationManager stopUpdatingHeading];
     [locationManager startUpdatingLocation];
 }
 
@@ -60,7 +59,6 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
-    [locationManager stopUpdatingHeading];
     [locationManager stopUpdatingLocation];
 }
 
@@ -105,7 +103,7 @@
     UITableViewCell *cell = [super tableView: tableView cellForRowAtIndexPath: indexPath];
     
 	if ([locationManager location] == nil) {
-        [[cell detailTextLabel] setText: @"Unknown"];
+        [[cell detailTextLabel] setText: @"Entfernung Unbekannt"];
     }
     else {
         CLLocation *audioLocationLocation = [[CLLocation alloc] initWithCoordinate: [[filteredAudioLocations objectAtIndex: indexPath.row] coordinate]
@@ -188,7 +186,7 @@
     [filteredAudioLocations removeAllObjects];
     [filteredAudioLocations addObjectsFromArray: audioLocations];
     
-    [loadingHUDView stopAnimating];
+    //[loadingHUDView stopAnimating];
     [[self tableView] reloadData];
 }
 
