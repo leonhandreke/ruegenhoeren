@@ -80,27 +80,35 @@ for f in html_files:
 		uuidStartSplit = uuidLine.encode('utf-8').split('<meta key_name="uuid" content="')[1]
 		uuid = uuidStartSplit.split('" />')[0]
 		
+		# Audio file location #
 		audioFileRemoteLocationLine = soup.findAll('meta', key_name="audioFileRemoteLocation")[0]
 		audioFileRemoteLocationStartSplit = audioFileRemoteLocationLine.encode('utf-8').split('<meta key_name="audioFileRemoteLocation" content="')[1]
 		audioFileRemoteLocation = audioFileRemoteLocationStartSplit.split('" />')[0]
-
-		# Audio File Name #
 		
-		#audioFileNameLine = soup.findAll('meta', key_name="audioFileName")[0]
-		#audioFileNameStartSplit = audioFileNameLine.encode('utf-8').split('<meta key_name="audioFileName" content="')[1]
-		#audioFileName = audioFileNameStartSplit.split('" />')[0]
+		# cover image #
+		coverImageLocationLine = soup.findAll('meta', key_name="coverImage")[0]
+		coverImageLocationStartSplit = coverImageLocationLine.encode('utf-8').split('<meta key_name="coverImage" content="')[1]
+		coverImageLocation = coverImageLocationStartSplit.split('" />')[0]
+	   	
+		#print coverImageLocation
+		#coverImage = urllib.urlopen(asciify_url(unicode(coverImageLocation)))
+		#print coverImage.read()
+		#encodedCoverImage = tempfile.TemporaryFile()
+		#encodedCoverImage = base64.b64encode(coverImage.read())
+        
+                #print encodedCoverImage
 
-		finDict = {'topic': topic, 'title': title, 'subtitle': subtitle, 'longitude': longitude, 'latitude': latitude, 'uuid': uuid, 'descriptionPage': htmlbody, 'audioFileRemoteLocation': audioFileRemoteLocation}
+		finDict = {'topic': topic, 'title': title, 'subtitle': subtitle, 'longitude': longitude, 'latitude': latitude, 'uuid': uuid, 'descriptionPage': htmlbody, 'audioFileRemoteLocation': audioFileRemoteLocation, 'coverImageRemoteLocation': coverImageLocation}
 		
 		mainDict[uuid] = finDict
 		
-		print "Topic: "+topic
-		print "Title: "+title
-		print "Subtitle: "+subtitle
-		print "Longitude: "+longitude
-		print "Latitude: "+latitude
-		print "UUID: "+uuid
+		#print "Topic: "+topic
+		#print "Title: "+title
+		#print "Subtitle: "+subtitle
+		#print "Longitude: "+longitude
+		#print "Latitude: "+latitude
+		#print "UUID: "+uuid
 		#print "Remote File Location: "+audioFileName
-		print "-"
+		#print "-"
 	
 	plistlib.writePlist(mainDict, pathPlist)

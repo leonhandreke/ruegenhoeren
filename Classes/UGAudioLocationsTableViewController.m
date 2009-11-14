@@ -98,10 +98,12 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-    [[cell textLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] title]];
-    [[cell detailTextLabel] setText: [[filteredAudioLocations objectAtIndex: indexPath.row] subtitle]];
-    
+    UGAudioLocation *audioLocation = [filteredAudioLocations objectAtIndex: indexPath.row];
+    [[cell textLabel] setText: [audioLocation title]];
+    [[cell detailTextLabel] setText: [audioLocation subtitle]];
+    //NSLog(@"%@", [UIImage imageWithContentsOfFile: [audioLocation coverImageLocalLocation]]);
+    UIImage *scaledImage = [[UIImage imageWithContentsOfFile: [audioLocation coverImageLocalLocation]] scaleImageToSize: CGSizeMake(45, 45)];
+    [[cell imageView] setImage: scaledImage];
 	[cell setAccessoryType: UITableViewCellAccessoryDisclosureIndicator];
 	
     return cell;
@@ -221,7 +223,6 @@
 - (void)dealloc {
     [super dealloc];
 }
-
 
 @end
 

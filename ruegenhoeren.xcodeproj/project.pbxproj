@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		350C0F8310ADC93B00D0F752 /* NSData+MBBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C0F8210ADC93B00D0F752 /* NSData+MBBase64.m */; };
+		350C108410ADF3FC00D0F752 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C108310ADF3FC00D0F752 /* NSString+MD5.m */; };
 		352A075D1086589F0003080E /* IconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 352A075C1086589F0003080E /* IconHuge.png */; };
 		352A07EC1088D3830003080E /* 28-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 352A07E81088D3830003080E /* 28-star.png */; };
 		352A07ED1088D3830003080E /* 57-download.png in Resources */ = {isa = PBXBuildFile; fileRef = 352A07E91088D3830003080E /* 57-download.png */; };
@@ -28,16 +30,12 @@
 		35757524105ABA300058EB63 /* whitetrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 35757521105ABA300058EB63 /* whitetrack.png */; };
 		35757600105D3B5D0058EB63 /* bluetrack.png in Resources */ = {isa = PBXBuildFile; fileRef = 357575FF105D3B5D0058EB63 /* bluetrack.png */; };
 		3575768A105D49D00058EB63 /* UGAudioPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */; };
+		3575EA9210AF274400F7FA39 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 3575EA9110AF274400F7FA39 /* UIImage+Scale.m */; };
 		35798C9F1053C87500B91200 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35798C9E1053C87500B91200 /* MediaPlayer.framework */; };
 		3586EF5610A21E7000145089 /* 06-magnifying-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 3586EF5510A21E7000145089 /* 06-magnifying-glass.png */; };
 		3586EF7110A34EBD00145089 /* audioLocationsCache.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3586EF7010A34EBD00145089 /* audioLocationsCache.plist */; };
 		3589979E104D95A60095A26A /* UGAudioLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */; };
 		358997A8104D95EA0095A26A /* UGAudioLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */; };
-		358AEB02106BD3CD00CE5D1C /* LoadingHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB01106BD3CD00CE5D1C /* LoadingHUDView.m */; };
-		358AEB1C106BD43B00CE5D1C /* TKGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB1B106BD43B00CE5D1C /* TKGlobal.m */; };
-		358AEB2B106BD45200CE5D1C /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB28106BD45200CE5D1C /* UIImageAdditions.m */; };
-		358AEB2C106BD45200CE5D1C /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB2A106BD45200CE5D1C /* UIViewAdditions.m */; };
-		358AEB2F106BD45D00CE5D1C /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 358AEB2E106BD45D00CE5D1C /* NSDateAdditions.m */; };
 		358AEB50106BD66900CE5D1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358AEB4F106BD66900CE5D1C /* MapKit.framework */; };
 		358AEC4E106D4C8C00CE5D1C /* descriptionPage.css in Resources */ = {isa = PBXBuildFile; fileRef = 358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */; };
 		35982D091051835800D7EF1C /* UGAudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35982D071051835800D7EF1C /* UGAudioPlayerViewController.m */; };
@@ -65,6 +63,10 @@
 		28A0AAE50D9B0CCF005BE974 /* ruegenhoeren_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ruegenhoeren_Prefix.pch; sourceTree = "<group>"; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		350C0F8110ADC93B00D0F752 /* NSData+MBBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MBBase64.h"; sourceTree = "<group>"; };
+		350C0F8210ADC93B00D0F752 /* NSData+MBBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MBBase64.m"; sourceTree = "<group>"; };
+		350C108210ADF3FC00D0F752 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		350C108310ADF3FC00D0F752 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		352A075C1086589F0003080E /* IconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconHuge.png; path = Resources/IconHuge.png; sourceTree = "<group>"; };
 		352A07E81088D3830003080E /* 28-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "28-star.png"; path = "Resources/28-star.png"; sourceTree = "<group>"; };
 		352A07E91088D3830003080E /* 57-download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "57-download.png"; path = "Resources/57-download.png"; sourceTree = "<group>"; };
@@ -82,22 +84,14 @@
 		35757521105ABA300058EB63 /* whitetrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whitetrack.png; path = Resources/whitetrack.png; sourceTree = "<group>"; };
 		357575FF105D3B5D0058EB63 /* bluetrack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluetrack.png; path = Resources/bluetrack.png; sourceTree = "<group>"; };
 		35757689105D49D00058EB63 /* UGAudioPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioPlayerViewController.xib; sourceTree = "<group>"; };
+		3575EA9010AF274400F7FA39 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		3575EA9110AF274400F7FA39 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		35798C9E1053C87500B91200 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3586EF5510A21E7000145089 /* 06-magnifying-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "06-magnifying-glass.png"; path = "Resources/06-magnifying-glass.png"; sourceTree = "<group>"; };
 		3586EF7010A34EBD00145089 /* audioLocationsCache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = audioLocationsCache.plist; sourceTree = "<group>"; };
 		3589979D104D95A60095A26A /* UGAudioLocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UGAudioLocationDetailViewController.xib; sourceTree = "<group>"; };
 		358997A6104D95EA0095A26A /* UGAudioLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioLocationDetailViewController.h; sourceTree = "<group>"; };
 		358997A7104D95EA0095A26A /* UGAudioLocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAudioLocationDetailViewController.m; sourceTree = "<group>"; };
-		358AEB00106BD3CD00CE5D1C /* LoadingHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingHUDView.h; path = ../tapkulibrary/TapkuLibrary/LoadingHUDView.h; sourceTree = SOURCE_ROOT; };
-		358AEB01106BD3CD00CE5D1C /* LoadingHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingHUDView.m; path = ../tapkulibrary/TapkuLibrary/LoadingHUDView.m; sourceTree = SOURCE_ROOT; };
-		358AEB1A106BD42500CE5D1C /* TKGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKGlobal.h; path = ../tapkulibrary/TapkuLibrary/TKGlobal.h; sourceTree = SOURCE_ROOT; };
-		358AEB1B106BD43B00CE5D1C /* TKGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKGlobal.m; path = ../tapkulibrary/TapkuLibrary/TKGlobal.m; sourceTree = SOURCE_ROOT; };
-		358AEB27106BD45200CE5D1C /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageAdditions.h; path = ../tapkulibrary/TapkuLibrary/UIImageAdditions.h; sourceTree = SOURCE_ROOT; };
-		358AEB28106BD45200CE5D1C /* UIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageAdditions.m; path = ../tapkulibrary/TapkuLibrary/UIImageAdditions.m; sourceTree = SOURCE_ROOT; };
-		358AEB29106BD45200CE5D1C /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewAdditions.h; path = ../tapkulibrary/TapkuLibrary/UIViewAdditions.h; sourceTree = SOURCE_ROOT; };
-		358AEB2A106BD45200CE5D1C /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewAdditions.m; path = ../tapkulibrary/TapkuLibrary/UIViewAdditions.m; sourceTree = SOURCE_ROOT; };
-		358AEB2D106BD45D00CE5D1C /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDateAdditions.h; path = ../tapkulibrary/TapkuLibrary/NSDateAdditions.h; sourceTree = SOURCE_ROOT; };
-		358AEB2E106BD45D00CE5D1C /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDateAdditions.m; path = ../tapkulibrary/TapkuLibrary/NSDateAdditions.m; sourceTree = SOURCE_ROOT; };
 		358AEB4F106BD66900CE5D1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		358AEC4D106D4C8C00CE5D1C /* descriptionPage.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = descriptionPage.css; path = Resources/descriptionPage.css; sourceTree = "<group>"; };
 		35982D061051835800D7EF1C /* UGAudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAudioPlayerViewController.h; sourceTree = "<group>"; };
@@ -149,6 +143,12 @@
 				350C0D5B10AB1AF500D0F752 /* Navigation Structure */,
 				350C0D5C10AB1B3600D0F752 /* Models */,
 				350C0D7310AB1BA400D0F752 /* Detail Views */,
+				350C0F8110ADC93B00D0F752 /* NSData+MBBase64.h */,
+				350C0F8210ADC93B00D0F752 /* NSData+MBBase64.m */,
+				350C108210ADF3FC00D0F752 /* NSString+MD5.h */,
+				350C108310ADF3FC00D0F752 /* NSString+MD5.m */,
+				3575EA9010AF274400F7FA39 /* UIImage+Scale.h */,
+				3575EA9110AF274400F7FA39 /* UIImage+Scale.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -169,7 +169,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				358AEACD106BD3B300CE5D1C /* Tapku */,
 				354CEAFD10850550000B9A99 /* Entitlements.plist */,
 			);
 			name = CustomTemplate;
@@ -283,23 +282,6 @@
 			name = NIBs;
 			sourceTree = "<group>";
 		};
-		358AEACD106BD3B300CE5D1C /* Tapku */ = {
-			isa = PBXGroup;
-			children = (
-				358AEB2D106BD45D00CE5D1C /* NSDateAdditions.h */,
-				358AEB2E106BD45D00CE5D1C /* NSDateAdditions.m */,
-				358AEB27106BD45200CE5D1C /* UIImageAdditions.h */,
-				358AEB28106BD45200CE5D1C /* UIImageAdditions.m */,
-				358AEB29106BD45200CE5D1C /* UIViewAdditions.h */,
-				358AEB2A106BD45200CE5D1C /* UIViewAdditions.m */,
-				358AEB1A106BD42500CE5D1C /* TKGlobal.h */,
-				358AEB1B106BD43B00CE5D1C /* TKGlobal.m */,
-				358AEB00106BD3CD00CE5D1C /* LoadingHUDView.h */,
-				358AEB01106BD3CD00CE5D1C /* LoadingHUDView.m */,
-			);
-			name = Tapku;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,12 +373,10 @@
 				35E9E24C1065002E0022BA69 /* UGTopicsTableViewController.m in Sources */,
 				35E9E2E2106512290022BA69 /* UGAudioLocationsTableViewController.m in Sources */,
 				35E9E61F10662C380022BA69 /* UGAudioLocationsDistanceTableViewController.m in Sources */,
-				358AEB02106BD3CD00CE5D1C /* LoadingHUDView.m in Sources */,
-				358AEB1C106BD43B00CE5D1C /* TKGlobal.m in Sources */,
-				358AEB2B106BD45200CE5D1C /* UIImageAdditions.m in Sources */,
-				358AEB2C106BD45200CE5D1C /* UIViewAdditions.m in Sources */,
-				358AEB2F106BD45D00CE5D1C /* NSDateAdditions.m in Sources */,
 				352A083B1088FC340003080E /* UGDownload.m in Sources */,
+				350C0F8310ADC93B00D0F752 /* NSData+MBBase64.m in Sources */,
+				350C108410ADF3FC00D0F752 /* NSString+MD5.m in Sources */,
+				3575EA9210AF274400F7FA39 /* UIImage+Scale.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,7 +46,9 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
         NSDictionary *currentDictionary;
         
         while (currentDictionary = [dictionaryEnumetator nextObject]) {
-            [audioLocations addObject: [[UGAudioLocation alloc] initWithDictionary: currentDictionary]];
+            UGAudioLocation *newAudioLocation = [[UGAudioLocation alloc] initWithDictionary: currentDictionary];
+            [audioLocations addObject: newAudioLocation];
+            [newAudioLocation downloadCoverImageIfNeeded];
         }
         
         

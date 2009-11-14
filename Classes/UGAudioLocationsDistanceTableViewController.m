@@ -194,7 +194,7 @@
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
 {
-    [loadingHUDView stopAnimating];
+    //[loadingHUDView stopAnimating];
 	DebugLog(@"CLLocationManager error: %@", [error description]);
 }
 

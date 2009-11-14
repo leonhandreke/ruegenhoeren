@@ -29,7 +29,11 @@
     
     NSString *resourcePath = [[NSBundle mainBundle] bundlePath];
     NSURL *resourceURL = [NSURL fileURLWithPath: resourcePath];
-    [webView loadHTMLString: [audioLocation descriptionPage] baseURL: resourceURL];
+    UIImage *coverImage = [UIImage imageWithContentsOfFile: [audioLocation coverImageLocalLocation]];
+    NSData *coverImageData = UIImagePNGRepresentation(coverImage);
+    NSString *coverImageString = [NSString stringWithFormat: @"data:image/png;base64, %@", [coverImageData base64Encoding]];
+    NSString *descriptionPage = [NSString stringWithFormat: [audioLocation descriptionPage], coverImageString];
+    [webView loadHTMLString: descriptionPage baseURL: resourceURL];
     
 }
 
@@ -173,6 +177,7 @@
     
     // Make a nice play button
     [self updatePlayDownloadIcon];
+    [download release];
 }
 
 - (void)download: (UGDownload *) aDownload didReceiveDataOfLength: (NSUInteger) dataLength {

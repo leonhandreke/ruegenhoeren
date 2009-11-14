@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIImage+Scale.h"
 #import "ruegenhoerenAppDelegate.h"
 #import "UGAudioLocationDatabase.h"
 #import "UGAudioLocation.h"

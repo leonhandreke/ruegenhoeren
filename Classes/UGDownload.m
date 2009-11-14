@@ -35,6 +35,7 @@
 - (void) start {
     connection = [NSURLConnection connectionWithRequest:[self request] delegate: self];
     [connection start];
+    //NSLog(@"Starting DL %@", connection);
 }
 
 - (void) cancel {
@@ -67,6 +68,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
+    //NSLog(@"REceived Data");
     //DebugLog(@"Received Data of length %d from connection", [data length]);
     [downloadedData appendData:data];
     receivedLength += data.length;
@@ -100,6 +102,10 @@
         [delegate downloadDidFinish: self];
     }
     
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"%@", [error userInfo]);
 }
 
 @end

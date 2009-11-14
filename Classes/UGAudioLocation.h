@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
-
+#import "UGDownload.h"
+#import "NSString+MD5.h"
 
 @interface UGAudioLocation : NSObject <MKAnnotation> {
 
@@ -21,9 +22,13 @@
     NSString *narrator;
     NSString *topic;
     
+    NSURL *coverImageRemoteLocation;
+    
     CLLocationCoordinate2D coordinate;
     
     NSURL *audioFileRemoteLocation;
+    
+    //UGDownload *imageDownload;
     
 }
 
@@ -31,16 +36,19 @@
 - (NSDictionary *) dictionary;
 
 - (NSURL *) audioFileLocalLocation;
+- (NSString *) coverImageLocalLocation;
+- (void) downloadCoverImageIfNeeded;
 
-@property (copy) NSString *uuid;
-@property (copy) NSString *title;
-@property (copy) NSString *subtitle;
-@property (copy) NSString *descriptionPage;
-@property (copy) NSString *narrator;
-@property (copy) NSString *topic;
+@property (retain) NSString *uuid;
+@property (retain) NSString *title;
+@property (retain) NSString *subtitle;
+@property (retain) NSString *descriptionPage;
+@property (retain) NSString *narrator;
+@property (retain) NSString *topic;
+@property (retain) NSURL *coverImageRemoteLocation;
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
-@property (copy) NSURL *audioFileRemoteLocation;
+@property (retain) NSURL *audioFileRemoteLocation;
 
 @end

@@ -11,7 +11,7 @@
 
 @implementation UGAudioLocation
 
-@synthesize uuid, title, subtitle, descriptionPage, narrator, topic, coordinate, audioFileRemoteLocation;
+@synthesize uuid, title, subtitle, descriptionPage, narrator, topic, coverImageRemoteLocation, coordinate, audioFileRemoteLocation;
 
 - (UGAudioLocation *) initWithDictionary: (NSDictionary *) dictionary {
     if (self = [self init]) {
@@ -21,7 +21,8 @@
         [self setDescriptionPage: [dictionary valueForKey: @"descriptionPage"]];
         [self setNarrator: [dictionary valueForKey: @"narrator"]];
         [self setTopic: [dictionary valueForKey: @"topic"]];
-        [self setAudioFileRemoteLocation: [NSURL URLWithString: [dictionary valueForKey: @"audioFileRemoteLocation"]]];
+        [self setAudioFileRemoteLocation: [[NSURL alloc] initWithString: [[dictionary valueForKey: @"audioFileRemoteLocation"] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]]];
+        [self setCoverImageRemoteLocation: [[NSURL alloc] initWithString: [[dictionary valueForKey: @"coverImageRemoteLocation"] stringByAddingPercentEscapesUsingEncoding:NSISOLatin1StringEncoding]]];
         CLLocationCoordinate2D newCoordinate = {[(NSNumber *)[dictionary valueForKey: @"latitude"] doubleValue], [(NSNumber *)[dictionary valueForKey: @"longitude"] doubleValue]};
         [self setCoordinate: newCoordinate];
     }
@@ -36,6 +37,7 @@
     [narrator release];
     [topic release];
     [audioFileRemoteLocation release];
+    [coverImageRemoteLocation release];
     [super dealloc];
 }
 
@@ -52,6 +54,24 @@
     return [NSURL fileURLWithPath: filename];
 }
 
+- (NSString *) coverImageLocalLocation {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES); 
+    NSString *filename = [paths objectAtIndex:0];
+    filename = [filename stringByAppendingPathComponent: [NSString stringWithFormat: @"%@.jpg", [[[[self coverImageRemoteLocation] path] lastPathComponent] md5Hash]]];
+    //NSString *filename = [[NSBundle mainBundle] pathForResource: audioFileName ofType: nil];  
+    return filename;
+}
+
+- (void) downloadCoverImageIfNeeded {
+    if (![[NSFileManager defaultManager] fileExistsAtPath: [self coverImageLocalLocation]]) {
+        //NSLog(@"download cover image: %@", [self coverImageRemoteLocation]);
+        [[NSFileManager defaultManager] createDirectoryAtPath: [self coverImageLocalLocation] attributes: nil];
+        NSURLRequest *imageRequest = [NSURLRequest requestWithURL: coverImageRemoteLocation];
+        UGDownload *imageDownload = [[UGDownload alloc] initWithRequest: imageRequest destination: [self coverImageLocalLocation] delegate: self];
+        [imageDownload start];
+    }
+}
+
 - (NSDictionary *) dictionary {
     NSMutableDictionary *resultDictionary = [[NSMutableDictionary alloc] init];
     
@@ -66,5 +86,9 @@
     [resultDictionary setValue: [NSNumber numberWithDouble: coordinate.longitude ] forKey: @"longitude"];
     
     return [resultDictionary autorelease];
+}
+
+- (void)downloadDidFinish: (UGDownload *) aDownload {
+    [aDownload release];
 }
 @end

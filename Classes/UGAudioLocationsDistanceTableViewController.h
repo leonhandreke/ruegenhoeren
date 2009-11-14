@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#import "LoadingHUDView.h"
+//#import "LoadingHUDView.h"
 
 #import "UGAudioLocationDatabase.h"
 #import "UGAudioLocationsTableViewController.h"
 
 @interface UGAudioLocationsDistanceTableViewController : UGAudioLocationsTableViewController <CLLocationManagerDelegate> {
 	CLLocationManager *locationManager;
-    LoadingHUDView *loadingHUDView;
+    //LoadingHUDView *loadingHUDView;
 }
 
 @property (nonatomic, retain) CLLocationManager *locationManager;  
