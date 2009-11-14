@@ -55,6 +55,8 @@
     [titleLabel setText: [audioLocation title]];
     [subtitleLabel setText: [audioLocation subtitle]];
     
+    [backgroundImageView setImage: [UIImage imageWithContentsOfFile: [audioLocation coverImageLocalLocation]]];
+    
 
     
 	// VolumeViewHolder is the frame to hold the slider.  We'll resize the slider to be the size of the frame.
@@ -92,7 +94,7 @@
 }
 
 - (void) viewWillDisappear: (BOOL) animated {
-    [self togglePlayPause: self];
+    [audioPlayer stop];
     [self disableScrubberUpdate: self];
     [super viewWillDisappear: animated];
 }
@@ -110,6 +112,10 @@
     [doneTimeLabel setText: doneLabelValue];
     [remainingTimeLabel setText: remainingLabelValue];
     [scrubberSlider setValue: [sliderValue doubleValue]];
+    
+    if (![audioPlayer isPlaying]) {
+        [playPauseButton setImage: [UIImage imageNamed: @"play.png"] forState: UIControlStateNormal];
+    }
 
 }
 

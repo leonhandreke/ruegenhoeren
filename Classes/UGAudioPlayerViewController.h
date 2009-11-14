@@ -24,7 +24,7 @@
     IBOutlet UISlider *scrubberSlider;
     IBOutlet UILabel *doneTimeLabel;
     IBOutlet UILabel *remainingTimeLabel;
-    
+    IBOutlet UIImageView *backgroundImageView;
     IBOutlet UILabel *titleLabel;
     IBOutlet UILabel *subtitleLabel;
     

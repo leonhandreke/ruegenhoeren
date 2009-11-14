@@ -11,7 +11,7 @@
 
 @implementation UGDownload
 
-@synthesize request, delegate, destination, receivedLength;
+@synthesize request, delegate, destination, receivedLength, totalLength;
 
 
 - (UGDownload *) initWithRequest: (NSURLRequest *) newRequest destination: (NSString *) newDestination delegate: (id) newDelegate {
@@ -21,8 +21,6 @@
         [self setDestination: [newDestination stringByAppendingPathExtension:@"download"]];
         // Make sure the directory is there
         [[NSFileManager defaultManager] createDirectoryAtPath: [self destination] withIntermediateDirectories: YES attributes: nil error: nil];
-        // Delete the old file in case it's still there
-        [[NSFileManager defaultManager] removeItemAtPath: newDestination error: nil];
     }
     
     return self;
@@ -94,8 +92,12 @@
     [downloadedData release];
     downloadedData = nil;
     
+    NSString *newDestination = [[self destination] stringByDeletingPathExtension]
+    // Delete the old file in case it's still there
+    [[NSFileManager defaultManager] removeItemAtPath: newDestination error: nil];
+    
     //Move the file to it's 'complete' location
-    [[NSFileManager defaultManager] moveItemAtPath: [self destination] toPath: [[self destination] stringByDeletingPathExtension] error: nil];
+    [[NSFileManager defaultManager] moveItemAtPath: [self destination] toPath: newDestination error: nil];
     
     if( [delegate respondsToSelector:@selector(downloadDidFinish:)] )
     {

@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "UGAudioLocation.h"
+#import "UGDownload.h"
 
 @interface UGAudioLocationDatabase : NSObject {
 

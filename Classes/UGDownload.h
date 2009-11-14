@@ -32,6 +32,7 @@
 - (void) cancel;
 
 
+@property (readonly) double totalLength;
 @property (assign) id delegate;
 @property (retain) NSURLRequest *request;
 @property (retain) NSString *destination;

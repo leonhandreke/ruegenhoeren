@@ -119,7 +119,7 @@
                                      UIViewAutoresizingFlexibleTopMargin |
                                      UIViewAutoresizingFlexibleBottomMargin);
     downloadProgressBar = progressView;
-    UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Downloade Hörstation"
+    UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Verbinde..."
                                                       delegate:self
                                              cancelButtonTitle:nil
                                         destructiveButtonTitle: @"Abbrechen"
@@ -182,6 +182,7 @@
 
 - (void)download: (UGDownload *) aDownload didReceiveDataOfLength: (NSUInteger) dataLength {
     [downloadProgressBar setProgress: [download progress]];
+    [downloadActionSheet setTitle: [NSString stringWithFormat:@"Downloade Hörstation (%.2fMB/%.2fMB)", [aDownload receivedLength]/1024/1024, [aDownload totalLength]/1024/1024]];
 }
 
 

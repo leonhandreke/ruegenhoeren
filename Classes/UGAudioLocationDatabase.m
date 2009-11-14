@@ -25,7 +25,8 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
         }
         else {
             mainAudioLocationDatabase = [[UGAudioLocationDatabase alloc] init];
-        }		
+        }
+        
     }
     return mainAudioLocationDatabase;	
 }
@@ -117,14 +118,23 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 
 + (NSString *) defaultCacheFileLocation {
     // For now just the App Bundle because the content does not change
-    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    //NSString *cachesDirectory = [paths objectAtIndex:0];
-    NSString *cachesDirectory = [[NSBundle mainBundle] bundlePath];
-    NSString *path = [cachesDirectory stringByAppendingPathComponent:@"audioLocationsCache.plist"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *documentDirectory = [[NSBundle mainBundle] bundlePath];
+    NSString *path = [documentDirectory stringByAppendingPathComponent:@"audioLocationsCache.plist"];
     
+    if ([[NSFileManager defaultManager] fileExistsAtPath: path]) {
+        return path
+    }
+    
+    NSString *bundleDirectory = [[NSBundle mainBundle] bundlePath];
+    NSString *path = [bundleDirectory stringByAppendingPathComponent:@"audioLocationsCache.plist"];
     return path;    
 }
 
+- (void) updateDatabaseCache {
+    UGDownload *cacheDownload
+}
 #pragma mark Distance Sorting Stuff
 
 NSInteger distanceSort(id firstAudioLocation, id secondAudioLocation, void *userLocation)
@@ -160,7 +170,6 @@ NSInteger distanceSort(id firstAudioLocation, id secondAudioLocation, void *user
 + (NSArray *) sortArray: (NSArray *) array byDistanceFrom: (CLLocation *) newLocation {
     return [array sortedArrayUsingFunction: distanceSort context: newLocation];    
 }
-
 
 
 

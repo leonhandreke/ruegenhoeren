@@ -272,6 +272,9 @@
 								<string>350C0D5C10AB1B3600D0F752</string>
 								<string>350C0D7310AB1BA400D0F752</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
+								<string>352A07F41088D3AB0003080E</string>
+								<string>352A07F31088D3980003080E</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -280,8 +283,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>10</integer>
-									<integer>4</integer>
+									<integer>18</integer>
+									<integer>13</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -322,7 +325,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>356097BB104B19CD00EA72D7</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>UGAudioLocationsTableViewController.m</string>
+								<string>UGDownload.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>356097BC104B19CD00EA72D7</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>UGAudioLocationsTableViewController.m</string>
+										<string>UGDownload.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>3575EB7E10AF2DFC00F7FA39</string>
+										<string>3575EBF610AF4FC500F7FA39</string>
 										<key>history</key>
 										<array>
 											<string>35B65CE31080A4A6000DC693</string>
@@ -343,35 +346,35 @@
 											<string>352A07F71088D3BB0003080E</string>
 											<string>352A08221088FB100003080E</string>
 											<string>3586EF6110A21F6900145089</string>
-											<string>3586EF8610A34F9600145089</string>
 											<string>350C0BF410A7631300D0F752</string>
 											<string>350C0CFA10AB0BD400D0F752</string>
 											<string>350C0D6210AB1B6400D0F752</string>
 											<string>350C0D6410AB1B6400D0F752</string>
 											<string>350C0D6510AB1B6400D0F752</string>
 											<string>350C0E1810AB3F9F00D0F752</string>
-											<string>350C0E4A10AB41B100D0F752</string>
 											<string>350C0E7E10AB591400D0F752</string>
-											<string>350C0EF910AB5DC700D0F752</string>
-											<string>350C0F1010AC929C00D0F752</string>
 											<string>350C0F3510ACB3E000D0F752</string>
 											<string>350C0F3610ACB3E000D0F752</string>
 											<string>350C0F8910ADCA3A00D0F752</string>
 											<string>350C0F8B10ADCA3A00D0F752</string>
 											<string>350C0F8E10ADD06400D0F752</string>
-											<string>350C105910ADED2B00D0F752</string>
 											<string>3575EA0810ADF64300F7FA39</string>
 											<string>3575EA1210ADF69F00F7FA39</string>
 											<string>3575EA2C10AF222A00F7FA39</string>
 											<string>3575EA3510AF23DB00F7FA39</string>
-											<string>3575EA3610AF23DB00F7FA39</string>
-											<string>3575EA3710AF23DB00F7FA39</string>
 											<string>3575EA9510AF279F00F7FA39</string>
 											<string>3575EA9810AF279F00F7FA39</string>
 											<string>3575EB0B10AF299900F7FA39</string>
-											<string>3575EB1210AF29D000F7FA39</string>
 											<string>3575EB4710AF2C9900F7FA39</string>
-											<string>3575EB7D10AF2DF600F7FA39</string>
+											<string>3575EBA410AF334F00F7FA39</string>
+											<string>3575EBDA10AF396D00F7FA39</string>
+											<string>3575EBE310AF3A7D00F7FA39</string>
+											<string>3575EBF110AF4FC500F7FA39</string>
+											<string>3575EBF210AF4FC500F7FA39</string>
+											<string>3575EBF310AF4FC500F7FA39</string>
+											<string>3575EBF410AF4FC500F7FA39</string>
+											<string>3575EBF510AF4FC500F7FA39</string>
+											<string>3575EBA610AF334F00F7FA39</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -686,7 +689,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>3575EB7F10AF2DFC00F7FA39</string>
+		<string>3575EBEF10AF3A9E00F7FA39</string>
 		<string>3575E9F810ADF4E300F7FA39</string>
 		<string>3575E9EE10ADF4B600F7FA39</string>
 		<string>/Users/Leon/Development/ruegenhoeren/ruegenhoeren.xcodeproj</string>
