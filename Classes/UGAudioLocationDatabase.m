@@ -118,22 +118,22 @@ static UGAudioLocationDatabase *mainAudioLocationDatabase = nil;
 
 + (NSString *) defaultCacheFileLocation {
     // For now just the App Bundle because the content does not change
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory = [paths objectAtIndex:0];
+   // NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+   // NSString *documentDirectory = [paths objectAtIndex:0];
     NSString *documentDirectory = [[NSBundle mainBundle] bundlePath];
     NSString *path = [documentDirectory stringByAppendingPathComponent:@"audioLocationsCache.plist"];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath: path]) {
-        return path
+        return path;
     }
     
-    NSString *bundleDirectory = [[NSBundle mainBundle] bundlePath];
-    NSString *path = [bundleDirectory stringByAppendingPathComponent:@"audioLocationsCache.plist"];
-    return path;    
+   NSString *bundleDirectory = [[NSBundle mainBundle] bundlePath];
+   NSString *newPath = [bundleDirectory stringByAppendingPathComponent:@"audioLocationsCache.plist"];
+    return newPath;    
 }
 
 - (void) updateDatabaseCache {
-    UGDownload *cacheDownload
+    UGDownload *cacheDownload;
 }
 #pragma mark Distance Sorting Stuff
 

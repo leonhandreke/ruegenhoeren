@@ -92,7 +92,7 @@
     [downloadedData release];
     downloadedData = nil;
     
-    NSString *newDestination = [[self destination] stringByDeletingPathExtension]
+    NSString *newDestination = [[self destination] stringByDeletingPathExtension];
     // Delete the old file in case it's still there
     [[NSFileManager defaultManager] removeItemAtPath: newDestination error: nil];
     
