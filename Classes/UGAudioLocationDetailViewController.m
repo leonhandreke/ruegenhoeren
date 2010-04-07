@@ -151,7 +151,10 @@
     }
     else {
         button = [[[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: @"57-download.png"] style: UIBarButtonItemStylePlain target: self action: @selector(downloadAudioLocation:)] autorelease];
-    }
+		if ([[audioLocation audioFileRemoteLocation] path] == NULL){
+			button.enabled = NO;
+		}	
+	}
     NSArray *toolbarItems = [NSArray arrayWithObjects: flexibleSpace, button, flexibleSpace, nil];
     [toolbar setItems: toolbarItems];
     
